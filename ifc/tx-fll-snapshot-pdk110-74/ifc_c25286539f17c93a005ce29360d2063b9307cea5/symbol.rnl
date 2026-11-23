@@ -1,0 +1,24 @@
+/* Symbol of the subcircuit tx_fll_snapshot_pdk110_74 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-fll-snapshot-pdk110-74-sym", version="0.1")
+}
+@RNL {
+  $TX_FLL_SNAPSHOT_PDK110_74_BLOCK = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=1, label="GATE", direction="left");
+    (-5, -1) @PIN(terminal=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], label="D<13:0>", direction="left");
+    (5, 0)   @PIN(terminal=[16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], label="M<13:0>", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, -1) (-4, -1) };
+    @LINE { (4, 0) (5, 0) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Parallel bit capture register stack + strobe arrow */
+    (0.2, -0.4) @RECTANGLE(width=2.4, height=3.8);
+    @LINE { (-1.0, 0.55) (1.4, 0.55) };
+    @LINE { (-1.0, -0.4) (1.4, -0.4) };
+    @LINE { (-1.0, -1.35) (1.4, -1.35) };
+    @LINE { (-1.6, 2.0) (0.2, 2.0) (0.2, 1.5) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="tx_fll_snapshot_pdk110_74", recursive=true) => @SET-SYMBOL $TX_FLL_SNAPSHOT_PDK110_74_BLOCK
+}

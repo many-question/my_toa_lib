@@ -1,0 +1,13 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_e73b13bb9b8d60621fe7467fbfaaf207a0d3e234
+name: pll
+form: transistor
+description: Netlist of the subcircuit rtcomb_ff_v13_pdk110_50 of pll.
+files:
+  netlist:
+  - "50_rtcomb_ff_v13.scs"
+  packages:
+  - pll_semantics.rnl
+specifications:
+  process: tsmc180

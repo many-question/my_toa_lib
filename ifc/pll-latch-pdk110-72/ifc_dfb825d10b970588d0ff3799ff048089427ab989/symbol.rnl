@@ -1,0 +1,28 @@
+/* Symbol of the subcircuit pll_latch_pdk110_72 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-latch-pdk110-72-sym", version="0.1")
+}
+@RNL {
+  $PLL_LATCH_PDK110_72_BLOCK = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 2)  @PIN(terminal=1, label="D", direction="left");
+    (-4, 0)  @PIN(terminal=2, label="G", direction="left");
+    (-4, -2) @PIN(terminal=3, label="GB", direction="left");
+    (4, 0)   @PIN(terminal=4, label="Q", direction="right");
+    @LINE { (-4, 2) (-3, 2) };
+    @LINE { (-4, 0) (-3, 0) };
+    @LINE { (-4, -2) (-3, -2) };
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=6);
+    /* Active-low bubble on GB + internal pass switch + bistable storage loop */
+    (-2.75, -2.0) @CIRCLE(radius=0.22);
+    @LINE { (-1.8, 1.6) (-1.1, 1.6) (-0.5, 2.1) };
+    (-0.4, 1.6) @CIRCLE(radius=0.14);
+    @LINE { (-0.25, 1.6) (0.3, 1.6) (0.3, 0.6) };
+    @LINE { (-0.6, 1.1) (1.0, 0.4) (-0.6, -0.3) (-0.6, 1.1) };
+    (1.2, 0.4) @CIRCLE(radius=0.18);
+    @LINE { (1.4, 0.4) (1.8, 0.4) (1.8, -0.8) (-1.0, -0.8) (-1.0, 0.4) (-0.6, 0.4) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="pll_latch_pdk110_72", recursive=true) => @SET-SYMBOL $PLL_LATCH_PDK110_72_BLOCK
+}

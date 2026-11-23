@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: pll-nand2-pdk110-15
+title: pll_nand2_pdk110_15
+description: Interface of the subcircuit pll_nand2_pdk110_15 of pll.
+pins:
+- {name: a}
+- {name: b}
+- {name: "y"}
+- {name: vdd}
+- {name: vss}

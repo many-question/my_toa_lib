@@ -1,0 +1,20 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_1bf844c9e8f65dbeb74123ee0d08d747079d4ceb
+name: pll
+form: passive
+description: Netlist of the subcircuit lc_vco_physical_v14_pdk110_1 of pll.
+files:
+  netlist:
+  - "01_lc_vco_physical_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  lc_core_physical_v14_pdk110_2:
+    ifc: ifc_fc4005c53d9d494487bcd0d6c015247ec3266555
+    ckt: ckt_93f68e1bb03c7c43fb3c485747d61fc40afaa46a
+  tx_cap_bank_switched_v4_pdk110_4:
+    ifc: ifc_b5efe2c3f41c745474cdf5007bd1f29425331e5d
+    ckt: ckt_2ac6ba08d7d66b06cd2fd8a38db0be3bc3d30b6e
+specifications:
+  process: tsmc180

@@ -1,0 +1,29 @@
+/* Symbol of the subcircuit validity_physical_v14_pdk110_53 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="validity-physical-v14-pdk110-53-sym", version="0.1")
+}
+@RNL {
+  $VALIDITY_PHYSICAL_V14_PDK110_53_BLOCK = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=1, label="RF", direction="left");
+    (-5, 0)  @PIN(terminal=2, label="HP", direction="left");
+    (-5, -2) @PIN(terminal=3, label="HN", direction="left");
+    (5, 1)   @PIN(terminal=4, label="AMP_OK", direction="right");
+    (5, -1)  @PIN(terminal=5, label="PH_OK", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, 0) (-4, 0) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (4, 1) (5, 1) };
+    @LINE { (4, -1) (5, -1) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Upper RF rectifier diode + lower window comparator graphic */
+    @LINE { (-1.6, 2.2) (-0.6, 1.6) (-1.6, 1.0) (-1.6, 2.2) };
+    @LINE { (-0.6, 2.2) (-0.6, 1.0) };
+    @LINE { (-0.6, 1.6) (1.2, 1.6) };
+    @LINE { (-1.6, -0.4) (0.6, -0.4) };
+    @LINE { (-1.6, -2.0) (0.6, -2.0) };
+    @LINE { (-0.6, -0.6) (0.8, -1.2) (-0.6, -1.8) (-0.6, -0.6) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="validity_physical_v14_pdk110_53", recursive=true) => @SET-SYMBOL $VALIDITY_PHYSICAL_V14_PDK110_53_BLOCK
+}

@@ -1,0 +1,25 @@
+type: ifc
+license: CC0-1.0
+name: tx-fll-counter-pdk110-71
+title: tx_fll_counter_pdk110_71
+description: Interface of the subcircuit tx_fll_counter_pdk110_71 of pll.
+pins:
+- {name: clk}
+- {name: gate}
+- {name: reset}
+- {name: q0}
+- {name: q1}
+- {name: q2}
+- {name: q3}
+- {name: q4}
+- {name: q5}
+- {name: q6}
+- {name: q7}
+- {name: q8}
+- {name: q9}
+- {name: q10}
+- {name: q11}
+- {name: q12}
+- {name: q13}
+- {name: vdd}
+- {name: vss}

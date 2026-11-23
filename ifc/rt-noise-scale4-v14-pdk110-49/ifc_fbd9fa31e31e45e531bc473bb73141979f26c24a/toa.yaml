@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: rt-noise-scale4-v14-pdk110-49
+title: rt_noise_scale4_v14_pdk110_49
+description: Interface of the subcircuit rt_noise_scale4_v14_pdk110_49 of pll.
+pins:
+- {name: data}
+- {name: clk}
+- {name: out}
+- {name: vdd}
+- {name: vss}

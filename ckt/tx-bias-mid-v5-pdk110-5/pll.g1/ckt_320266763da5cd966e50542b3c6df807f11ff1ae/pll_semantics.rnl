@@ -1,0 +1,23 @@
+/* The part of the package pll-semantics that the subcircuit tx_bias_mid_v5_pdk110_5 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/tx_bias_mid_v5_pdk110_5", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $RC_NOISE_FILTER = @DEFINE(
+    roles=["{resistors}", "{capacitors}"],
+    parameters=[["cutoff_role", "bias_supply_filtering"]]
+  ) {};
+  $AC_COUPLED_BIAS_NETWORK = @DEFINE(
+    roles=["{divider_resistors}", "{bypass_caps}", "{coupling_caps}", "{isolation_resistors}"],
+    parameters=[["bias_level", "0.491_VDD"]]
+  ) {}
+}

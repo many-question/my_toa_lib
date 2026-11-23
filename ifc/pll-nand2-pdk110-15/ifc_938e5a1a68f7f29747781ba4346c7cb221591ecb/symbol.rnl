@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit pll_nand2_pdk110_15 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-nand2-pdk110-15-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="pll_nand2_pdk110_15", recursive=true) => @SET-SYMBOL(terminals=[[1, "a"], [2, "b"], [3, "y"]]) $NAND_2INPUT
+}

@@ -1,0 +1,13 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_5375c2d707b4f27b06d37f6b51fbca3c364d0bfe
+name: pll
+form: transistor
+description: Netlist of the subcircuit pll_inv_pdk110_28 of pll.
+files:
+  netlist:
+  - "28_pll_inv.scs"
+  packages:
+  - pll_semantics.rnl
+specifications:
+  process: tsmc180

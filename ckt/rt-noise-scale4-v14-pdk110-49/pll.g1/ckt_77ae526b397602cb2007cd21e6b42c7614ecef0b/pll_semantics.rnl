@@ -1,0 +1,24 @@
+/* The part of the package pll-semantics that the subcircuit rt_noise_scale4_v14_pdk110_49 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/rt_noise_scale4_v14_pdk110_49", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="rtcomb_ff_v13_pdk110_50", terminals=["d", "ck", "qb", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_inv_pdk110_51", terminals=["a", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_inv_pdk110_52", terminals=["a", "y", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $RETIMER_STAGE = @DEFINE(
+    roles=["{retimer_ffs}", "{skewed_buffers}", "{clock_inverters}"],
+    parameters=[["stages", 2], ["scale", "4x_low_noise"]]
+  ) {};
+  # @SELECT-INSTANCE(model="pll_inv_pdk110_*", recursive=true) => @SET-SYMBOL $INVERTER;
+  # @SELECT-INSTANCE(model="rtcomb_ff_v13_pdk110_50", recursive=true) => @SET-SYMBOL $D_FLIP_FLOP_Q_ONLY
+}

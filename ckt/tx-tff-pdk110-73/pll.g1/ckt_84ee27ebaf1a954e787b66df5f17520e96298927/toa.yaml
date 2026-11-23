@@ -1,0 +1,18 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_eee1fb1dd95e6bcb4bd3920a7e72af0293a51597
+name: pll
+form: composition
+description: Netlist of the subcircuit tx_tff_pdk110_73 of pll.
+files:
+  netlist:
+  - "73_tx_tff.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_7:
+    ifc: ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b
+    ckt: ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d
+  tx_dff_r0_pdk110_58:
+    ifc: ifc_46bd6fd224f9bf51a4504c927f82af13da0b3e0e
+    ckt: ckt_c2cd0a3ce14edf02119cfd8390874d3e4fa8b2bd

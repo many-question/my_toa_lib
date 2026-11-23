@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: tx-mux-pdk110-64
+title: tx_mux_pdk110_64
+description: Interface of the subcircuit tx_mux_pdk110_64 of pll.
+pins:
+- {name: a}
+- {name: b}
+- {name: s}
+- {name: "y"}
+- {name: vdd}
+- {name: vss}

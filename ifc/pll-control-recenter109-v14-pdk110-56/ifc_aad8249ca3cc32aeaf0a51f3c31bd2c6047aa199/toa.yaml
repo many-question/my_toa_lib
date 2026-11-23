@@ -1,0 +1,46 @@
+type: ifc
+license: CC0-1.0
+name: pll-control-recenter109-v14-pdk110-56
+title: pll_control_recenter109_v14_pdk110_56
+description: Interface of the subcircuit pll_control_recenter109_v14_pdk110_56 of pll.
+pins:
+- {name: refclk}
+- {name: reset}
+- {name: apply}
+- {name: k0}
+- {name: k1}
+- {name: k2}
+- {name: k3}
+- {name: k4}
+- {name: k5}
+- {name: outclk}
+- {name: acqclk}
+- {name: phase_good}
+- {name: frequency_good}
+- {name: b0}
+- {name: b1}
+- {name: b2}
+- {name: b3}
+- {name: b4}
+- {name: b5}
+- {name: b6}
+- {name: b7}
+- {name: s0}
+- {name: s1}
+- {name: s2}
+- {name: s3}
+- {name: s4}
+- {name: s5}
+- {name: divider_reset}
+- {name: enable}
+- {name: pulse}
+- {name: preset}
+- {name: qualified}
+- {name: range_error}
+- {name: config_ready}
+- {name: config_invalid}
+- {name: restart}
+- {name: count_gate}
+- {name: count_reset}
+- {name: vdd}
+- {name: vss}

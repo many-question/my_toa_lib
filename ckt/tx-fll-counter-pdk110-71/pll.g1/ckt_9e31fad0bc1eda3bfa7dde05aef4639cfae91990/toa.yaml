@@ -1,0 +1,24 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_3d93bc4ebcff5a2a5f039d1cf4803295d64c3070
+name: pll
+form: composition
+description: Netlist of the subcircuit tx_fll_counter_pdk110_71 of pll.
+files:
+  netlist:
+  - "71_tx_fll_counter.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_59:
+    ifc: ifc_2b24119bec5cd541e8ad29e1844c89f7cf9e712c
+    ckt: ckt_5726fcd9274c41bd8dc567a1cc2cbefb8c482703
+  pll_latch_pdk110_72:
+    ifc: ifc_dfb825d10b970588d0ff3799ff048089427ab989
+    ckt: ckt_85280831fe371df166039c50748e9254699ea4fb
+  tx_and_pdk110_47:
+    ifc: ifc_68439ec415a2984bae048865f408de2e7ebbfae5
+    ckt: ckt_ab582ec2b0e9b43066e67e0dbc111ca2ca05334e
+  tx_tff_pdk110_73:
+    ifc: ifc_eee1fb1dd95e6bcb4bd3920a7e72af0293a51597
+    ckt: ckt_84ee27ebaf1a954e787b66df5f17520e96298927

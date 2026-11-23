@@ -1,0 +1,72 @@
+/* The part of the package pll-semantics that the subcircuit tx_pll_supervisor_capture_v14_pdk110_77 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/tx_pll_supervisor_capture_v14_pdk110_77", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="pll_inv_pdk110_7", terminals=["a", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_and_pdk110_47", terminals=["a", "b", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_dff_r0_pdk110_58", terminals=["d", "clk", "reset", "q", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_mux_pdk110_64", terminals=["a", "b", "s", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_xor_pdk110_66", terminals=["a", "b", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_or_pdk110_67", terminals=["a", "b", "y", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $section_box = @DEFINE-STYLE(linecolor="#cbd5e0", linestyle="dashed", fillcolor="#f8fafc") {};
+  $section_label = @DEFINE-STYLE(textcolor="#2b6cb0", size=0.85, bold=true) {};
+  $fly_label_style = @DEFINE-STYLE(textcolor="#0f766e", size=0.70, bold=true) {};
+  $SYNTHESIZED_FSM_CONTROLLER = @DEFINE(
+    roles=["{state_ffs}", "{datapath_muxes}", "{comb_logic}"],
+    parameters=[["controller_name", "digital_controller"], ["clock_domain", "refclk"]]
+  ) {};
+  $MUX2_SYM = @DEFINE-SYMBOL(box=[-3, -3, 3, 3]) {
+    (-3, 1)  @PIN(terminal=1, label="0", direction="left");
+    (-3, -1) @PIN(terminal=2, label="1", direction="left");
+    (0, -3)  @PIN(terminal=3, label="S", direction="down");
+    (3, 0)   @PIN(terminal=4, direction="right");
+    @LINE { (-3, 1) (-2, 1) };
+    @LINE { (-3, -1) (-2, -1) };
+    @LINE { (2, 0) (3, 0) };
+    @LINE { (0, -3) (0, -1.5) };
+    @LINE { (-2, 2) (2, 1) (2, -1) (-2, -2) (-2, 2) };
+    /* Internal SPDT selector switch graphic */
+    @LINE { (-1.1, 1.0) (-0.4, 1.0) };
+    @LINE { (-1.1, -1.0) (-0.4, -1.0) };
+    (-0.4, 1.0) @CIRCLE(radius=0.14);
+    (-0.4, -1.0) @CIRCLE(radius=0.14);
+    (0.8, 0.0) @CIRCLE(radius=0.16);
+    @LINE { (-0.3, 0.9) (0.8, 0.0) (1.6, 0.0) };
+    @LINE { (0.0, -1.3) (0.0, 0.2) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 2.5)
+  };
+  $DFF_R_SYM = @DEFINE-SYMBOL(box=[-4, -4, 4, 4]) {
+    (-4, 1)  @PIN(terminal=1, label="D", direction="left");
+    (-4, -1) @PIN(terminal=2, label="CK", direction="left");
+    (0, -4)  @PIN(terminal=3, label="R", direction="down");
+    (4, 0)   @PIN(terminal=4, label="Q", direction="right");
+    @LINE { (-4, 1) (-3, 1) };
+    @LINE { (-4, -1) (-3, -1) };
+    @LINE { (0, -4) (0, -3) };
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=6);
+    /* Edge-triggered clock triangle + internal master-slave bistable latch loop */
+    @LINE { (-3, -0.45) (-2.1, -1.0) (-3, -1.55) };
+    @LINE { (-1.2, 1.5) (0.6, 0.8) (-1.2, 0.1) (-1.2, 1.5) };
+    (0.8, 0.8) @CIRCLE(radius=0.18);
+    @LINE { (1.0, 0.8) (1.5, 0.8) (1.5, -0.3) (-1.6, -0.3) (-1.6, 0.8) (-1.2, 0.8) };
+    @LINE { (0, -2.8) (0, -1.5) (-0.4, -1.9) };
+    @LINE { (0, -1.5) (0.4, -1.9) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="pll_inv_pdk110_*", recursive=true) => @SET-SYMBOL $INVERTER;
+  # @SELECT-INSTANCE(model="tx_and_pdk110_47", recursive=true) => @SET-SYMBOL $AND_2INPUT;
+  # @SELECT-INSTANCE(model="tx_or_pdk110_67", recursive=true) => @SET-SYMBOL $OR_2INPUT;
+  # @SELECT-INSTANCE(model="tx_xor_pdk110_66", recursive=true) => @SET-SYMBOL $XOR_2INPUT;
+  # @SELECT-INSTANCE(model="tx_mux_pdk110_64", recursive=true) => @SET-SYMBOL $MUX2_SYM;
+  # @SELECT-INSTANCE(model="tx_dff_r0_pdk110_58", recursive=true) => @SET-SYMBOL $DFF_R_SYM
+}

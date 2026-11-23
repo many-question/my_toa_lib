@@ -1,0 +1,17 @@
+type: ifc
+license: CC0-1.0
+name: tx-cap-bank-switched-v4-pdk110-4
+title: tx_cap_bank_switched_v4_pdk110_4
+description: Interface of the subcircuit tx_cap_bank_switched_v4_pdk110_4 of pll.
+pins:
+- {name: tank}
+- {name: b0}
+- {name: b1}
+- {name: b2}
+- {name: b3}
+- {name: b4}
+- {name: b5}
+- {name: b6}
+- {name: b7}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: tx-tff-pdk110-73
+title: tx_tff_pdk110_73
+description: Interface of the subcircuit tx_tff_pdk110_73 of pll.
+pins:
+- {name: clk}
+- {name: reset}
+- {name: q}
+- {name: qb}
+- {name: vdd}
+- {name: vss}

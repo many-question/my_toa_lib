@@ -1,0 +1,28 @@
+/* Symbol of the subcircuit tx_mux_pdk110_64 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-mux-pdk110-64-sym", version="0.1")
+}
+@RNL {
+  $TX_MUX_PDK110_64_BLOCK = @DEFINE-SYMBOL(box=[-3, -3, 3, 3]) {
+    (-3, 1)  @PIN(terminal=1, label="0", direction="left");
+    (-3, -1) @PIN(terminal=2, label="1", direction="left");
+    (0, -3)  @PIN(terminal=3, label="S", direction="down");
+    (3, 0)   @PIN(terminal=4, direction="right");
+    @LINE { (-3, 1) (-2, 1) };
+    @LINE { (-3, -1) (-2, -1) };
+    @LINE { (2, 0) (3, 0) };
+    @LINE { (0, -3) (0, -1.5) };
+    @LINE { (-2, 2) (2, 1) (2, -1) (-2, -2) (-2, 2) };
+    /* Internal SPDT selector switch graphic */
+    @LINE { (-1.1, 1.0) (-0.4, 1.0) };
+    @LINE { (-1.1, -1.0) (-0.4, -1.0) };
+    (-0.4, 1.0) @CIRCLE(radius=0.14);
+    (-0.4, -1.0) @CIRCLE(radius=0.14);
+    (0.8, 0.0) @CIRCLE(radius=0.16);
+    @LINE { (-0.3, 0.9) (0.8, 0.0) (1.6, 0.0) };
+    @LINE { (0.0, -1.3) (0.0, 0.2) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 2.5)
+  };
+  # @SELECT-INSTANCE(model="tx_mux_pdk110_64", recursive=true) => @SET-SYMBOL $TX_MUX_PDK110_64_BLOCK
+}

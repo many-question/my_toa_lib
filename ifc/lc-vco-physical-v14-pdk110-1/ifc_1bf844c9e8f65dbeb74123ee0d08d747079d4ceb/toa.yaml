@@ -1,0 +1,19 @@
+type: ifc
+license: CC0-1.0
+name: lc-vco-physical-v14-pdk110-1
+title: lc_vco_physical_v14_pdk110_1
+description: Interface of the subcircuit lc_vco_physical_v14_pdk110_1 of pll.
+pins:
+- {name: vp}
+- {name: vn}
+- {name: ctrl}
+- {name: b0}
+- {name: b1}
+- {name: b2}
+- {name: b3}
+- {name: b4}
+- {name: b5}
+- {name: b6}
+- {name: b7}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,25 @@
+/* Symbol of the subcircuit rf_light24s12_v14_pdk110_19 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="rf-light24s12-v14-pdk110-19-sym", version="0.1")
+}
+@RNL {
+  $RF_LIGHT24S12_V14_PDK110_19_BLOCK = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 0) @PIN(terminal=1, label="RF", direction="left");
+    (4, 0)  @PIN(terminal=2, label="CLK", direction="right");
+    (0, 3)  @PIN(terminal=3, label="VDD", direction="up");
+    @LINE { (-4, 0) (-3, 0) };
+    @LINE { (3, 0) (4, 0) };
+    @LINE { (0, 2) (0, 3) };
+    (0, 0) @RECTANGLE(width=6, height=4);
+    /* AC coupling cap + self-biased inverter triangle + feedback resistor */
+    @LINE { (-1.5, 0.6) (-1.5, -0.6) };
+    @LINE { (-1.1, 0.6) (-1.1, -0.6) };
+    @LINE { (-1.1, 0.0) (-0.6, 0.0) };
+    @LINE { (-0.6, 1.0) (1.2, 0.0) (-0.6, -1.0) (-0.6, 1.0) };
+    (1.4, 0.0) @CIRCLE(radius=0.18);
+    @LINE { (-0.9, 0.0) (-0.9, 1.3) (1.5, 1.3) (1.5, 0.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, -2.8)
+  };
+  # @SELECT-INSTANCE(model="rf_light24s12_v14_pdk110_19", recursive=true) => @SET-SYMBOL $RF_LIGHT24S12_V14_PDK110_19_BLOCK
+}

@@ -1,0 +1,18 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_689907d0b5eeb84b85d9e7c2b13a8de09ba30dc5
+name: pll
+form: composition
+description: Netlist of the subcircuit tx_mux_pdk110_64 of pll.
+files:
+  netlist:
+  - "64_tx_mux.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_48:
+    ifc: ifc_3a5fa68b8ec3d2bf530ffc412e57e7efffcea3a2
+    ckt: ckt_7febc9e2356a0bc13761d7bccacb36a6b71f4a12
+  pll_tg_pdk110_65:
+    ifc: ifc_451409ba974ee774669662a1fe6692139a420dbe
+    ckt: ckt_c764535a5e9a04f73a8aae49c190be76cfcb5a9e

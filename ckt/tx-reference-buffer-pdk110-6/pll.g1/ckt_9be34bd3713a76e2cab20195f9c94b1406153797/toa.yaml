@@ -1,0 +1,24 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_71ba7919a0ce00ab6cecd15bac7e9864c4e4147b
+name: pll
+form: composition
+description: Netlist of the subcircuit tx_reference_buffer_pdk110_6 of pll.
+files:
+  netlist:
+  - "06_tx_reference_buffer.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_10:
+    ifc: ifc_89806ef53cbcb9d139a9358c72cbfeac788678d4
+    ckt: ckt_7df7840b2f3ff6bf37d12d30653329bee3afa2a7
+  pll_inv_pdk110_7:
+    ifc: ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b
+    ckt: ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d
+  pll_inv_pdk110_8:
+    ifc: ifc_3d13b5de641cb0241c0bdd01ec91099c1787b726
+    ckt: ckt_0243045360cd136b60f7604e02bdde54c7179438
+  pll_inv_pdk110_9:
+    ifc: ifc_8d9e5d85486f68939244bd2d8cd1d9f024577266
+    ckt: ckt_c6781ae5c46a789dba9a365aebad880f6ebb33d6

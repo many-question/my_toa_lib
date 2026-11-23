@@ -1,0 +1,22 @@
+/* The part of the package pll-semantics that the subcircuit rtcomb_ff_v13_pdk110_50 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/rtcomb_ff_v13_pdk110_50", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="nch", terminals=["d", "g", "s", "b"]);
+  @DEVICE(name="*", model="pch", terminals=["d", "g", "s", "b"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $TSPC_STAGE = @DEFINE(
+    roles=["{stage1_input}", "{stage2_precharge}", "{stage3_output}", "{feedback_element}"],
+    parameters=[["edge", "rising"], ["topology", "9T_inverting_TSPC"]]
+  ) {};
+  # @SELECT-INSTANCE(model="nch", recursive=true) => @SET-SYMBOL $NMOS;
+  # @SELECT-INSTANCE(model="pch", recursive=true) => @SET-SYMBOL $PMOS
+}

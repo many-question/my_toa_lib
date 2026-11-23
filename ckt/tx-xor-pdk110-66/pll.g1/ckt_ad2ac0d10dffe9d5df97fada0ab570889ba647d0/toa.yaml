@@ -1,0 +1,18 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_368f1d6ba199dabfdbaa31500b472094316c6057
+name: pll
+form: composition
+description: Netlist of the subcircuit tx_xor_pdk110_66 of pll.
+files:
+  netlist:
+  - "66_tx_xor.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_48:
+    ifc: ifc_3a5fa68b8ec3d2bf530ffc412e57e7efffcea3a2
+    ckt: ckt_7febc9e2356a0bc13761d7bccacb36a6b71f4a12
+  tx_mux_pdk110_64:
+    ifc: ifc_689907d0b5eeb84b85d9e7c2b13a8de09ba30dc5
+    ckt: ckt_536243f22e410a8ee33c316034791f358c186dde

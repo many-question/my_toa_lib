@@ -1,0 +1,21 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_12e1946f1854434f4beb332028309fbeee5842b2
+name: pll
+form: composition
+description: Netlist of the subcircuit ff_singlephase_v14_pdk110_44 of pll.
+files:
+  netlist:
+  - "44_ff_singlephase_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_27:
+    ifc: ifc_49c41690a6e5826228f07a546469a1c672efd382
+    ckt: ckt_0bbc17ff799871660ee5633f7ab1478801de1d7a
+  pll_inv_pdk110_45:
+    ifc: ifc_07280a8eb15fe1406704becbfaa0c4609b2fac64
+    ckt: ckt_0658cebfd8d7e83fb7910e53ebbba9d154233b4e
+  pll_tspc_inv_pdk110_25:
+    ifc: ifc_4832fe57a0488c21af0afbc04400e827fe9c531a
+    ckt: ckt_5d5f8305cecfef694caecd38861c10bdb460c1a4

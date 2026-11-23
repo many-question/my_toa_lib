@@ -1,0 +1,13 @@
+type: ifc
+license: CC0-1.0
+name: validity-physical-v14-pdk110-53
+title: validity_physical_v14_pdk110_53
+description: Interface of the subcircuit validity_physical_v14_pdk110_53 of pll.
+pins:
+- {name: rf}
+- {name: hp}
+- {name: hn}
+- {name: amp_good}
+- {name: phase_good}
+- {name: vdd}
+- {name: vss}

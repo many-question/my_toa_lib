@@ -1,0 +1,35 @@
+type: ifc
+license: CC0-1.0
+name: tx-frequency-watchdog-pdk110-80
+title: tx_frequency_watchdog_pdk110_80
+description: Interface of the subcircuit tx_frequency_watchdog_pdk110_80 of pll.
+pins:
+- {name: refclk}
+- {name: reset}
+- {name: active}
+- {name: target_k0}
+- {name: target_k1}
+- {name: target_k2}
+- {name: target_k3}
+- {name: target_k4}
+- {name: target_k5}
+- {name: measured0}
+- {name: measured1}
+- {name: measured2}
+- {name: measured3}
+- {name: measured4}
+- {name: measured5}
+- {name: measured6}
+- {name: measured7}
+- {name: measured8}
+- {name: measured9}
+- {name: measured10}
+- {name: measured11}
+- {name: measured12}
+- {name: measured13}
+- {name: count_gate}
+- {name: count_reset}
+- {name: frequency_good}
+- {name: valid}
+- {name: vdd}
+- {name: vss}

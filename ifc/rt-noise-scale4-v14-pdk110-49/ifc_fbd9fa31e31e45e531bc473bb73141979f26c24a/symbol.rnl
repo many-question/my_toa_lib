@@ -1,0 +1,25 @@
+/* Symbol of the subcircuit rt_noise_scale4_v14_pdk110_49 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="rt-noise-scale4-v14-pdk110-49-sym", version="0.1")
+}
+@RNL {
+  $RT_NOISE_SCALE4_V14_PDK110_49_BLOCK = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 1)  @PIN(terminal=1, label="DATA", direction="left");
+    (-4, -1) @PIN(terminal=2, label="CLK", direction="left");
+    (4, 0)   @PIN(terminal=3, label="OUT", direction="right");
+    (0, 3)   @PIN(terminal=4, label="VDD", direction="up");
+    @LINE { (-4, 1) (-3, 1) };
+    @LINE { (-4, -1) (-3, -1) };
+    @LINE { (3, 0) (4, 0) };
+    @LINE { (0, 2) (0, 3) };
+    (0, 0) @RECTANGLE(width=6, height=4);
+    /* Clock edge triangle + internal retiming DFF stage + clean pulse */
+    @LINE { (-3, -0.55) (-2.2, -1.0) (-3, -1.45) };
+    (0.0, 0.0) @RECTANGLE(width=2.2, height=2.4);
+    @LINE { (-1.1, -0.4) (-0.5, -0.7) (-1.1, -1.0) };
+    @LINE { (1.3, -0.6) (1.6, -0.6) (1.6, 0.6) (2.3, 0.6) (2.3, -0.6) (2.6, -0.6) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, -2.8)
+  };
+  # @SELECT-INSTANCE(model="rt_noise_scale4_v14_pdk110_49", recursive=true) => @SET-SYMBOL $RT_NOISE_SCALE4_V14_PDK110_49_BLOCK
+}

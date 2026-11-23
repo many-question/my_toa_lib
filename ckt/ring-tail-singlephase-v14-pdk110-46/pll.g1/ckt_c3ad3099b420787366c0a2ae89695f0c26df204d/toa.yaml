@@ -1,0 +1,26 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_0e30419bace1f89748039847e3e105c723437cbe
+name: pll
+form: passive
+description: Netlist of the subcircuit ring_tail_singlephase_v14_pdk110_46 of pll.
+files:
+  netlist:
+  - "46_ring_tail_singlephase_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  ff_singlephase_v14_pdk110_44:
+    ifc: ifc_12e1946f1854434f4beb332028309fbeee5842b2
+    ckt: ckt_6f3670368caba8c64cb91d2701337ad46db02a0e
+  pll_inv_pdk110_7:
+    ifc: ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b
+    ckt: ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d
+  pll_tg_pdk110_43:
+    ifc: ifc_0be7d4529a1756f3e1714be38703563f674ac03d
+    ckt: ckt_7980fc1829072d6132a1f2cfe969d646a0df2bac
+  tx_and_pdk110_47:
+    ifc: ifc_68439ec415a2984bae048865f408de2e7ebbfae5
+    ckt: ckt_ab582ec2b0e9b43066e67e0dbc111ca2ca05334e
+specifications:
+  process: tsmc180

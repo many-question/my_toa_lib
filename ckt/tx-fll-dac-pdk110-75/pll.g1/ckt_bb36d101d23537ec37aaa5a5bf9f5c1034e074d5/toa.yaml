@@ -1,0 +1,20 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_15f5e07a821812e258b35b13f9ccadfc0236b091
+name: pll
+form: transistor
+description: Netlist of the subcircuit tx_fll_dac_pdk110_75 of pll.
+files:
+  netlist:
+  - "75_tx_fll_dac.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_59:
+    ifc: ifc_2b24119bec5cd541e8ad29e1844c89f7cf9e712c
+    ckt: ckt_5726fcd9274c41bd8dc567a1cc2cbefb8c482703
+  pll_inv_pdk110_76:
+    ifc: ifc_7100c632d42111fc4eb77e8840394140db5e30dc
+    ckt: ckt_0ecbea98f5a0808809c979b2ae201dd987a84009
+specifications:
+  process: tsmc180

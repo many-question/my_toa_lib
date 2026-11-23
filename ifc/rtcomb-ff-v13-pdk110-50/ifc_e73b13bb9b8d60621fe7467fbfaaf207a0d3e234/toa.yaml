@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: rtcomb-ff-v13-pdk110-50
+title: rtcomb_ff_v13_pdk110_50
+description: Interface of the subcircuit rtcomb_ff_v13_pdk110_50 of pll.
+pins:
+- {name: d}
+- {name: ck}
+- {name: qb}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,29 @@
+/* Symbol of the subcircuit bank_pulsetrip_v14_pdk110_21 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="bank-pulsetrip-v14-pdk110-21-sym", version="0.1")
+}
+@RNL {
+  $BANK_PULSETRIP_V14_PDK110_21_BLOCK = @DEFINE-SYMBOL(box=[-6, -4, 6, 4]) {
+    (-6, 2)  @PIN(terminal=1, label="CLK", direction="left");
+    (-6, 0)  @PIN(terminal=2, label="RST", direction="left");
+    (-6, -2) @PIN(terminal=[3, 4, 5, 6, 7, 8], label="S<5:0>", direction="left");
+    (6, 2)   @PIN(terminal=10, label="DATA", direction="right");
+    (6, 0)   @PIN(terminal=11, label="ACQCLK", direction="right");
+    (6, -2)  @PIN(terminal=9, label="Q1", direction="right");
+    @LINE { (-6, 2) (-5, 2) };
+    @LINE { (-6, 0) (-5, 0) };
+    @LINE { (-6, -2) (-5, -2) };
+    @LINE { (5, 2) (6, 2) };
+    @LINE { (5, 0) (6, 0) };
+    @LINE { (5, -2) (6, -2) };
+    (0, 0) @RECTANGLE(width=10, height=6);
+    /* High-freq input wave -> /N ring divider loop -> low-freq output wave */
+    @LINE { (-2.4, 1.0) (-2.4, 1.8) (-1.9, 1.8) (-1.9, 1.0) (-1.4, 1.0) (-1.4, 1.8) (-0.9, 1.8) (-0.9, 1.0) };
+    (0.0, 0.0) @CIRCLE(radius=1.1);
+    @LINE { (-0.5, -0.6) (0.5, 0.6) };
+    @LINE { (0.9, 1.0) (0.9, 1.8) (2.1, 1.8) (2.1, 1.0) (2.7, 1.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="bank_pulsetrip_v14_pdk110_21", recursive=true) => @SET-SYMBOL $BANK_PULSETRIP_V14_PDK110_21_BLOCK
+}

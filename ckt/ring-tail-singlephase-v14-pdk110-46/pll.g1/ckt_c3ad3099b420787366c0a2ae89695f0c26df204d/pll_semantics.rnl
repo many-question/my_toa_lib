@@ -1,0 +1,60 @@
+/* The part of the package pll-semantics that the subcircuit ring_tail_singlephase_v14_pdk110_46 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/ring_tail_singlephase_v14_pdk110_46", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="pll_inv_pdk110_7", terminals=["a", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_tg_pdk110_43", terminals=["a", "b", "on", "off", "vdd", "vss"]);
+  @DEVICE(name="*", model="ff_singlephase_v14_pdk110_44", terminals=["d", "clk", "clkb", "q", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_and_pdk110_47", terminals=["a", "b", "y", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $fly_label_style = @DEFINE-STYLE(textcolor="#0f766e", size=0.70, bold=true) {};
+  $MULTIPLEXER_BANK = @DEFINE(
+    roles=["{mux_cells}"],
+    parameters=[["role", "signal_selector"]]
+  ) {};
+  $TG_SYM = @DEFINE-SYMBOL(box=[-2, -2, 2, 2]) {
+    (-2, 0) @PIN(terminal=1, direction="left");
+    (2, 0)  @PIN(terminal=2, direction="right");
+    (0, -2) @PIN(terminal=3, direction="down");
+    (0, 2)  @PIN(terminal=4, direction="up");
+    @LINE { (-2, 0) (-1, 0) };
+    @LINE { (1, 0) (2, 0) };
+    @LINE { (-1, 1) (1, 0) (-1, -1) (-1, 1) };
+    @LINE { (1, 1) (-1, 0) (1, -1) (1, 1) };
+    @LINE { (0, -2) (0, -0.5) };
+    @LINE { (0, 2) (0, 0.9) };
+    (0, 0.7) @CIRCLE(radius=0.2);
+    ? @TEXT("${name}", key="name", halign="start", size=0.65) => @PLACE(1.6, 1.6)
+  };
+  $FF_2CLK_SYM = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 2)  @PIN(terminal=1, label="D", direction="left");
+    (-4, 0)  @PIN(terminal=2, label="CK", direction="left");
+    (-4, -2) @PIN(terminal=3, label="CKB", direction="left");
+    (4, 0)   @PIN(terminal=4, label="Q", direction="right");
+    @LINE { (-4, 2) (-3, 2) };
+    @LINE { (-4, 0) (-3, 0) };
+    @LINE { (-4, -2) (-3, -2) };
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=6);
+    /* Dual-phase clock triangles + master/slave partition + inverter cascade */
+    @LINE { (-3, 0.45) (-2.1, 0.0) (-3, -0.45) };
+    (-2.75, -2.0) @CIRCLE(radius=0.22);
+    @LINE { (0.0, 2.4) (0.0, -2.4) };
+    @LINE { (-1.5, 1.5) (-0.4, 0.9) (-1.5, 0.3) (-1.5, 1.5) };
+    @LINE { (0.4, 1.5) (1.5, 0.9) (0.4, 0.3) (0.4, 1.5) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="pll_inv_pdk110_*", recursive=true) => @SET-SYMBOL $INVERTER;
+  # @SELECT-INSTANCE(model="pll_tg_pdk110_*", recursive=true) => @SET-SYMBOL $TG_SYM;
+  # @SELECT-INSTANCE(model="tx_and_pdk110_47", recursive=true) => @SET-SYMBOL $AND_2INPUT;
+  # @SELECT-INSTANCE(model="ff_singlephase_v14_pdk110_44", recursive=true) => @SET-SYMBOL $FF_2CLK_SYM
+}

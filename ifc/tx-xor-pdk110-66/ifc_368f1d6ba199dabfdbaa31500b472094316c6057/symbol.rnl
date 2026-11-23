@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit tx_xor_pdk110_66 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-xor-pdk110-66-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="tx_xor_pdk110_66", recursive=true) => @SET-SYMBOL(terminals=[[1, "a"], [2, "b"], [3, "y"]]) $XOR_2INPUT
+}

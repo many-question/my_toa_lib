@@ -1,0 +1,19 @@
+{"toa": "source/1"}
+{"object": "ckt_fbcaf01fbb7f7381f7523950cd18de00f82305cb", "label": "div3-fast-v14-pdk110-30/pll.g1", "refs": ["ifc_5ed0a473d63ed432aece0bb7a84f47e36c3acd98", "ifc_34d41d01f4a2a4da3ed9a755226ea7781141a95b", "ckt_43553d08dadbd088532234af8684a66d1f1bdc08", "ifc_82011f33608b5877b36022a9646496ff5f5ae847", "ckt_155d37819e2994afc8d62a34d07c47d44f2dcd82", "ifc_49c41690a6e5826228f07a546469a1c672efd382", "ckt_0bbc17ff799871660ee5633f7ab1478801de1d7a", "ifc_015a16fd74c92f26aa87fc3eb46383671f9aedf6", "ckt_4045bd452bb999fe182687484c36bd648722a9a6", "ifc_d7f770827c5e4072b359cdfe125983c8ea6786f4", "ckt_cee276007dcabcf9d70ebe307d0bbb51dc39ee56"], "license": "CC0-1.0"}
+{"object": "ifc_5ed0a473d63ed432aece0bb7a84f47e36c3acd98", "label": "div3-fast-v14-pdk110-30", "license": "CC0-1.0"}
+{"object": "ifc_34d41d01f4a2a4da3ed9a755226ea7781141a95b", "label": "ff-static-fast-v14-pdk110-33", "license": "CC0-1.0"}
+{"object": "ckt_43553d08dadbd088532234af8684a66d1f1bdc08", "label": "ff-static-fast-v14-pdk110-33/pll.g1", "refs": ["ifc_34d41d01f4a2a4da3ed9a755226ea7781141a95b", "ifc_a7a69147467164617dedf0bb219dc10eebe26a49", "ckt_3c03b2577e5eb6b72a9c0fe0de9330347ddef62f"], "license": "CC0-1.0"}
+{"object": "ifc_82011f33608b5877b36022a9646496ff5f5ae847", "label": "nor-fast-v14-pdk110-32", "license": "CC0-1.0"}
+{"object": "ckt_155d37819e2994afc8d62a34d07c47d44f2dcd82", "label": "nor-fast-v14-pdk110-32/pll.g1", "refs": ["ifc_82011f33608b5877b36022a9646496ff5f5ae847"], "license": "CC0-1.0"}
+{"object": "ifc_49c41690a6e5826228f07a546469a1c672efd382", "label": "pll-inv-pdk110-27", "license": "CC0-1.0"}
+{"object": "ckt_0bbc17ff799871660ee5633f7ab1478801de1d7a", "label": "pll-inv-pdk110-27/pll.g1", "refs": ["ifc_49c41690a6e5826228f07a546469a1c672efd382"], "license": "CC0-1.0"}
+{"object": "ifc_015a16fd74c92f26aa87fc3eb46383671f9aedf6", "label": "pll-inv-pdk110-29", "license": "CC0-1.0"}
+{"object": "ckt_4045bd452bb999fe182687484c36bd648722a9a6", "label": "pll-inv-pdk110-29/pll.g1", "refs": ["ifc_015a16fd74c92f26aa87fc3eb46383671f9aedf6"], "license": "CC0-1.0"}
+{"object": "ifc_d7f770827c5e4072b359cdfe125983c8ea6786f4", "label": "pll-inv-pdk110-31", "license": "CC0-1.0"}
+{"object": "ckt_cee276007dcabcf9d70ebe307d0bbb51dc39ee56", "label": "pll-inv-pdk110-31/pll.g1", "refs": ["ifc_d7f770827c5e4072b359cdfe125983c8ea6786f4"], "license": "CC0-1.0"}
+{"object": "ifc_a7a69147467164617dedf0bb219dc10eebe26a49", "label": "ring-inv-latch-v14-pdk110-34", "license": "CC0-1.0"}
+{"object": "ckt_3c03b2577e5eb6b72a9c0fe0de9330347ddef62f", "label": "ring-inv-latch-v14-pdk110-34/pll.g1", "refs": ["ifc_a7a69147467164617dedf0bb219dc10eebe26a49", "ifc_49c41690a6e5826228f07a546469a1c672efd382", "ckt_0bbc17ff799871660ee5633f7ab1478801de1d7a", "ifc_015a16fd74c92f26aa87fc3eb46383671f9aedf6", "ckt_4045bd452bb999fe182687484c36bd648722a9a6", "ifc_39c919cda426e24303c271735633ef3ac0714783", "ckt_678bc8a5e2892d834c4de7e83b6578fff0ccd40e", "ifc_0e6acf90f241c3baa06114b5d034becf1733db08", "ckt_95ba9afa445ea827eb94654602590e5c255c9a92"], "license": "CC0-1.0"}
+{"object": "ifc_39c919cda426e24303c271735633ef3ac0714783", "label": "pll-tg-pdk110-16", "license": "CC0-1.0"}
+{"object": "ckt_678bc8a5e2892d834c4de7e83b6578fff0ccd40e", "label": "pll-tg-pdk110-16/pll.g1", "refs": ["ifc_39c919cda426e24303c271735633ef3ac0714783"], "license": "CC0-1.0"}
+{"object": "ifc_0e6acf90f241c3baa06114b5d034becf1733db08", "label": "pll-tg-pdk110-35", "license": "CC0-1.0"}
+{"object": "ckt_95ba9afa445ea827eb94654602590e5c255c9a92", "label": "pll-tg-pdk110-35/pll.g1", "refs": ["ifc_0e6acf90f241c3baa06114b5d034becf1733db08"], "license": "CC0-1.0"}

@@ -1,0 +1,16 @@
+type: ifc
+license: CC0-1.0
+name: tx-fll-dac-pdk110-75
+title: tx_fll_dac_pdk110_75
+description: Interface of the subcircuit tx_fll_dac_pdk110_75 of pll.
+pins:
+- {name: d0}
+- {name: d1}
+- {name: d2}
+- {name: d3}
+- {name: d4}
+- {name: d5}
+- {name: enable}
+- {name: out}
+- {name: vdd}
+- {name: vss}

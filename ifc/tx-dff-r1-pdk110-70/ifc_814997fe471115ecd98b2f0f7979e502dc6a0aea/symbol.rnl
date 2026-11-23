@@ -1,0 +1,27 @@
+/* Symbol of the subcircuit tx_dff_r1_pdk110_70 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-dff-r1-pdk110-70-sym", version="0.1")
+}
+@RNL {
+  $TX_DFF_R1_PDK110_70_BLOCK = @DEFINE-SYMBOL(box=[-4, -4, 4, 4]) {
+    (-4, 1)  @PIN(terminal=1, label="D", direction="left");
+    (-4, -1) @PIN(terminal=2, label="CK", direction="left");
+    (0, -4)  @PIN(terminal=3, label="R", direction="down");
+    (4, 0)   @PIN(terminal=4, label="Q", direction="right");
+    @LINE { (-4, 1) (-3, 1) };
+    @LINE { (-4, -1) (-3, -1) };
+    @LINE { (0, -4) (0, -3) };
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=6);
+    /* Edge-triggered clock triangle + internal master-slave bistable latch loop */
+    @LINE { (-3, -0.45) (-2.1, -1.0) (-3, -1.55) };
+    @LINE { (-1.2, 1.5) (0.6, 0.8) (-1.2, 0.1) (-1.2, 1.5) };
+    (0.8, 0.8) @CIRCLE(radius=0.18);
+    @LINE { (1.0, 0.8) (1.5, 0.8) (1.5, -0.3) (-1.6, -0.3) (-1.6, 0.8) (-1.2, 0.8) };
+    @LINE { (0, -2.8) (0, -1.5) (-0.4, -1.9) };
+    @LINE { (0, -1.5) (0.4, -1.9) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="tx_dff_r1_pdk110_70", recursive=true) => @SET-SYMBOL $TX_DFF_R1_PDK110_70_BLOCK
+}

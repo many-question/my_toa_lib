@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: tx-cp-timing-pdk110-78
+title: tx_cp_timing_pdk110_78
+description: Interface of the subcircuit tx_cp_timing_pdk110_78 of pll.
+pins:
+- {name: ref}
+- {name: enable}
+- {name: reset}
+- {name: pulse}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,13 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_e4c1cfa933ce2e4cbb17c311f623a8cea56d7bda
+name: pll
+form: transistor
+description: Netlist of the subcircuit ff_fbdelay50_v14_pdk110_22 of pll.
+files:
+  netlist:
+  - "22_ff_fbdelay50_v14.scs"
+  packages:
+  - pll_semantics.rnl
+specifications:
+  process: tsmc180

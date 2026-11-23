@@ -1,0 +1,38 @@
+/* Symbol of the subcircuit tx_frequency_watchdog_pdk110_80 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-frequency-watchdog-pdk110-80-sym", version="0.1")
+}
+@RNL {
+  $TX_FREQUENCY_WATCHDOG_PDK110_80_BLOCK = @DEFINE-SYMBOL(box=[-6, -6, 6, 6]) {
+    (-6, 4)  @PIN(terminal=1, label="REF", direction="left");
+    (-6, 2)  @PIN(terminal=2, label="RST", direction="left");
+    (-6, 0)  @PIN(terminal=3, label="ACT", direction="left");
+    (-6, -2) @PIN(terminal=[4, 5, 6, 7, 8, 9], label="K<5:0>", direction="left");
+    (-6, -4) @PIN(terminal=[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23], label="M<13:0>", direction="left");
+    (6, 3)   @PIN(terminal=24, label="WGATE", direction="right");
+    (6, 1)   @PIN(terminal=25, label="WRST", direction="right");
+    (6, -1)  @PIN(terminal=26, label="FRQ_OK", direction="right");
+    (6, -3)  @PIN(terminal=27, label="VALID", direction="right");
+    @LINE { (-6, 4) (-5, 4) };
+    @LINE { (-6, 2) (-5, 2) };
+    @LINE { (-6, 0) (-5, 0) };
+    @LINE { (-6, -2) (-5, -2) };
+    @LINE { (-6, -4) (-5, -4) };
+    @LINE { (5, 3) (6, 3) };
+    @LINE { (5, 1) (6, 1) };
+    @LINE { (5, -1) (6, -1) };
+    @LINE { (5, -3) (6, -3) };
+    (0, 0) @RECTANGLE(width=10, height=10);
+    /* Clock triangle + Watchdog timer circle + Frequency tolerance window */
+    @LINE { (-5, 4.45) (-4.1, 4.0) (-5, 3.55) };
+    (0.0, 1.4) @CIRCLE(radius=1.4);
+    @LINE { (0.0, 1.4) (0.0, 2.3) };
+    @LINE { (0.0, 1.4) (0.8, 1.4) };
+    @LINE { (-1.8, -1.2) (1.8, -1.2) };
+    @LINE { (-1.8, -3.2) (1.8, -3.2) };
+    @LINE { (-1.6, -2.2) (-0.9, -1.5) (-0.2, -2.8) (0.5, -1.6) (1.2, -2.6) (1.7, -2.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 5.6)
+  };
+  # @SELECT-INSTANCE(model="tx_frequency_watchdog_pdk110_80", recursive=true) => @SET-SYMBOL $TX_FREQUENCY_WATCHDOG_PDK110_80_BLOCK
+}

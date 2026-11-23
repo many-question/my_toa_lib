@@ -1,0 +1,16 @@
+type: ifc
+license: CC0-1.0
+name: ring-tail-singlephase-v14-pdk110-46
+title: ring_tail_singlephase_v14_pdk110_46
+description: Interface of the subcircuit ring_tail_singlephase_v14_pdk110_46 of pll.
+pins:
+- {name: d}
+- {name: clk}
+- {name: clkb}
+- {name: load}
+- {name: loadb}
+- {name: init}
+- {name: selected}
+- {name: q}
+- {name: vdd}
+- {name: vss}

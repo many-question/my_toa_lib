@@ -1,0 +1,42 @@
+/* Symbol of the subcircuit tx_pll_config_pdk110_57 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-pll-config-pdk110-57-sym", version="0.1")
+}
+@RNL {
+  $TX_PLL_CONFIG_PDK110_57_BLOCK = @DEFINE-SYMBOL(box=[-6, -6, 6, 6]) {
+    (-6, 4)  @PIN(terminal=1, label="REF", direction="left");
+    (-6, 2)  @PIN(terminal=2, label="RST", direction="left");
+    (-6, 0)  @PIN(terminal=3, label="APPLY", direction="left");
+    (-6, -3) @PIN(terminal=[4, 5, 6, 7, 8, 9], label="K<5:0>", direction="left");
+    (6, 4)   @PIN(terminal=[10, 11, 12, 13, 14, 15], label="AK<5:0>", direction="right");
+    (6, 2)   @PIN(terminal=[16, 17, 18, 19, 20, 21], label="S<5:0>", direction="right");
+    (6, 0)   @PIN(terminal=22, label="RDY", direction="right");
+    (6, -2)  @PIN(terminal=23, label="INV", direction="right");
+    (6, -4)  @PIN(terminal=24, label="CRST", direction="right");
+    @LINE { (-6, 4) (-5, 4) };
+    @LINE { (-6, 2) (-5, 2) };
+    @LINE { (-6, 0) (-5, 0) };
+    @LINE { (-6, -3) (-5, -3) };
+    @LINE { (5, 4) (6, 4) };
+    @LINE { (5, 2) (6, 2) };
+    @LINE { (5, 0) (6, 0) };
+    @LINE { (5, -2) (6, -2) };
+    @LINE { (5, -4) (6, -4) };
+    (0, 0) @RECTANGLE(width=10, height=10);
+    /* Clock triangle + Shadow/Active Register Grids + Modulus Decoder */
+    @LINE { (-5, 4.45) (-4.1, 4.0) (-5, 3.55) };
+    (0, 2.2) @RECTANGLE(width=4.4, height=1.6);
+    @LINE { (-1.1, 3.0) (-1.1, 1.4) };
+    @LINE { (0.0, 3.0) (0.0, 1.4) };
+    @LINE { (1.1, 3.0) (1.1, 1.4) };
+    (0, -1.8) @RECTANGLE(width=4.4, height=1.6);
+    @LINE { (-1.1, -1.0) (-1.1, -2.6) };
+    @LINE { (0.0, -1.0) (0.0, -2.6) };
+    @LINE { (1.1, -1.0) (1.1, -2.6) };
+    @LINE { (0.0, -0.8) (0.0, 1.2) (-0.4, 0.7) };
+    @LINE { (0.0, 1.2) (0.4, 0.7) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 5.6)
+  };
+  # @SELECT-INSTANCE(model="tx_pll_config_pdk110_57", recursive=true) => @SET-SYMBOL $TX_PLL_CONFIG_PDK110_57_BLOCK
+}

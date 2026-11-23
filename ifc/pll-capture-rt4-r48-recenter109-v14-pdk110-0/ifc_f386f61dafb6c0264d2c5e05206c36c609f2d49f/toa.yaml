@@ -1,0 +1,24 @@
+type: ifc
+license: CC0-1.0
+name: pll-capture-rt4-r48-recenter109-v14-pdk110-0
+title: pll_capture_rt4_r48_recenter109_v14_pdk110_0
+description: Interface of the subcircuit pll_capture_rt4_r48_recenter109_v14_pdk110_0 of pll.
+pins:
+- {name: ref}
+- {name: reset}
+- {name: apply}
+- {name: k0}
+- {name: k1}
+- {name: k2}
+- {name: k3}
+- {name: k4}
+- {name: k5}
+- {name: out}
+- {name: qualified}
+- {name: range_error}
+- {name: cfg_ready}
+- {name: frequency_good}
+- {name: phase_good}
+- {name: amp_good}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,9 @@
+{"toa": "source/1"}
+{"object": "ckt_5d3f41e392bd84b7d6efec1cf0022399e35c980f", "label": "lc-vco-physical-v14-pdk110-1/pll.g1", "refs": ["ifc_1bf844c9e8f65dbeb74123ee0d08d747079d4ceb", "ifc_fc4005c53d9d494487bcd0d6c015247ec3266555", "ckt_93f68e1bb03c7c43fb3c485747d61fc40afaa46a", "ifc_b5efe2c3f41c745474cdf5007bd1f29425331e5d", "ckt_2ac6ba08d7d66b06cd2fd8a38db0be3bc3d30b6e"], "license": "CC0-1.0"}
+{"object": "ifc_1bf844c9e8f65dbeb74123ee0d08d747079d4ceb", "label": "lc-vco-physical-v14-pdk110-1", "license": "CC0-1.0"}
+{"object": "ifc_fc4005c53d9d494487bcd0d6c015247ec3266555", "label": "lc-core-physical-v14-pdk110-2", "license": "CC0-1.0"}
+{"object": "ckt_93f68e1bb03c7c43fb3c485747d61fc40afaa46a", "label": "lc-core-physical-v14-pdk110-2/pll.g1", "refs": ["ifc_fc4005c53d9d494487bcd0d6c015247ec3266555", "ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020", "ckt_b4b7d7bb821cdb7e6b170c8b08c61f21a7bc0a82"], "license": "CC0-1.0"}
+{"object": "ifc_b5efe2c3f41c745474cdf5007bd1f29425331e5d", "label": "tx-cap-bank-switched-v4-pdk110-4", "license": "CC0-1.0"}
+{"object": "ckt_2ac6ba08d7d66b06cd2fd8a38db0be3bc3d30b6e", "label": "tx-cap-bank-switched-v4-pdk110-4/pll.g1", "refs": ["ifc_b5efe2c3f41c745474cdf5007bd1f29425331e5d"], "license": "CC0-1.0"}
+{"object": "ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020", "label": "tx-inductor-pi-pdk110-3", "license": "CC0-1.0"}
+{"object": "ckt_b4b7d7bb821cdb7e6b170c8b08c61f21a7bc0a82", "label": "tx-inductor-pi-pdk110-3/pll.g1", "refs": ["ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020"], "license": "CC0-1.0"}

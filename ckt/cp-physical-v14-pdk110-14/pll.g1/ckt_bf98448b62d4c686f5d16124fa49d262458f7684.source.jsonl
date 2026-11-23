@@ -1,0 +1,9 @@
+{"toa": "source/1"}
+{"object": "ckt_bf98448b62d4c686f5d16124fa49d262458f7684", "label": "cp-physical-v14-pdk110-14/pll.g1", "refs": ["ifc_c7c17695c820385fb9bca6f1910926f0ce0b6987", "ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b", "ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d", "ifc_938e5a1a68f7f29747781ba4346c7cb221591ecb", "ckt_cdafd96b2ffcdae913ff574924bd7c2f29734995", "ifc_39c919cda426e24303c271735633ef3ac0714783", "ckt_678bc8a5e2892d834c4de7e83b6578fff0ccd40e"], "license": "CC0-1.0"}
+{"object": "ifc_c7c17695c820385fb9bca6f1910926f0ce0b6987", "label": "cp-physical-v14-pdk110-14", "license": "CC0-1.0"}
+{"object": "ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b", "label": "pll-inv-pdk110-7", "license": "CC0-1.0"}
+{"object": "ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d", "label": "pll-inv-pdk110-7/pll.g1", "refs": ["ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b"], "license": "CC0-1.0"}
+{"object": "ifc_938e5a1a68f7f29747781ba4346c7cb221591ecb", "label": "pll-nand2-pdk110-15", "license": "CC0-1.0"}
+{"object": "ckt_cdafd96b2ffcdae913ff574924bd7c2f29734995", "label": "pll-nand2-pdk110-15/pll.g1", "refs": ["ifc_938e5a1a68f7f29747781ba4346c7cb221591ecb"], "license": "CC0-1.0"}
+{"object": "ifc_39c919cda426e24303c271735633ef3ac0714783", "label": "pll-tg-pdk110-16", "license": "CC0-1.0"}
+{"object": "ckt_678bc8a5e2892d834c4de7e83b6578fff0ccd40e", "label": "pll-tg-pdk110-16/pll.g1", "refs": ["ifc_39c919cda426e24303c271735633ef3ac0714783"], "license": "CC0-1.0"}

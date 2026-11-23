@@ -1,0 +1,21 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_fbd9fa31e31e45e531bc473bb73141979f26c24a
+name: pll
+form: composition
+description: Netlist of the subcircuit rt_noise_scale4_v14_pdk110_49 of pll.
+files:
+  netlist:
+  - "49_rt_noise_scale4_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_51:
+    ifc: ifc_39a62ebcfa081e6bf63f4cd1e542348d16f524ba
+    ckt: ckt_df8c7a47059436b01a0ecf06e595c5ea22c2c042
+  pll_inv_pdk110_52:
+    ifc: ifc_837e8bb24d533b6f89d0dcfcaf3b75a9cb8e6b34
+    ckt: ckt_d0074c37c97c5a32e9406bf564962daa9750fe41
+  rtcomb_ff_v13_pdk110_50:
+    ifc: ifc_e73b13bb9b8d60621fe7467fbfaaf207a0d3e234
+    ckt: ckt_53d4efac67e9595e20c95a8bb92bc9d48a20589e

@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit pll_tspc_inv_pdk110_25 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-tspc-inv-pdk110-25-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="pll_tspc_inv_pdk110_25", recursive=true) => @SET-SYMBOL(terminals=[[1, "d"], [2, "ck"], [3, "q"]]) $D_FLIP_FLOP_Q_ONLY
+}

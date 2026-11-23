@@ -1,0 +1,15 @@
+type: ifc
+license: CC0-1.0
+name: ring-sync-singlephase-v14-pdk110-42
+title: ring_sync_singlephase_v14_pdk110_42
+description: Interface of the subcircuit ring_sync_singlephase_v14_pdk110_42 of pll.
+pins:
+- {name: d}
+- {name: clk}
+- {name: clkb}
+- {name: load}
+- {name: loadb}
+- {name: init}
+- {name: q}
+- {name: vdd}
+- {name: vss}

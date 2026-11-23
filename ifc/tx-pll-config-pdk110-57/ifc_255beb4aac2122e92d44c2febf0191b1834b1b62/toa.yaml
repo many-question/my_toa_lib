@@ -1,0 +1,32 @@
+type: ifc
+license: CC0-1.0
+name: tx-pll-config-pdk110-57
+title: tx_pll_config_pdk110_57
+description: Interface of the subcircuit tx_pll_config_pdk110_57 of pll.
+pins:
+- {name: refclk}
+- {name: reset}
+- {name: apply}
+- {name: cfg_k0}
+- {name: cfg_k1}
+- {name: cfg_k2}
+- {name: cfg_k3}
+- {name: cfg_k4}
+- {name: cfg_k5}
+- {name: active_k0}
+- {name: active_k1}
+- {name: active_k2}
+- {name: active_k3}
+- {name: active_k4}
+- {name: active_k5}
+- {name: select_m0}
+- {name: select_m1}
+- {name: select_m2}
+- {name: select_m3}
+- {name: select_m4}
+- {name: select_m5}
+- {name: ready}
+- {name: invalid}
+- {name: divider_reset}
+- {name: vdd}
+- {name: vss}

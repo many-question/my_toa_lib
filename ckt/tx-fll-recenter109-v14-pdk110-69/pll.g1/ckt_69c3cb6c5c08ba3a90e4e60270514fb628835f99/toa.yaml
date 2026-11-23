@@ -1,0 +1,33 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_0ecf20e0af49e27118649c997e04485609729cea
+name: pll
+form: composition
+description: Netlist of the subcircuit tx_fll_recenter109_v14_pdk110_69 of pll.
+files:
+  netlist:
+  - "69_tx_fll_recenter109_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_7:
+    ifc: ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b
+    ckt: ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d
+  tx_and_pdk110_47:
+    ifc: ifc_68439ec415a2984bae048865f408de2e7ebbfae5
+    ckt: ckt_ab582ec2b0e9b43066e67e0dbc111ca2ca05334e
+  tx_dff_r0_pdk110_58:
+    ifc: ifc_46bd6fd224f9bf51a4504c927f82af13da0b3e0e
+    ckt: ckt_c2cd0a3ce14edf02119cfd8390874d3e4fa8b2bd
+  tx_dff_r1_pdk110_70:
+    ifc: ifc_814997fe471115ecd98b2f0f7979e502dc6a0aea
+    ckt: ckt_4dee70c87cf61abf0927f00f63e6ea86ecd8510a
+  tx_mux_pdk110_64:
+    ifc: ifc_689907d0b5eeb84b85d9e7c2b13a8de09ba30dc5
+    ckt: ckt_536243f22e410a8ee33c316034791f358c186dde
+  tx_or_pdk110_67:
+    ifc: ifc_dfef44e5193b08b04bfd74738aea8f0d1541d4a1
+    ckt: ckt_c1048463f3845d7caf8345fbef7232e2149ba242
+  tx_xor_pdk110_66:
+    ifc: ifc_368f1d6ba199dabfdbaa31500b472094316c6057
+    ckt: ckt_ad2ac0d10dffe9d5df97fada0ab570889ba647d0

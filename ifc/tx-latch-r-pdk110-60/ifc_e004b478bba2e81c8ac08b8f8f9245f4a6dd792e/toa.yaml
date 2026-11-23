@@ -1,0 +1,13 @@
+type: ifc
+license: CC0-1.0
+name: tx-latch-r-pdk110-60
+title: tx_latch_r_pdk110_60
+description: Interface of the subcircuit tx_latch_r_pdk110_60 of pll.
+pins:
+- {name: d}
+- {name: gate}
+- {name: gateb}
+- {name: resetb}
+- {name: q}
+- {name: vdd}
+- {name: vss}

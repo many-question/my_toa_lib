@@ -1,0 +1,19 @@
+type: ifc
+license: CC0-1.0
+name: bank-pulsetrip-v14-pdk110-21
+title: bank_pulsetrip_v14_pdk110_21
+description: Interface of the subcircuit bank_pulsetrip_v14_pdk110_21 of pll.
+pins:
+- {name: clk}
+- {name: reset}
+- {name: s0}
+- {name: s1}
+- {name: s2}
+- {name: s3}
+- {name: s4}
+- {name: s5}
+- {name: q1}
+- {name: out}
+- {name: fllclk}
+- {name: vdd}
+- {name: vss}

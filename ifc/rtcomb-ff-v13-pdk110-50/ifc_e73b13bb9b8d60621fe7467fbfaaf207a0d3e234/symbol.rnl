@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit rtcomb_ff_v13_pdk110_50 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="rtcomb-ff-v13-pdk110-50-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="rtcomb_ff_v13_pdk110_50", recursive=true) => @SET-SYMBOL(terminals=[[1, "d"], [2, "ck"], [3, "q"]]) $D_FLIP_FLOP_Q_ONLY
+}

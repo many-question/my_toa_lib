@@ -1,0 +1,37 @@
+/* Symbol of the subcircuit ring_tail_singlephase_v14_pdk110_46 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="ring-tail-singlephase-v14-pdk110-46-sym", version="0.1")
+}
+@RNL {
+  $RING_TAIL_SINGLEPHASE_V14_PDK110_46_BLOCK = @DEFINE-SYMBOL(box=[-5, -6, 5, 6]) {
+    (-5, 4)  @PIN(terminal=1, label="D", direction="left");
+    (-5, 2)  @PIN(terminal=2, label="CK", direction="left");
+    (-5, 0)  @PIN(terminal=3, label="CKB", direction="left");
+    (-5, -2) @PIN(terminal=4, label="LD", direction="left");
+    (-5, -4) @PIN(terminal=5, label="LDB", direction="left");
+    (-2, -6) @PIN(terminal=6, label="INIT", direction="down");
+    (2, -6)  @PIN(terminal=7, label="SEL", direction="down");
+    (5, 0)   @PIN(terminal=8, label="Q", direction="right");
+    @LINE { (-5, 4) (-4, 4) };
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, 0) (-4, 0) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (-5, -4) (-4, -4) };
+    @LINE { (-2, -6) (-2, -5) };
+    @LINE { (2, -6) (2, -5) };
+    @LINE { (4, 0) (5, 0) };
+    (0, 0) @RECTANGLE(width=8, height=10);
+    /* Internal tail selector + load MUX + DFF storage stage */
+    @LINE { (-4, 2.45) (-3.1, 2.0) (-4, 1.55) };
+    (-3.75, 0.0) @CIRCLE(radius=0.22);
+    (-3.75, -4.0) @CIRCLE(radius=0.22);
+    @LINE { (-2.2, 3.6) (-0.8, 2.9) (-0.8, 1.5) (-2.2, 0.8) (-2.2, 3.6) };
+    @LINE { (-0.8, 2.2) (0.2, 2.2) };
+    (1.6, 1.2) @RECTANGLE(width=2.8, height=3.8);
+    @LINE { (2.0, -4.8) (2.0, -0.7) };
+    (2.0, -1.8) @CIRCLE(radius=0.55);
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 5.6)
+  };
+  # @SELECT-INSTANCE(model="ring_tail_singlephase_v14_pdk110_46", recursive=true) => @SET-SYMBOL $RING_TAIL_SINGLEPHASE_V14_PDK110_46_BLOCK
+}

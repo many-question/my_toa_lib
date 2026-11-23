@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit pll_nor2_pdk110_68 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-nor2-pdk110-68-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="pll_nor2_pdk110_68", recursive=true) => @SET-SYMBOL(terminals=[[1, "a"], [2, "b"], [3, "y"]]) $NOR_2INPUT
+}

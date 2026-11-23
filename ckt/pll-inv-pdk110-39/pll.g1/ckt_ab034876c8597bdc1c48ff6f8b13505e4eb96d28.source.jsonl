@@ -1,0 +1,3 @@
+{"toa": "source/1"}
+{"object": "ckt_ab034876c8597bdc1c48ff6f8b13505e4eb96d28", "label": "pll-inv-pdk110-39/pll.g1", "refs": ["ifc_019f90fe72836b84aadaca973cddd00112b0d56e"], "license": "CC0-1.0"}
+{"object": "ifc_019f90fe72836b84aadaca973cddd00112b0d56e", "label": "pll-inv-pdk110-39", "license": "CC0-1.0"}

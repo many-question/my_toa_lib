@@ -1,0 +1,24 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_dfb825d10b970588d0ff3799ff048089427ab989
+name: pll
+form: composition
+description: Netlist of the subcircuit pll_latch_pdk110_72 of pll.
+files:
+  netlist:
+  - "72_pll_latch.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_48:
+    ifc: ifc_3a5fa68b8ec3d2bf530ffc412e57e7efffcea3a2
+    ckt: ckt_7febc9e2356a0bc13761d7bccacb36a6b71f4a12
+  pll_inv_pdk110_62:
+    ifc: ifc_9522e39b3083221e6f84565827fd9e382cbac1db
+    ckt: ckt_7b69dbda4474ce4ba36b9133d8887d5953d6025f
+  pll_tg_pdk110_61:
+    ifc: ifc_9c4c65d79d17af09e9ad39bee7f269d963eb52f5
+    ckt: ckt_878288d7c22e121db93a85abd5d5098731d1e57f
+  pll_tg_pdk110_63:
+    ifc: ifc_a8ffeb62592a9cade2366c20f96d239a07185d6f
+    ckt: ckt_ca4b5645b3f7cf6a9577f21ca3af509ae9d2a60d

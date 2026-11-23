@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: tx-or-pdk110-67
+title: tx_or_pdk110_67
+description: Interface of the subcircuit tx_or_pdk110_67 of pll.
+pins:
+- {name: a}
+- {name: b}
+- {name: "y"}
+- {name: vdd}
+- {name: vss}

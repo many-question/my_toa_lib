@@ -1,0 +1,24 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_a7a69147467164617dedf0bb219dc10eebe26a49
+name: pll
+form: composition
+description: Netlist of the subcircuit ring_inv_latch_v14_pdk110_34 of pll.
+files:
+  netlist:
+  - "34_ring_inv_latch_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_27:
+    ifc: ifc_49c41690a6e5826228f07a546469a1c672efd382
+    ckt: ckt_0bbc17ff799871660ee5633f7ab1478801de1d7a
+  pll_inv_pdk110_29:
+    ifc: ifc_015a16fd74c92f26aa87fc3eb46383671f9aedf6
+    ckt: ckt_4045bd452bb999fe182687484c36bd648722a9a6
+  pll_tg_pdk110_16:
+    ifc: ifc_39c919cda426e24303c271735633ef3ac0714783
+    ckt: ckt_678bc8a5e2892d834c4de7e83b6578fff0ccd40e
+  pll_tg_pdk110_35:
+    ifc: ifc_0e6acf90f241c3baa06114b5d034becf1733db08
+    ckt: ckt_95ba9afa445ea827eb94654602590e5c255c9a92

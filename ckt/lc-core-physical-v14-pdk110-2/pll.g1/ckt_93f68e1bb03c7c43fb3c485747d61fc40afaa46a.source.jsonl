@@ -1,0 +1,5 @@
+{"toa": "source/1"}
+{"object": "ckt_93f68e1bb03c7c43fb3c485747d61fc40afaa46a", "label": "lc-core-physical-v14-pdk110-2/pll.g1", "refs": ["ifc_fc4005c53d9d494487bcd0d6c015247ec3266555", "ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020", "ckt_b4b7d7bb821cdb7e6b170c8b08c61f21a7bc0a82"], "license": "CC0-1.0"}
+{"object": "ifc_fc4005c53d9d494487bcd0d6c015247ec3266555", "label": "lc-core-physical-v14-pdk110-2", "license": "CC0-1.0"}
+{"object": "ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020", "label": "tx-inductor-pi-pdk110-3", "license": "CC0-1.0"}
+{"object": "ckt_b4b7d7bb821cdb7e6b170c8b08c61f21a7bc0a82", "label": "tx-inductor-pi-pdk110-3/pll.g1", "refs": ["ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020"], "license": "CC0-1.0"}

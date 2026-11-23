@@ -1,0 +1,27 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_5ed0a473d63ed432aece0bb7a84f47e36c3acd98
+name: pll
+form: composition
+description: Netlist of the subcircuit div3_fast_v14_pdk110_30 of pll.
+files:
+  netlist:
+  - "30_div3_fast_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  ff_static_fast_v14_pdk110_33:
+    ifc: ifc_34d41d01f4a2a4da3ed9a755226ea7781141a95b
+    ckt: ckt_43553d08dadbd088532234af8684a66d1f1bdc08
+  nor_fast_v14_pdk110_32:
+    ifc: ifc_82011f33608b5877b36022a9646496ff5f5ae847
+    ckt: ckt_155d37819e2994afc8d62a34d07c47d44f2dcd82
+  pll_inv_pdk110_27:
+    ifc: ifc_49c41690a6e5826228f07a546469a1c672efd382
+    ckt: ckt_0bbc17ff799871660ee5633f7ab1478801de1d7a
+  pll_inv_pdk110_29:
+    ifc: ifc_015a16fd74c92f26aa87fc3eb46383671f9aedf6
+    ckt: ckt_4045bd452bb999fe182687484c36bd648722a9a6
+  pll_inv_pdk110_31:
+    ifc: ifc_d7f770827c5e4072b359cdfe125983c8ea6786f4
+    ckt: ckt_cee276007dcabcf9d70ebe307d0bbb51dc39ee56

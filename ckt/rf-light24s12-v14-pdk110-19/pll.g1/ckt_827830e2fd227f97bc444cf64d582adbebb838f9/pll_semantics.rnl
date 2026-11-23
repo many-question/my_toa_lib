@@ -1,0 +1,21 @@
+/* The part of the package pll-semantics that the subcircuit rf_light24s12_v14_pdk110_19 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/rf_light24s12_v14_pdk110_19", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="pll_inv_pdk110_20", terminals=["a", "y", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $SELF_BIASED_RF_BUFFER = @DEFINE(
+    roles=[["ac_cap", "instance"], ["bias_resistor", "instance"], "{inverter_chain}"],
+    parameters=[["coupling", "single_ended_AC"]]
+  ) {};
+  # @SELECT-INSTANCE(model="pll_inv_pdk110_*", recursive=true) => @SET-SYMBOL $INVERTER
+}

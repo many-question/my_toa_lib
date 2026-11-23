@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: pll-tspc-inv-pdk110-25
+title: pll_tspc_inv_pdk110_25
+description: Interface of the subcircuit pll_tspc_inv_pdk110_25 of pll.
+pins:
+- {name: d}
+- {name: ck}
+- {name: qb}
+- {name: vdd}
+- {name: vss}

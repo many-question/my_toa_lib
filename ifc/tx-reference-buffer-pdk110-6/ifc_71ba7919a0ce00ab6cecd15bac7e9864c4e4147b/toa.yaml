@@ -1,0 +1,10 @@
+type: ifc
+license: CC0-1.0
+name: tx-reference-buffer-pdk110-6
+title: tx_reference_buffer_pdk110_6
+description: Interface of the subcircuit tx_reference_buffer_pdk110_6 of pll.
+pins:
+- {name: inp}
+- {name: out}
+- {name: vdd}
+- {name: vss}

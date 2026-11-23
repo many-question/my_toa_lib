@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: ring-inv-latch-v14-pdk110-34
+title: ring_inv_latch_v14_pdk110_34
+description: Interface of the subcircuit ring_inv_latch_v14_pdk110_34 of pll.
+pins:
+- {name: d}
+- {name: ck}
+- {name: ckb}
+- {name: qb}
+- {name: vdd}
+- {name: vss}

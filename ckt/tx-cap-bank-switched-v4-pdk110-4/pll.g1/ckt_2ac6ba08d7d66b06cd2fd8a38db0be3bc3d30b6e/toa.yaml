@@ -1,0 +1,13 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_b5efe2c3f41c745474cdf5007bd1f29425331e5d
+name: pll
+form: transistor
+description: Netlist of the subcircuit tx_cap_bank_switched_v4_pdk110_4 of pll.
+files:
+  netlist:
+  - "04_tx_cap_bank_switched_v4.scs"
+  packages:
+  - pll_semantics.rnl
+specifications:
+  process: tsmc180

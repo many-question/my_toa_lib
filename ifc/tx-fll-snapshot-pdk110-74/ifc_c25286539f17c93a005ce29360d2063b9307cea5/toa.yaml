@@ -1,0 +1,37 @@
+type: ifc
+license: CC0-1.0
+name: tx-fll-snapshot-pdk110-74
+title: tx_fll_snapshot_pdk110_74
+description: Interface of the subcircuit tx_fll_snapshot_pdk110_74 of pll.
+pins:
+- {name: gate}
+- {name: d0}
+- {name: d1}
+- {name: d2}
+- {name: d3}
+- {name: d4}
+- {name: d5}
+- {name: d6}
+- {name: d7}
+- {name: d8}
+- {name: d9}
+- {name: d10}
+- {name: d11}
+- {name: d12}
+- {name: d13}
+- {name: q0}
+- {name: q1}
+- {name: q2}
+- {name: q3}
+- {name: q4}
+- {name: q5}
+- {name: q6}
+- {name: q7}
+- {name: q8}
+- {name: q9}
+- {name: q10}
+- {name: q11}
+- {name: q12}
+- {name: q13}
+- {name: vdd}
+- {name: vss}

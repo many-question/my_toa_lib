@@ -1,0 +1,17 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_fd603303785582d0aeec7c156c39068805bdd3fe
+name: pll
+form: passive
+description: Netlist of the subcircuit rf_light24s12_v14_pdk110_19 of pll.
+files:
+  netlist:
+  - "19_rf_light24s12_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_20:
+    ifc: ifc_652cbca0d91e3956ce017c8edca7135b7f4f78d4
+    ckt: ckt_5031362f77188ee9992468dd62a83fe9f3e62eff
+specifications:
+  process: tsmc180

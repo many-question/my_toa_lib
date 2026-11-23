@@ -1,0 +1,49 @@
+/* The part of the package pll-semantics that the subcircuit tx_sampler_pdk110_11 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/tx_sampler_pdk110_11", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="pll_inv_pdk110_12", terminals=["a", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_tg_pdk110_13", terminals=["a", "b", "on", "off", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $defect_style = @DEFINE-STYLE(linecolor="#c53030", textcolor="#c53030", bold=true, size=0.75) {};
+  $defect_box = @DEFINE-STYLE(linecolor="#e53e3e", linestyle="dashed", fillcolor="#fff5f5") {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $fly_label_style = @DEFINE-STYLE(textcolor="#0f766e", size=0.70, bold=true) {};
+  $SUB_SAMPLING_PD = @DEFINE(
+    roles=[["sampler_p", "instance"], ["sampler_n", "instance"], ["hold_cap_p", "instance"], ["hold_cap_n", "instance"], "{clock_buffers}"],
+    parameters=[["hold_cap", "40fF"], ["architecture", "differential_track_and_hold"]]
+  ) {};
+  $DESIGN_DEFECT = @DEFINE(
+    roles=["{culprit_devices}", "{affected_nets}"],
+    parameters=[
+      ["severity", "high"],
+      ["category", "electrical_bug"],
+      ["mechanism", "unspecified"],
+      ["recommendation", "fix_in_revision"]
+    ]
+  ) {};
+  $TG_SYM = @DEFINE-SYMBOL(box=[-2, -2, 2, 2]) {
+    (-2, 0) @PIN(terminal=1, direction="left");
+    (2, 0)  @PIN(terminal=2, direction="right");
+    (0, -2) @PIN(terminal=3, direction="down");
+    (0, 2)  @PIN(terminal=4, direction="up");
+    @LINE { (-2, 0) (-1, 0) };
+    @LINE { (1, 0) (2, 0) };
+    @LINE { (-1, 1) (1, 0) (-1, -1) (-1, 1) };
+    @LINE { (1, 1) (-1, 0) (1, -1) (1, 1) };
+    @LINE { (0, -2) (0, -0.5) };
+    @LINE { (0, 2) (0, 0.9) };
+    (0, 0.7) @CIRCLE(radius=0.2);
+    ? @TEXT("${name}", key="name", halign="start", size=0.65) => @PLACE(1.6, 1.6)
+  };
+  # @SELECT-INSTANCE(model="pll_inv_pdk110_*", recursive=true) => @SET-SYMBOL $INVERTER;
+  # @SELECT-INSTANCE(model="pll_tg_pdk110_*", recursive=true) => @SET-SYMBOL $TG_SYM
+}

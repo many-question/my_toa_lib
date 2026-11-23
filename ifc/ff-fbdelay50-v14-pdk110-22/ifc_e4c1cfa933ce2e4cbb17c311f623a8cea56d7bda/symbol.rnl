@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit ff_fbdelay50_v14_pdk110_22 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="ff-fbdelay50-v14-pdk110-22-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="ff_fbdelay50_v14_pdk110_22", recursive=true) => @SET-SYMBOL(terminals=[[1, "d"], [2, "ck"], [3, "q"]]) $D_FLIP_FLOP_Q_ONLY
+}

@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: ff-fbdelay50-v14-pdk110-22
+title: ff_fbdelay50_v14_pdk110_22
+description: Interface of the subcircuit ff_fbdelay50_v14_pdk110_22 of pll.
+pins:
+- {name: d}
+- {name: ck}
+- {name: qb}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,17 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_fc4005c53d9d494487bcd0d6c015247ec3266555
+name: pll
+form: transistor
+description: Netlist of the subcircuit lc_core_physical_v14_pdk110_2 of pll.
+files:
+  netlist:
+  - "02_lc_core_physical_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  tx_inductor_pi_pdk110_3:
+    ifc: ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020
+    ckt: ckt_b4b7d7bb821cdb7e6b170c8b08c61f21a7bc0a82
+specifications:
+  process: tsmc180

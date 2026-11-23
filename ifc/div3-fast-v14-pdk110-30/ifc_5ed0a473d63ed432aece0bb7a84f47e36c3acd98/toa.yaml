@@ -1,0 +1,10 @@
+type: ifc
+license: CC0-1.0
+name: div3-fast-v14-pdk110-30
+title: div3_fast_v14_pdk110_30
+description: Interface of the subcircuit div3_fast_v14_pdk110_30 of pll.
+pins:
+- {name: clk}
+- {name: out}
+- {name: vdd}
+- {name: vss}

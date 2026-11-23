@@ -1,0 +1,20 @@
+/* Symbol of the subcircuit tx_bias_mid_v5_pdk110_5 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-bias-mid-v5-pdk110-5-sym", version="0.1")
+}
+@RNL {
+  $TX_BIAS_MID_V5_PDK110_5_BLOCK = @DEFINE-SYMBOL(box=[-4, -2, 4, 2]) {
+    (4, 0) @PIN(terminal=3, label="VMID", direction="right");
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=4);
+    /* Internal resistive voltage divider R-R ladder + center tap to VMID */
+    @LINE { (-1.6, 1.6) (-0.4, 1.6) };
+    @LINE { (-1.0, 1.6) (-1.0, 1.2) (-1.4, 0.9) (-0.6, 0.6) (-1.0, 0.3) (-1.0, -0.3) (-1.4, -0.6) (-0.6, -0.9) (-1.0, -1.2) (-1.0, -1.6) };
+    @LINE { (-1.5, -1.6) (-0.5, -1.6) };
+    (-1.0, 0.0) @CIRCLE(radius=0.18);
+    @LINE { (-1.0, 0.0) (0.6, 0.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 2.5)
+  };
+  # @SELECT-INSTANCE(model="tx_bias_mid_v5_pdk110_5", recursive=true) => @SET-SYMBOL $TX_BIAS_MID_V5_PDK110_5_BLOCK
+}

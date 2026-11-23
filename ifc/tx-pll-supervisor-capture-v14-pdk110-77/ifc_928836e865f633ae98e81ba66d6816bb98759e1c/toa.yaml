@@ -1,0 +1,19 @@
+type: ifc
+license: CC0-1.0
+name: tx-pll-supervisor-capture-v14-pdk110-77
+title: tx_pll_supervisor_capture_v14_pdk110_77
+description: Interface of the subcircuit tx_pll_supervisor_capture_v14_pdk110_77 of pll.
+pins:
+- {name: refclk}
+- {name: reset}
+- {name: cfg_ready}
+- {name: fll_enable}
+- {name: range_error}
+- {name: phase_good}
+- {name: frequency_good}
+- {name: pll_enable}
+- {name: qualified}
+- {name: restart}
+- {name: fault}
+- {name: vdd}
+- {name: vss}

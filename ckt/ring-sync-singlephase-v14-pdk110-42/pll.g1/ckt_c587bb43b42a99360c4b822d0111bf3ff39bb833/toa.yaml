@@ -1,0 +1,18 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_14c17121fbdd406dc58567296a992bdddfbe2c3a
+name: pll
+form: composition
+description: Netlist of the subcircuit ring_sync_singlephase_v14_pdk110_42 of pll.
+files:
+  netlist:
+  - "42_ring_sync_singlephase_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  ff_singlephase_v14_pdk110_44:
+    ifc: ifc_12e1946f1854434f4beb332028309fbeee5842b2
+    ckt: ckt_6f3670368caba8c64cb91d2701337ad46db02a0e
+  pll_tg_pdk110_43:
+    ifc: ifc_0be7d4529a1756f3e1714be38703563f674ac03d
+    ckt: ckt_7980fc1829072d6132a1f2cfe969d646a0df2bac

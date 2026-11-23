@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: ff-static-fast-v14-pdk110-33
+title: ff_static_fast_v14_pdk110_33
+description: Interface of the subcircuit ff_static_fast_v14_pdk110_33 of pll.
+pins:
+- {name: d}
+- {name: clk}
+- {name: clkb}
+- {name: q}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,69 @@
+/* The part of the package pll-semantics that the subcircuit lc_vco_physical_v14_pdk110_1 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/lc_vco_physical_v14_pdk110_1", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="nmoscap", terminals=["p", "n"]);
+  @DEVICE(name="*", model="lc_core_physical_v14_pdk110_2", terminals=["vp", "vn", "b3", "b4", "b5", "b6", "b7", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_cap_bank_switched_v4_pdk110_4", terminals=["tank", "b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $bus_label_style = @DEFINE-STYLE(textcolor="#1e3a8a", size=0.82, bold=true) {};
+  $LC_RESONANT_TANK = @DEFINE(
+    roles=["{inductors}", "{fixed_caps}", "{varactors}", "{switched_banks}"],
+    parameters=[["mode", "differential_LC"], ["tuning_bits", 8]]
+  ) {};
+  $CAP_BANK_SYM = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (0, 4)  @PIN(terminal=1, label="TANK", direction="up");
+    (0, -4) @PIN(terminal=[2, 3, 4, 5, 6, 7, 8, 9], label="B<7:0>", direction="down");
+    @LINE { (0, 4) (0, 3) };
+    @LINE { (0, -3) (0, -4) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Internal parallel binary-weighted capacitor array + digital switches */
+    @LINE { (-2.4, 2.0) (2.4, 2.0) };
+    @LINE { (0, 2.8) (0, 2.0) };
+    @LINE { (-2.4, 2.0) (-2.4, 1.1) };
+    @LINE { (-3.0, 1.1) (-1.8, 1.1) };
+    @LINE { (-3.0, 0.7) (-1.8, 0.7) };
+    @LINE { (-2.4, 0.7) (-2.4, 0.1) (-1.9, -0.7) };
+    @LINE { (0.0, 2.0) (0.0, 1.1) };
+    @LINE { (-0.6, 1.1) (0.6, 1.1) };
+    @LINE { (-0.6, 0.7) (0.6, 0.7) };
+    @LINE { (0.0, 0.7) (0.0, 0.1) (0.5, -0.7) };
+    @LINE { (2.4, 2.0) (2.4, 1.1) };
+    @LINE { (1.8, 1.1) (3.0, 1.1) };
+    @LINE { (1.8, 0.7) (3.0, 0.7) };
+    @LINE { (2.4, 0.7) (2.4, 0.1) (2.9, -0.7) };
+    @LINE { (-2.4, -1.2) (2.4, -1.2) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  $LC_CORE_SYM = @DEFINE-SYMBOL(box=[-6, -4, 6, 4]) {
+    (-4, 4) @PIN(terminal=1, label="VP", direction="up");
+    (4, 4)  @PIN(terminal=2, label="VN", direction="up");
+    (0, -4) @PIN(terminal=[3, 4, 5, 6, 7], label="B<7:3>", direction="down");
+    @LINE { (-4, 4) (-4, 3) };
+    @LINE { (4, 4) (4, 3) };
+    @LINE { (0, -3) (0, -4) };
+    (0, 0) @RECTANGLE(width=12, height=6);
+    /* Internal cross-coupled negative-Gm FET pair + fine varactor graphic */
+    @LINE { (-4, 2.4) (-4, -1.8) (4, -1.8) (4, 2.4) };
+    @LINE { (-4, 1.2) (4, -0.6) };
+    @LINE { (4, 1.2) (-4, -0.6) };
+    (-4, 1.2) @CIRCLE(radius=0.22);
+    (4, 1.2) @CIRCLE(radius=0.22);
+    @LINE { (-0.7, 1.6) (0.7, 1.6) };
+    @LINE { (-0.7, 1.2) (0.7, 1.2) };
+    @LINE { (-0.9, 0.9) (0.9, 1.9) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="nmoscap", recursive=true) => @SET-SYMBOL $VARIABLE_CAPACITOR;
+  # @SELECT-INSTANCE(model="tx_cap_bank_switched_v4_pdk110_4", recursive=true) => @SET-SYMBOL $CAP_BANK_SYM;
+  # @SELECT-INSTANCE(model="lc_core_physical_v14_pdk110_2", recursive=true) => @SET-SYMBOL $LC_CORE_SYM
+}

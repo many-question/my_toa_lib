@@ -1,0 +1,51 @@
+/* Symbol of the subcircuit pll_capture_rt4_r48_recenter109_v14_pdk110_0 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-capture-rt4-r48-recenter109-v14-pdk110-0-sym", version="0.1")
+}
+@RNL {
+  $PLL_CAPTURE_RT4_R48_RECENTER109_V14_PDK110_0_BLOCK = @DEFINE-SYMBOL(box=[-10, -14, 10, 12]) {
+    (-10, 8)   @PIN(terminal=1, label="REF", direction="left");
+    (-10, 5)   @PIN(terminal=2, label="RESET", direction="left");
+    (-10, 2)   @PIN(terminal=3, label="APPLY", direction="left");
+    (-10, -4)  @PIN(terminal=[4, 5, 6, 7, 8, 9], label="K<5:0>", direction="left");
+    (10, 8)    @PIN(terminal=10, label="OUT", direction="right");
+    (10, 4)    @PIN(terminal=11, label="QUALIFIED", direction="right");
+    (10, 1)    @PIN(terminal=12, label="RANGE_ERR", direction="right");
+    (10, -2)   @PIN(terminal=13, label="CFG_RDY", direction="right");
+    (10, -5)   @PIN(terminal=14, label="FREQ_GOOD", direction="right");
+    (10, -8)   @PIN(terminal=15, label="PHASE_GOOD", direction="right");
+    (10, -11)  @PIN(terminal=16, label="AMP_GOOD", direction="right");
+    (0, 12)    @PIN(terminal=17, label="VDD", direction="up");
+    (0, -14)   @PIN(terminal=18, label="VSS", direction="down");
+    @LINE { (-10, 8) (-9, 8) };
+    @LINE { (-10, 5) (-9, 5) };
+    @LINE { (-10, 2) (-9, 2) };
+    @LINE { (-10, -4) (-9, -4) };
+    @LINE { (9, 8) (10, 8) };
+    @LINE { (9, 4) (10, 4) };
+    @LINE { (9, 1) (10, 1) };
+    @LINE { (9, -2) (10, -2) };
+    @LINE { (9, -5) (10, -5) };
+    @LINE { (9, -8) (10, -8) };
+    @LINE { (9, -11) (10, -11) };
+    @LINE { (0, 11) (0, 12) };
+    @LINE { (0, -13) (0, -14) };
+    (0, -1) @RECTANGLE(width=18, height=24);
+    /* Internal Hybrid FLL + Sub-Sampling PLL Loop Diagram */
+    (-3.2, 5.5) @RECTANGLE(width=2.6, height=2.2);
+    (0.0, 5.5)  @RECTANGLE(width=2.4, height=2.2);
+    (3.4, 5.5)  @CIRCLE(radius=1.3);
+    @LINE { (2.6, 5.5) (3.0, 6.2) (3.4, 5.5) (3.8, 4.8) (4.2, 5.5) };
+    @LINE { (-1.9, 5.5) (-1.2, 5.5) };
+    @LINE { (1.2, 5.5) (2.1, 5.5) };
+    (0.0, 1.5)  @RECTANGLE(width=3.2, height=2.0);
+    @LINE { (3.4, 4.2) (3.4, 1.5) (1.6, 1.5) };
+    @LINE { (-1.6, 1.5) (-3.2, 1.5) (-3.2, 4.4) };
+    (0.0, -5.5) @RECTANGLE(width=8.4, height=5.0);
+    @LINE { (0.0, -3.0) (0.0, 0.5) };
+    @LINE { (2.8, -3.0) (2.8, 4.4) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.8) => @PLACE(0, -1.2)
+  };
+  # @SELECT-INSTANCE(model="pll_capture_rt4_r48_recenter109_v14_pdk110_0", recursive=true) => @SET-SYMBOL $PLL_CAPTURE_RT4_R48_RECENTER109_V14_PDK110_0_BLOCK
+}

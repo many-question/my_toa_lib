@@ -1,0 +1,11 @@
+{"toa": "source/1"}
+{"object": "ckt_9be34bd3713a76e2cab20195f9c94b1406153797", "label": "tx-reference-buffer-pdk110-6/pll.g1", "refs": ["ifc_71ba7919a0ce00ab6cecd15bac7e9864c4e4147b", "ifc_89806ef53cbcb9d139a9358c72cbfeac788678d4", "ckt_7df7840b2f3ff6bf37d12d30653329bee3afa2a7", "ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b", "ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d", "ifc_3d13b5de641cb0241c0bdd01ec91099c1787b726", "ckt_0243045360cd136b60f7604e02bdde54c7179438", "ifc_8d9e5d85486f68939244bd2d8cd1d9f024577266", "ckt_c6781ae5c46a789dba9a365aebad880f6ebb33d6"], "license": "CC0-1.0"}
+{"object": "ifc_71ba7919a0ce00ab6cecd15bac7e9864c4e4147b", "label": "tx-reference-buffer-pdk110-6", "license": "CC0-1.0"}
+{"object": "ifc_89806ef53cbcb9d139a9358c72cbfeac788678d4", "label": "pll-inv-pdk110-10", "license": "CC0-1.0"}
+{"object": "ckt_7df7840b2f3ff6bf37d12d30653329bee3afa2a7", "label": "pll-inv-pdk110-10/pll.g1", "refs": ["ifc_89806ef53cbcb9d139a9358c72cbfeac788678d4"], "license": "CC0-1.0"}
+{"object": "ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b", "label": "pll-inv-pdk110-7", "license": "CC0-1.0"}
+{"object": "ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d", "label": "pll-inv-pdk110-7/pll.g1", "refs": ["ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b"], "license": "CC0-1.0"}
+{"object": "ifc_3d13b5de641cb0241c0bdd01ec91099c1787b726", "label": "pll-inv-pdk110-8", "license": "CC0-1.0"}
+{"object": "ckt_0243045360cd136b60f7604e02bdde54c7179438", "label": "pll-inv-pdk110-8/pll.g1", "refs": ["ifc_3d13b5de641cb0241c0bdd01ec91099c1787b726"], "license": "CC0-1.0"}
+{"object": "ifc_8d9e5d85486f68939244bd2d8cd1d9f024577266", "label": "pll-inv-pdk110-9", "license": "CC0-1.0"}
+{"object": "ckt_c6781ae5c46a789dba9a365aebad880f6ebb33d6", "label": "pll-inv-pdk110-9/pll.g1", "refs": ["ifc_8d9e5d85486f68939244bd2d8cd1d9f024577266"], "license": "CC0-1.0"}

@@ -1,0 +1,37 @@
+/* Symbol of the subcircuit tx_sampler_pdk110_11 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-sampler-pdk110-11-sym", version="0.1")
+}
+@RNL {
+  $TX_SAMPLER_PDK110_11_BLOCK = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=2, label="VP", direction="left");
+    (-5, 0)  @PIN(terminal=1, label="REF", direction="left");
+    (-5, -2) @PIN(terminal=3, label="VN", direction="left");
+    (5, 2)   @PIN(terminal=4, label="HP", direction="right");
+    (5, -2)  @PIN(terminal=5, label="HN", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, 0) (-4, 0) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (4, 2) (5, 2) };
+    @LINE { (4, -2) (5, -2) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Differential track-and-hold switches + hold capacitors */
+    @LINE { (-2.2, 2.0) (-1.2, 2.0) (-0.3, 2.6) };
+    (-0.2, 2.0) @CIRCLE(radius=0.15);
+    @LINE { (0.0, 2.0) (2.0, 2.0) };
+    @LINE { (1.1, 2.0) (1.1, 1.2) };
+    @LINE { (0.6, 1.2) (1.6, 1.2) };
+    @LINE { (0.6, 0.9) (1.6, 0.9) };
+    @LINE { (-2.2, -2.0) (-1.2, -2.0) (-0.3, -1.4) };
+    (-0.2, -2.0) @CIRCLE(radius=0.15);
+    @LINE { (0.0, -2.0) (2.0, -2.0) };
+    @LINE { (1.1, -2.0) (1.1, -1.2) };
+    @LINE { (0.6, -1.2) (1.6, -1.2) };
+    @LINE { (0.6, -0.9) (1.6, -0.9) };
+    @LINE { (-1.8, 0.0) (-0.7, 0.0) (-0.7, 2.1) };
+    @LINE { (-0.7, 0.0) (-0.7, -1.5) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="tx_sampler_pdk110_11", recursive=true) => @SET-SYMBOL $TX_SAMPLER_PDK110_11_BLOCK
+}

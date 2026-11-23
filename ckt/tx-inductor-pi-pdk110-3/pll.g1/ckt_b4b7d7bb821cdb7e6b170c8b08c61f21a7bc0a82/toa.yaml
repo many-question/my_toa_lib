@@ -1,0 +1,13 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_fb0dcd4a9df8525c42fb52e38e94306f42b69020
+name: pll
+form: passive
+description: Netlist of the subcircuit tx_inductor_pi_pdk110_3 of pll.
+files:
+  netlist:
+  - "03_tx_inductor_pi.scs"
+  packages:
+  - pll_semantics.rnl
+specifications:
+  process: tsmc180

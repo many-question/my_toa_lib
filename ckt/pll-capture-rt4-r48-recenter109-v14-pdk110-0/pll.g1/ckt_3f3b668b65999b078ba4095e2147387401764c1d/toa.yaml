@@ -1,0 +1,47 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_f386f61dafb6c0264d2c5e05206c36c609f2d49f
+name: pll
+form: transistor
+description: Netlist of the subcircuit pll_capture_rt4_r48_recenter109_v14_pdk110_0 of pll.
+files:
+  netlist:
+  - "00_pll_capture_rt4_r48_recenter109_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  bank_pulsetrip_v14_pdk110_21:
+    ifc: ifc_75b7b6b7c5d9e0a05e36d3696e648d8ee2a6bcfe
+    ckt: ckt_ad403a953d9f74e2552fe2430d46413019fe5aee
+  cp_physical_v14_pdk110_14:
+    ifc: ifc_c7c17695c820385fb9bca6f1910926f0ce0b6987
+    ckt: ckt_bf98448b62d4c686f5d16124fa49d262458f7684
+  lc_vco_physical_v14_pdk110_1:
+    ifc: ifc_1bf844c9e8f65dbeb74123ee0d08d747079d4ceb
+    ckt: ckt_5d3f41e392bd84b7d6efec1cf0022399e35c980f
+  pll_control_recenter109_v14_pdk110_56:
+    ifc: ifc_aad8249ca3cc32aeaf0a51f3c31bd2c6047aa199
+    ckt: ckt_faf078b9796f7cf5f880907224ae8fae9be86db2
+  rf_light24s12_v14_pdk110_19:
+    ifc: ifc_fd603303785582d0aeec7c156c39068805bdd3fe
+    ckt: ckt_827830e2fd227f97bc444cf64d582adbebb838f9
+  rt_noise_scale4_v14_pdk110_49:
+    ifc: ifc_fbd9fa31e31e45e531bc473bb73141979f26c24a
+    ckt: ckt_77ae526b397602cb2007cd21e6b42c7614ecef0b
+  tx_bias_mid_v5_pdk110_5:
+    ifc: ifc_d87334648ffaf2c6170313e6f9cf5ab4c7c43f2e
+    ckt: ckt_320266763da5cd966e50542b3c6df807f11ff1ae
+  tx_loop_filter_v5_pdk110_17:
+    ifc: ifc_402fd576b2d96b3d3cf342586c1f32ae783c9fb9
+    ckt: ckt_f0a211638ff87f268a45b025fc91daaeb7c06787
+  tx_reference_buffer_pdk110_6:
+    ifc: ifc_71ba7919a0ce00ab6cecd15bac7e9864c4e4147b
+    ckt: ckt_9be34bd3713a76e2cab20195f9c94b1406153797
+  tx_sampler_pdk110_11:
+    ifc: ifc_1f6935767db7928cfa93287a4de986a0d46df5d4
+    ckt: ckt_8acacd3b28841f2c086b9231be6104e8fce3dbf9
+  validity_physical_v14_pdk110_53:
+    ifc: ifc_307728a9cb356b704df0f0e7a2cdb736b8e3e317
+    ckt: ckt_11814c37ca9f1dead02cb89bdc9bda108ea525ca
+specifications:
+  process: tsmc180

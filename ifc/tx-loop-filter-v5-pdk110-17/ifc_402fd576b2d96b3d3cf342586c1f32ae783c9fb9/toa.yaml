@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: tx-loop-filter-v5-pdk110-17
+title: tx_loop_filter_v5_pdk110_17
+description: Interface of the subcircuit tx_loop_filter_v5_pdk110_17 of pll.
+pins:
+- {name: ctrl}
+- {name: vc1}
+- {name: enable}
+- {name: preset}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,299 @@
+/* The part of the package pll-semantics that the subcircuit pll_capture_rt4_r48_recenter109_v14_pdk110_0 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/pll_capture_rt4_r48_recenter109_v14_pdk110_0", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="lc_vco_physical_v14_pdk110_1", terminals=["vp", "vn", "ctrl", "b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_bias_mid_v5_pdk110_5", terminals=["vdd", "vss", "vmid"]);
+  @DEVICE(name="*", model="tx_reference_buffer_pdk110_6", terminals=["inp", "out", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_sampler_pdk110_11", terminals=["ref", "vp", "vn", "hp", "hn", "vdd", "vss"]);
+  @DEVICE(name="*", model="cp_physical_v14_pdk110_14", terminals=["hp", "hn", "pulse", "enable", "out", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_loop_filter_v5_pdk110_17", terminals=["ctrl", "vc1", "enable", "preset", "vdd", "vss"]);
+  @DEVICE(name="*", model="rf_light24s12_v14_pdk110_19", terminals=["rf", "clk", "vdd", "vss"]);
+  @DEVICE(name="*", model="bank_pulsetrip_v14_pdk110_21", terminals=["clk", "reset", "s0", "s1", "s2", "s3", "s4", "s5", "q1", "out", "fllclk", "vdd", "vss"]);
+  @DEVICE(name="*", model="rt_noise_scale4_v14_pdk110_49", terminals=["data", "clk", "out", "vdd", "vss"]);
+  @DEVICE(name="*", model="validity_physical_v14_pdk110_53", terminals=["rf", "hp", "hn", "amp_good", "phase_good", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_control_recenter109_v14_pdk110_56", terminals=["refclk", "reset", "apply", "k0", "k1", "k2", "k3", "k4", "k5", "outclk", "acqclk", "phase_good", "frequency_good", "b0", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "s0", "s1", "s2", "s3", "s4", "s5", "divider_reset", "enable", "pulse", "preset", "qualified", "range_error", "config_ready", "config_invalid", "restart", "count_gate", "count_reset", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $defect_style = @DEFINE-STYLE(linecolor="#c53030", textcolor="#c53030", bold=true, size=0.75) {};
+  $defect_box = @DEFINE-STYLE(linecolor="#e53e3e", linestyle="dashed", fillcolor="#fff5f5") {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $fly_label_style = @DEFINE-STYLE(textcolor="#0f766e", size=0.70, bold=true) {};
+  $bus_label_style = @DEFINE-STYLE(textcolor="#1e3a8a", size=0.82, bold=true) {};
+  $AC_COUPLED_BIAS_NETWORK = @DEFINE(
+    roles=["{divider_resistors}", "{bypass_caps}", "{coupling_caps}", "{isolation_resistors}"],
+    parameters=[["bias_level", "0.491_VDD"]]
+  ) {};
+  $HYBRID_FLL_SSPLL_SYSTEM = @DEFINE(
+    roles=[["vco", "instance"], ["sampler_pd", "instance"], ["charge_pump", "instance"], ["loop_filter", "instance"], ["rf_buffer", "instance"], ["divider_bank", "instance"], ["retimer", "instance"], ["validity_monitor", "instance"], ["digital_controller", "instance"], "{bias_and_coupling}", "{supply_probes}"],
+    parameters=[["architecture", "sub_sampling_PLL_with_FLL_recenter"]]
+  ) {};
+  $DESIGN_DEFECT = @DEFINE(
+    roles=["{culprit_devices}", "{affected_nets}"],
+    parameters=[
+      ["severity", "high"],
+      ["category", "electrical_bug"],
+      ["mechanism", "unspecified"],
+      ["recommendation", "fix_in_revision"]
+    ]
+  ) {};
+  $LC_VCO_SYM = @DEFINE-SYMBOL(box=[-6, -5, 6, 5]) {
+    (-6, 2)  @PIN(terminal=3, label="CTRL", direction="left");
+    (-6, -2) @PIN(terminal=[4, 5, 6, 7, 8, 9, 10, 11], label="B<7:0>", direction="left");
+    (6, 2)   @PIN(terminal=1, label="VP", direction="right");
+    (6, -2)  @PIN(terminal=2, label="VN", direction="right");
+    (0, 5)   @PIN(terminal=12, label="VDD", direction="up");
+    @LINE { (-6, 2) (-5, 2) };
+    @LINE { (-6, -2) (-5, -2) };
+    @LINE { (5, 2) (6, 2) };
+    @LINE { (5, -2) (6, -2) };
+    @LINE { (0, 4) (0, 5) };
+    (0, 0) @RECTANGLE(width=10, height=8);
+    /* Oscillator circle + harmonic sine wave + varactor tuning arrow */
+    (0, 0) @CIRCLE(radius=2.2);
+    @LINE { (-1.5, 0.0) (-0.8, 1.1) (0.0, 0.0) (0.8, -1.1) (1.5, 0.0) };
+    @LINE { (-3.4, -1.4) (2.8, 2.0) };
+    @LINE { (2.1, 2.0) (2.8, 2.0) (2.6, 1.3) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.7) => @PLACE(2.8, 4.6)
+  };
+  $BIAS_MID_SYM = @DEFINE-SYMBOL(box=[-4, -2, 4, 2]) {
+    (4, 0) @PIN(terminal=3, label="VMID", direction="right");
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=4);
+    /* Internal resistive voltage divider R-R ladder + center tap to VMID */
+    @LINE { (-1.6, 1.6) (-0.4, 1.6) };
+    @LINE { (-1.0, 1.6) (-1.0, 1.2) (-1.4, 0.9) (-0.6, 0.6) (-1.0, 0.3) (-1.0, -0.3) (-1.4, -0.6) (-0.6, -0.9) (-1.0, -1.2) (-1.0, -1.6) };
+    @LINE { (-1.5, -1.6) (-0.5, -1.6) };
+    (-1.0, 0.0) @CIRCLE(radius=0.18);
+    @LINE { (-1.0, 0.0) (0.6, 0.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 2.5)
+  };
+  $SAMPLER_SYM = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=2, label="VP", direction="left");
+    (-5, 0)  @PIN(terminal=1, label="REF", direction="left");
+    (-5, -2) @PIN(terminal=3, label="VN", direction="left");
+    (5, 2)   @PIN(terminal=4, label="HP", direction="right");
+    (5, -2)  @PIN(terminal=5, label="HN", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, 0) (-4, 0) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (4, 2) (5, 2) };
+    @LINE { (4, -2) (5, -2) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Differential track-and-hold switches + hold capacitors */
+    @LINE { (-2.2, 2.0) (-1.2, 2.0) (-0.3, 2.6) };
+    (-0.2, 2.0) @CIRCLE(radius=0.15);
+    @LINE { (0.0, 2.0) (2.0, 2.0) };
+    @LINE { (1.1, 2.0) (1.1, 1.2) };
+    @LINE { (0.6, 1.2) (1.6, 1.2) };
+    @LINE { (0.6, 0.9) (1.6, 0.9) };
+    @LINE { (-2.2, -2.0) (-1.2, -2.0) (-0.3, -1.4) };
+    (-0.2, -2.0) @CIRCLE(radius=0.15);
+    @LINE { (0.0, -2.0) (2.0, -2.0) };
+    @LINE { (1.1, -2.0) (1.1, -1.2) };
+    @LINE { (0.6, -1.2) (1.6, -1.2) };
+    @LINE { (0.6, -0.9) (1.6, -0.9) };
+    @LINE { (-1.8, 0.0) (-0.7, 0.0) (-0.7, 2.1) };
+    @LINE { (-0.7, 0.0) (-0.7, -1.5) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  $CP_SYM = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=1, label="HP", direction="left");
+    (-5, -2) @PIN(terminal=2, label="HN", direction="left");
+    (-2, -4) @PIN(terminal=3, label="PLS", direction="down");
+    (2, -4)  @PIN(terminal=4, label="EN", direction="down");
+    (5, 0)   @PIN(terminal=5, label="OUT", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (-2, -4) (-2, -3) };
+    @LINE { (2, -4) (2, -3) };
+    @LINE { (4, 0) (5, 0) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Dual current-source circles + UP/DN switches feeding OUT */
+    (0, 1.5) @CIRCLE(radius=0.8);
+    @LINE { (0, 2.0) (0, 1.0) (-0.3, 1.35) };
+    @LINE { (0, 1.0) (0.3, 1.35) };
+    (0, -1.5) @CIRCLE(radius=0.8);
+    @LINE { (0, -1.0) (0, -2.0) (-0.3, -1.65) };
+    @LINE { (0, -2.0) (0.3, -1.65) };
+    @LINE { (0.8, 1.5) (1.6, 0.6) (1.6, -0.6) (0.8, -1.5) };
+    (1.6, 0.0) @CIRCLE(radius=0.18);
+    @LINE { (1.6, 0.0) (2.2, 0.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  $LOOP_FILTER_SYM = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (0, 4)   @PIN(terminal=1, label="CTRL", direction="up");
+    (5, 0)   @PIN(terminal=2, label="VC1", direction="right");
+    (-5, 1)  @PIN(terminal=3, label="EN", direction="left");
+    (-5, -2) @PIN(terminal=4, label="PRE", direction="left");
+    @LINE { (0, 3) (0, 4) };
+    @LINE { (4, 0) (5, 0) };
+    @LINE { (-5, 1) (-4, 1) };
+    @LINE { (-5, -2) (-4, -2) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* 3rd-order passive R-C ladder filter schematic inside box */
+    @LINE { (-1.6, 1.2) (-1.0, 1.2) (-0.7, 1.6) (-0.3, 0.8) (0.1, 1.6) (0.5, 0.8) (0.8, 1.2) (1.6, 1.2) };
+    @LINE { (0.0, 2.0) (0.0, 1.2) };
+    @LINE { (-1.6, 1.2) (-1.6, 0.1) };
+    @LINE { (-2.2, 0.1) (-1.0, 0.1) };
+    @LINE { (-2.2, -0.3) (-1.0, -0.3) };
+    @LINE { (-1.6, -0.3) (-1.6, -1.2) };
+    @LINE { (1.6, 1.2) (1.6, 0.1) };
+    @LINE { (1.0, 0.1) (2.2, 0.1) };
+    @LINE { (1.0, -0.3) (2.2, -0.3) };
+    @LINE { (1.6, -0.3) (1.6, -1.2) };
+    @LINE { (-2.0, -1.2) (2.0, -1.2) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(-2, 3.6)
+  };
+  $RF_BUF_SYM = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 0) @PIN(terminal=1, label="RF", direction="left");
+    (4, 0)  @PIN(terminal=2, label="CLK", direction="right");
+    (0, 3)  @PIN(terminal=3, label="VDD", direction="up");
+    @LINE { (-4, 0) (-3, 0) };
+    @LINE { (3, 0) (4, 0) };
+    @LINE { (0, 2) (0, 3) };
+    (0, 0) @RECTANGLE(width=6, height=4);
+    /* AC coupling cap + self-biased inverter triangle + feedback resistor */
+    @LINE { (-1.5, 0.6) (-1.5, -0.6) };
+    @LINE { (-1.1, 0.6) (-1.1, -0.6) };
+    @LINE { (-1.1, 0.0) (-0.6, 0.0) };
+    @LINE { (-0.6, 1.0) (1.2, 0.0) (-0.6, -1.0) (-0.6, 1.0) };
+    (1.4, 0.0) @CIRCLE(radius=0.18);
+    @LINE { (-0.9, 0.0) (-0.9, 1.3) (1.5, 1.3) (1.5, 0.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, -2.8)
+  };
+  $DIV_BANK_SYM = @DEFINE-SYMBOL(box=[-6, -4, 6, 4]) {
+    (-6, 2)  @PIN(terminal=1, label="CLK", direction="left");
+    (-6, 0)  @PIN(terminal=2, label="RST", direction="left");
+    (-6, -2) @PIN(terminal=[3, 4, 5, 6, 7, 8], label="S<5:0>", direction="left");
+    (6, 2)   @PIN(terminal=10, label="DATA", direction="right");
+    (6, 0)   @PIN(terminal=11, label="ACQCLK", direction="right");
+    (6, -2)  @PIN(terminal=9, label="Q1", direction="right");
+    @LINE { (-6, 2) (-5, 2) };
+    @LINE { (-6, 0) (-5, 0) };
+    @LINE { (-6, -2) (-5, -2) };
+    @LINE { (5, 2) (6, 2) };
+    @LINE { (5, 0) (6, 0) };
+    @LINE { (5, -2) (6, -2) };
+    (0, 0) @RECTANGLE(width=10, height=6);
+    /* High-freq input wave -> /N ring divider loop -> low-freq output wave */
+    @LINE { (-2.4, 1.0) (-2.4, 1.8) (-1.9, 1.8) (-1.9, 1.0) (-1.4, 1.0) (-1.4, 1.8) (-0.9, 1.8) (-0.9, 1.0) };
+    (0.0, 0.0) @CIRCLE(radius=1.1);
+    @LINE { (-0.5, -0.6) (0.5, 0.6) };
+    @LINE { (0.9, 1.0) (0.9, 1.8) (2.1, 1.8) (2.1, 1.0) (2.7, 1.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  $RETIMER_SYM = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 1)  @PIN(terminal=1, label="DATA", direction="left");
+    (-4, -1) @PIN(terminal=2, label="CLK", direction="left");
+    (4, 0)   @PIN(terminal=3, label="OUT", direction="right");
+    (0, 3)   @PIN(terminal=4, label="VDD", direction="up");
+    @LINE { (-4, 1) (-3, 1) };
+    @LINE { (-4, -1) (-3, -1) };
+    @LINE { (3, 0) (4, 0) };
+    @LINE { (0, 2) (0, 3) };
+    (0, 0) @RECTANGLE(width=6, height=4);
+    /* Clock edge triangle + internal retiming DFF stage + clean pulse */
+    @LINE { (-3, -0.55) (-2.2, -1.0) (-3, -1.45) };
+    (0.0, 0.0) @RECTANGLE(width=2.2, height=2.4);
+    @LINE { (-1.1, -0.4) (-0.5, -0.7) (-1.1, -1.0) };
+    @LINE { (1.3, -0.6) (1.6, -0.6) (1.6, 0.6) (2.3, 0.6) (2.3, -0.6) (2.6, -0.6) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, -2.8)
+  };
+  $VALIDITY_SYM = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=1, label="RF", direction="left");
+    (-5, 0)  @PIN(terminal=2, label="HP", direction="left");
+    (-5, -2) @PIN(terminal=3, label="HN", direction="left");
+    (5, 1)   @PIN(terminal=4, label="AMP_OK", direction="right");
+    (5, -1)  @PIN(terminal=5, label="PH_OK", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, 0) (-4, 0) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (4, 1) (5, 1) };
+    @LINE { (4, -1) (5, -1) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Upper RF rectifier diode + lower window comparator graphic */
+    @LINE { (-1.6, 2.2) (-0.6, 1.6) (-1.6, 1.0) (-1.6, 2.2) };
+    @LINE { (-0.6, 2.2) (-0.6, 1.0) };
+    @LINE { (-0.6, 1.6) (1.2, 1.6) };
+    @LINE { (-1.6, -0.4) (0.6, -0.4) };
+    @LINE { (-1.6, -2.0) (0.6, -2.0) };
+    @LINE { (-0.6, -0.6) (0.8, -1.2) (-0.6, -1.8) (-0.6, -0.6) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  $PLL_CTRL_SYM = @DEFINE-SYMBOL(box=[-11, -10, 11, 10]) {
+    (-11, 6)  @PIN(terminal=1, label="REFB", direction="left");
+    (-11, 4)  @PIN(terminal=2, label="RST", direction="left");
+    (-11, 2)  @PIN(terminal=3, label="APPLY", direction="left");
+    (-11, -1) @PIN(terminal=[4, 5, 6, 7, 8, 9], label="K<5:0>", direction="left");
+    (-11, -4) @PIN(terminal=10, label="OUTCLK", direction="left");
+    (-11, -6) @PIN(terminal=11, label="ACQCLK", direction="left");
+    (-11, -8) @PIN(terminal=12, label="PH_OK", direction="left");
+    (-7, 10)  @PIN(terminal=[14, 15, 16, 17, 18, 19, 20, 21], label="B<7:0>", direction="up");
+    (-3, 10)  @PIN(terminal=[22, 23, 24, 25, 26, 27], label="S<5:0>", direction="up");
+    (0, 10)   @PIN(terminal=28, label="DIV_RST", direction="up");
+    (3, 10)   @PIN(terminal=29, label="EN", direction="up");
+    (5, 10)   @PIN(terminal=30, label="PLS", direction="up");
+    (8, 10)   @PIN(terminal=31, label="PRE", direction="up");
+    (11, 6)   @PIN(terminal=32, label="QUAL", direction="right");
+    (11, 4)   @PIN(terminal=33, label="RNG_ERR", direction="right");
+    (11, 2)   @PIN(terminal=34, label="CFG_RDY", direction="right");
+    (11, 0)   @PIN(terminal=13, label="FRQ_OK", direction="right");
+    (11, -2)  @PIN(terminal=35, label="CFG_INV", direction="right");
+    (11, -4)  @PIN(terminal=36, label="RESTART", direction="right");
+    (11, -6)  @PIN(terminal=37, label="CNT_GATE", direction="right");
+    (11, -8)  @PIN(terminal=38, label="CNT_RST", direction="right");
+    @LINE { (-11, 6) (-10, 6) };
+    @LINE { (-11, 4) (-10, 4) };
+    @LINE { (-11, 2) (-10, 2) };
+    @LINE { (-11, -1) (-10, -1) };
+    @LINE { (-11, -4) (-10, -4) };
+    @LINE { (-11, -6) (-10, -6) };
+    @LINE { (-11, -8) (-10, -8) };
+    @LINE { (-7, 9) (-7, 10) };
+    @LINE { (-3, 9) (-3, 10) };
+    @LINE { (0, 9) (0, 10) };
+    @LINE { (3, 9) (3, 10) };
+    @LINE { (5, 9) (5, 10) };
+    @LINE { (8, 9) (8, 10) };
+    @LINE { (10, 6) (11, 6) };
+    @LINE { (10, 4) (11, 4) };
+    @LINE { (10, 2) (11, 2) };
+    @LINE { (10, 0) (11, 0) };
+    @LINE { (10, -2) (11, -2) };
+    @LINE { (10, -4) (11, -4) };
+    @LINE { (10, -6) (11, -6) };
+    @LINE { (10, -8) (11, -8) };
+    (0, 0) @RECTANGLE(width=20, height=18);
+    /* Internal Digital Control Architecture Sub-Block Diagram (CFG, FLL, DAC, SUP) */
+    (-3.0, 3.0) @RECTANGLE(width=4.6, height=3.2);
+    (3.0, 3.0)  @RECTANGLE(width=4.6, height=3.2);
+    (-3.0, -3.5) @RECTANGLE(width=4.6, height=3.2);
+    (3.0, -3.5)  @RECTANGLE(width=4.6, height=3.2);
+    @LINE { (-0.7, 3.0) (0.7, 3.0) };
+    @LINE { (-3.0, 1.4) (-3.0, -1.9) };
+    @LINE { (3.0, 1.4) (3.0, -1.9) };
+    @LINE { (-0.7, -3.5) (0.7, -3.5) };
+    (3.0, 3.0) @CIRCLE(radius=0.9);
+    @LINE { (-4.4, -4.2) (-3.6, -4.2) (-3.6, -3.5) (-2.8, -3.5) (-2.8, -2.8) (-2.0, -2.8) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.7) => @PLACE(0, 0)
+  };
+  # @SELECT-INSTANCE(model="tx_reference_buffer_pdk110_6", recursive=true) => @SET-SYMBOL $BUFFER;
+  # @SELECT-INSTANCE(model="lc_vco_physical_v14_pdk110_1", recursive=true) => @SET-SYMBOL $LC_VCO_SYM;
+  # @SELECT-INSTANCE(model="tx_bias_mid_v5_pdk110_5", recursive=true) => @SET-SYMBOL $BIAS_MID_SYM;
+  # @SELECT-INSTANCE(model="tx_sampler_pdk110_11", recursive=true) => @SET-SYMBOL $SAMPLER_SYM;
+  # @SELECT-INSTANCE(model="cp_physical_v14_pdk110_14", recursive=true) => @SET-SYMBOL $CP_SYM;
+  # @SELECT-INSTANCE(model="tx_loop_filter_v5_pdk110_17", recursive=true) => @SET-SYMBOL $LOOP_FILTER_SYM;
+  # @SELECT-INSTANCE(model="rf_light24s12_v14_pdk110_19", recursive=true) => @SET-SYMBOL $RF_BUF_SYM;
+  # @SELECT-INSTANCE(model="bank_pulsetrip_v14_pdk110_21", recursive=true) => @SET-SYMBOL $DIV_BANK_SYM;
+  # @SELECT-INSTANCE(model="rt_noise_scale4_v14_pdk110_49", recursive=true) => @SET-SYMBOL $RETIMER_SYM;
+  # @SELECT-INSTANCE(model="validity_physical_v14_pdk110_53", recursive=true) => @SET-SYMBOL $VALIDITY_SYM;
+  # @SELECT-INSTANCE(model="pll_control_recenter109_v14_pdk110_56", recursive=true) => @SET-SYMBOL $PLL_CTRL_SYM
+}

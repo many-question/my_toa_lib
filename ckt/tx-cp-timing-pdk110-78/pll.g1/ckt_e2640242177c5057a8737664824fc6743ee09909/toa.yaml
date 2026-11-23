@@ -1,0 +1,24 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_18204dddea092545ad630867b7ae99ad01c6af2d
+name: pll
+form: composition
+description: Netlist of the subcircuit tx_cp_timing_pdk110_78 of pll.
+files:
+  netlist:
+  - "78_tx_cp_timing.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_7:
+    ifc: ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b
+    ckt: ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d
+  pll_inv_pdk110_79:
+    ifc: ifc_721b3c12c66cfe9f11438d61cc5582a4f0477bb9
+    ckt: ckt_5ca2941306baf7e843544b03dbd2eaf9fc08ed7c
+  tx_and_pdk110_47:
+    ifc: ifc_68439ec415a2984bae048865f408de2e7ebbfae5
+    ckt: ckt_ab582ec2b0e9b43066e67e0dbc111ca2ca05334e
+  tx_latch_r_pdk110_60:
+    ifc: ifc_e004b478bba2e81c8ac08b8f8f9245f4a6dd792e
+    ckt: ckt_fba646d6e33b5ffa3e2bd6c98861f745378a4ce2

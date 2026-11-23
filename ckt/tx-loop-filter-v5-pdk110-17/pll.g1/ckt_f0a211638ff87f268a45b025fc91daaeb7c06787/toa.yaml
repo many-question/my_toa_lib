@@ -1,0 +1,20 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_402fd576b2d96b3d3cf342586c1f32ae783c9fb9
+name: pll
+form: passive
+description: Netlist of the subcircuit tx_loop_filter_v5_pdk110_17 of pll.
+files:
+  netlist:
+  - "17_tx_loop_filter_v5.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_7:
+    ifc: ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b
+    ckt: ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d
+  pll_tg_pdk110_18:
+    ifc: ifc_13feb4b81f8b32423f254c2bd8111a8d9f098dfb
+    ckt: ckt_bfc860693e5fd8cee985fdc9566d8ec1c26a43de
+specifications:
+  process: tsmc180

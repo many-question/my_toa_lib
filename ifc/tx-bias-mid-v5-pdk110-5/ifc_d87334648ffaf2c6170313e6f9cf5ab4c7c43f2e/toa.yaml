@@ -1,0 +1,9 @@
+type: ifc
+license: CC0-1.0
+name: tx-bias-mid-v5-pdk110-5
+title: tx_bias_mid_v5_pdk110_5
+description: Interface of the subcircuit tx_bias_mid_v5_pdk110_5 of pll.
+pins:
+- {name: vdd}
+- {name: vss}
+- {name: vmid}

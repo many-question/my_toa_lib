@@ -1,0 +1,45 @@
+/* The part of the package pll-semantics that the subcircuit tx_dff_r0_pdk110_58 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/tx_dff_r0_pdk110_58", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="pll_inv_pdk110_7", terminals=["a", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_inv_pdk110_59", terminals=["a", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="tx_latch_r_pdk110_60", terminals=["d", "gate", "gateb", "resetb", "q", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $fly_label_style = @DEFINE-STYLE(textcolor="#0f766e", size=0.70, bold=true) {};
+  $MASTER_SLAVE_DFF = @DEFINE(
+    roles=["{clock_buffers}", "{master_latch}", "{slave_latch}", "{output_buffers}"],
+    parameters=[["edge", "rising"], ["async_reset", "active_low_r0"]]
+  ) {};
+  $LATCH_R_SYM = @DEFINE-SYMBOL(box=[-4, -4, 4, 4]) {
+    (-4, 2)  @PIN(terminal=1, label="D", direction="left");
+    (-4, 0)  @PIN(terminal=2, label="G", direction="left");
+    (-4, -2) @PIN(terminal=3, label="GB", direction="left");
+    (0, -4)  @PIN(terminal=4, label="RB", direction="down");
+    (4, 0)   @PIN(terminal=5, label="Q", direction="right");
+    @LINE { (-4, 2) (-3, 2) };
+    @LINE { (-4, 0) (-3, 0) };
+    @LINE { (-4, -2) (-3, -2) };
+    @LINE { (0, -4) (0, -3) };
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=6);
+    /* Active-low bubbles + pass switch + storage loop + reset arrow */
+    (-2.75, -2.0) @CIRCLE(radius=0.22);
+    (0.0, -2.75) @CIRCLE(radius=0.22);
+    @LINE { (-1.8, 1.6) (-1.1, 1.6) (-0.5, 2.1) };
+    @LINE { (-0.6, 1.1) (1.0, 0.4) (-0.6, -0.3) (-0.6, 1.1) };
+    (1.2, 0.4) @CIRCLE(radius=0.18);
+    @LINE { (1.4, 0.4) (1.8, 0.4) (1.8, -0.8) (-1.0, -0.8) (-1.0, 0.4) (-0.6, 0.4) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="pll_inv_pdk110_*", recursive=true) => @SET-SYMBOL $INVERTER;
+  # @SELECT-INSTANCE(model="tx_latch_r_pdk110_60", recursive=true) => @SET-SYMBOL $LATCH_R_SYM
+}

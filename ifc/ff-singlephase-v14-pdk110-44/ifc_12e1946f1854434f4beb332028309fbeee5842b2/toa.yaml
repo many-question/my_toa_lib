@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: ff-singlephase-v14-pdk110-44
+title: ff_singlephase_v14_pdk110_44
+description: Interface of the subcircuit ff_singlephase_v14_pdk110_44 of pll.
+pins:
+- {name: d}
+- {name: clk}
+- {name: clkb}
+- {name: q}
+- {name: vdd}
+- {name: vss}

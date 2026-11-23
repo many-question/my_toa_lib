@@ -1,0 +1,32 @@
+/* Symbol of the subcircuit cp_physical_v14_pdk110_14 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="cp-physical-v14-pdk110-14-sym", version="0.1")
+}
+@RNL {
+  $CP_PHYSICAL_V14_PDK110_14_BLOCK = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=1, label="HP", direction="left");
+    (-5, -2) @PIN(terminal=2, label="HN", direction="left");
+    (-2, -4) @PIN(terminal=3, label="PLS", direction="down");
+    (2, -4)  @PIN(terminal=4, label="EN", direction="down");
+    (5, 0)   @PIN(terminal=5, label="OUT", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (-2, -4) (-2, -3) };
+    @LINE { (2, -4) (2, -3) };
+    @LINE { (4, 0) (5, 0) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Dual current-source circles + UP/DN switches feeding OUT */
+    (0, 1.5) @CIRCLE(radius=0.8);
+    @LINE { (0, 2.0) (0, 1.0) (-0.3, 1.35) };
+    @LINE { (0, 1.0) (0.3, 1.35) };
+    (0, -1.5) @CIRCLE(radius=0.8);
+    @LINE { (0, -1.0) (0, -2.0) (-0.3, -1.65) };
+    @LINE { (0, -2.0) (0.3, -1.65) };
+    @LINE { (0.8, 1.5) (1.6, 0.6) (1.6, -0.6) (0.8, -1.5) };
+    (1.6, 0.0) @CIRCLE(radius=0.18);
+    @LINE { (1.6, 0.0) (2.2, 0.0) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="cp_physical_v14_pdk110_14", recursive=true) => @SET-SYMBOL $CP_PHYSICAL_V14_PDK110_14_BLOCK
+}

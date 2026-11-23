@@ -1,0 +1,13 @@
+type: ifc
+license: CC0-1.0
+name: tx-sampler-pdk110-11
+title: tx_sampler_pdk110_11
+description: Interface of the subcircuit tx_sampler_pdk110_11 of pll.
+pins:
+- {name: ref}
+- {name: vp}
+- {name: vn}
+- {name: hp}
+- {name: hn}
+- {name: vdd}
+- {name: vss}

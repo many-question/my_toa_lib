@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit tx_and_pdk110_47 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-and-pdk110-47-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="tx_and_pdk110_47", recursive=true) => @SET-SYMBOL(terminals=[[1, "a"], [2, "b"], [3, "y"]]) $AND_2INPUT
+}

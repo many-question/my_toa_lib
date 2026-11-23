@@ -1,0 +1,7 @@
+{"toa": "source/1"}
+{"object": "ckt_bb36d101d23537ec37aaa5a5bf9f5c1034e074d5", "label": "tx-fll-dac-pdk110-75/pll.g1", "refs": ["ifc_15f5e07a821812e258b35b13f9ccadfc0236b091", "ifc_2b24119bec5cd541e8ad29e1844c89f7cf9e712c", "ckt_5726fcd9274c41bd8dc567a1cc2cbefb8c482703", "ifc_7100c632d42111fc4eb77e8840394140db5e30dc", "ckt_0ecbea98f5a0808809c979b2ae201dd987a84009"], "license": "CC0-1.0"}
+{"object": "ifc_15f5e07a821812e258b35b13f9ccadfc0236b091", "label": "tx-fll-dac-pdk110-75", "license": "CC0-1.0"}
+{"object": "ifc_2b24119bec5cd541e8ad29e1844c89f7cf9e712c", "label": "pll-inv-pdk110-59", "license": "CC0-1.0"}
+{"object": "ckt_5726fcd9274c41bd8dc567a1cc2cbefb8c482703", "label": "pll-inv-pdk110-59/pll.g1", "refs": ["ifc_2b24119bec5cd541e8ad29e1844c89f7cf9e712c"], "license": "CC0-1.0"}
+{"object": "ifc_7100c632d42111fc4eb77e8840394140db5e30dc", "label": "pll-inv-pdk110-76", "license": "CC0-1.0"}
+{"object": "ckt_0ecbea98f5a0808809c979b2ae201dd987a84009", "label": "pll-inv-pdk110-76/pll.g1", "refs": ["ifc_7100c632d42111fc4eb77e8840394140db5e30dc"], "license": "CC0-1.0"}

@@ -1,0 +1,51 @@
+type: ifc
+license: CC0-1.0
+name: tx-fll-recenter109-v14-pdk110-69
+title: tx_fll_recenter109_v14_pdk110_69
+description: Interface of the subcircuit tx_fll_recenter109_v14_pdk110_69 of pll.
+pins:
+- {name: refclk}
+- {name: reset}
+- {name: target_k0}
+- {name: target_k1}
+- {name: target_k2}
+- {name: target_k3}
+- {name: target_k4}
+- {name: target_k5}
+- {name: measured0}
+- {name: measured1}
+- {name: measured2}
+- {name: measured3}
+- {name: measured4}
+- {name: measured5}
+- {name: measured6}
+- {name: measured7}
+- {name: measured8}
+- {name: measured9}
+- {name: measured10}
+- {name: measured11}
+- {name: measured12}
+- {name: measured13}
+- {name: coarse0}
+- {name: coarse1}
+- {name: coarse2}
+- {name: coarse3}
+- {name: coarse4}
+- {name: coarse5}
+- {name: coarse6}
+- {name: coarse7}
+- {name: dac0}
+- {name: dac1}
+- {name: dac2}
+- {name: dac3}
+- {name: dac4}
+- {name: dac5}
+- {name: count_gate}
+- {name: count_reset}
+- {name: enable}
+- {name: range_error}
+- {name: state_out0}
+- {name: state_out1}
+- {name: state_out2}
+- {name: vdd}
+- {name: vss}

@@ -1,0 +1,7 @@
+{"toa": "source/1"}
+{"object": "ckt_f0a211638ff87f268a45b025fc91daaeb7c06787", "label": "tx-loop-filter-v5-pdk110-17/pll.g1", "refs": ["ifc_402fd576b2d96b3d3cf342586c1f32ae783c9fb9", "ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b", "ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d", "ifc_13feb4b81f8b32423f254c2bd8111a8d9f098dfb", "ckt_bfc860693e5fd8cee985fdc9566d8ec1c26a43de"], "license": "CC0-1.0"}
+{"object": "ifc_402fd576b2d96b3d3cf342586c1f32ae783c9fb9", "label": "tx-loop-filter-v5-pdk110-17", "license": "CC0-1.0"}
+{"object": "ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b", "label": "pll-inv-pdk110-7", "license": "CC0-1.0"}
+{"object": "ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d", "label": "pll-inv-pdk110-7/pll.g1", "refs": ["ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b"], "license": "CC0-1.0"}
+{"object": "ifc_13feb4b81f8b32423f254c2bd8111a8d9f098dfb", "label": "pll-tg-pdk110-18", "license": "CC0-1.0"}
+{"object": "ckt_bfc860693e5fd8cee985fdc9566d8ec1c26a43de", "label": "pll-tg-pdk110-18/pll.g1", "refs": ["ifc_13feb4b81f8b32423f254c2bd8111a8d9f098dfb"], "license": "CC0-1.0"}

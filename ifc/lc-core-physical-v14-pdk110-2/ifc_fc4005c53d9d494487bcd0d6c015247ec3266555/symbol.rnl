@@ -1,0 +1,27 @@
+/* Symbol of the subcircuit lc_core_physical_v14_pdk110_2 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lc-core-physical-v14-pdk110-2-sym", version="0.1")
+}
+@RNL {
+  $LC_CORE_PHYSICAL_V14_PDK110_2_BLOCK = @DEFINE-SYMBOL(box=[-6, -4, 6, 4]) {
+    (-4, 4) @PIN(terminal=1, label="VP", direction="up");
+    (4, 4)  @PIN(terminal=2, label="VN", direction="up");
+    (0, -4) @PIN(terminal=[3, 4, 5, 6, 7], label="B<7:3>", direction="down");
+    @LINE { (-4, 4) (-4, 3) };
+    @LINE { (4, 4) (4, 3) };
+    @LINE { (0, -3) (0, -4) };
+    (0, 0) @RECTANGLE(width=12, height=6);
+    /* Internal cross-coupled negative-Gm FET pair + fine varactor graphic */
+    @LINE { (-4, 2.4) (-4, -1.8) (4, -1.8) (4, 2.4) };
+    @LINE { (-4, 1.2) (4, -0.6) };
+    @LINE { (4, 1.2) (-4, -0.6) };
+    (-4, 1.2) @CIRCLE(radius=0.22);
+    (4, 1.2) @CIRCLE(radius=0.22);
+    @LINE { (-0.7, 1.6) (0.7, 1.6) };
+    @LINE { (-0.7, 1.2) (0.7, 1.2) };
+    @LINE { (-0.9, 0.9) (0.9, 1.9) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="lc_core_physical_v14_pdk110_2", recursive=true) => @SET-SYMBOL $LC_CORE_PHYSICAL_V14_PDK110_2_BLOCK
+}

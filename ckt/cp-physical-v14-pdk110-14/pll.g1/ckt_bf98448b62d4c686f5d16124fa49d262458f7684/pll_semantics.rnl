@@ -1,0 +1,43 @@
+/* The part of the package pll-semantics that the subcircuit cp_physical_v14_pdk110_14 uses, taken out by toa-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-semantics/cp_physical_v14_pdk110_14", version="0.3");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4");
+  @DEVICE(name="*", model="nch", terminals=["d", "g", "s", "b"]);
+  @DEVICE(name="*", model="pch", terminals=["d", "g", "s", "b"]);
+  @DEVICE(name="*", model="pll_inv_pdk110_7", terminals=["a", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_nand2_pdk110_15", terminals=["a", "b", "y", "vdd", "vss"]);
+  @DEVICE(name="*", model="pll_tg_pdk110_16", terminals=["a", "b", "on", "off", "vdd", "vss"])
+}
+@RNL(author="gemini-4-argon") {
+  # @SELECT-NET(name="vdd", recursive=true) => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vd", recursive=true)  => @ADD-TO $SUPPLY_NET_SET;
+  # @SELECT-NET(name="vss", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  # @SELECT-NET(name="sub", recursive=true) => @ADD-TO $GROUND_NET_SET;
+  $title_style = @DEFINE-STYLE(textcolor="#1a365d", size=1.1, bold=true) {};
+  $subtitle_style = @DEFINE-STYLE(textcolor="#2c5282", size=0.8, italic=true) {};
+  $param_style = @DEFINE-STYLE(textcolor="#4a5568", size=0.65) {};
+  $PULSED_GM_CHARGE_PUMP = @DEFINE(
+    roles=[["gm_p", "instance"], ["gm_n", "instance"], "{tail_switches}", "{mirror_loads}", "{bleeders}"],
+    parameters=[["architecture", "pulsed_transconductance_CP"]]
+  ) {};
+  $TG_SYM = @DEFINE-SYMBOL(box=[-2, -2, 2, 2]) {
+    (-2, 0) @PIN(terminal=1, direction="left");
+    (2, 0)  @PIN(terminal=2, direction="right");
+    (0, -2) @PIN(terminal=3, direction="down");
+    (0, 2)  @PIN(terminal=4, direction="up");
+    @LINE { (-2, 0) (-1, 0) };
+    @LINE { (1, 0) (2, 0) };
+    @LINE { (-1, 1) (1, 0) (-1, -1) (-1, 1) };
+    @LINE { (1, 1) (-1, 0) (1, -1) (1, 1) };
+    @LINE { (0, -2) (0, -0.5) };
+    @LINE { (0, 2) (0, 0.9) };
+    (0, 0.7) @CIRCLE(radius=0.2);
+    ? @TEXT("${name}", key="name", halign="start", size=0.65) => @PLACE(1.6, 1.6)
+  };
+  # @SELECT-INSTANCE(model="nch", recursive=true) => @SET-SYMBOL $NMOS;
+  # @SELECT-INSTANCE(model="pch", recursive=true) => @SET-SYMBOL $PMOS;
+  # @SELECT-INSTANCE(model="pll_inv_pdk110_*", recursive=true) => @SET-SYMBOL $INVERTER;
+  # @SELECT-INSTANCE(model="pll_tg_pdk110_*", recursive=true) => @SET-SYMBOL $TG_SYM;
+  # @SELECT-INSTANCE(model="pll_nand2_pdk110_15", recursive=true) => @SET-SYMBOL $NAND_2INPUT
+}

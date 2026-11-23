@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: pll-latch-pdk110-72
+title: pll_latch_pdk110_72
+description: Interface of the subcircuit pll_latch_pdk110_72 of pll.
+pins:
+- {name: d}
+- {name: gate}
+- {name: gateb}
+- {name: q}
+- {name: vdd}
+- {name: vss}

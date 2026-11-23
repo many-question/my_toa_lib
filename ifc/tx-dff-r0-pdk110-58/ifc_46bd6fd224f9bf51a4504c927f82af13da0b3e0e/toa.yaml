@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: tx-dff-r0-pdk110-58
+title: tx_dff_r0_pdk110_58
+description: Interface of the subcircuit tx_dff_r0_pdk110_58 of pll.
+pins:
+- {name: d}
+- {name: clk}
+- {name: reset}
+- {name: q}
+- {name: vdd}
+- {name: vss}

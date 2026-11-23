@@ -1,0 +1,32 @@
+/* Symbol of the subcircuit tx_loop_filter_v5_pdk110_17 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-loop-filter-v5-pdk110-17-sym", version="0.1")
+}
+@RNL {
+  $TX_LOOP_FILTER_V5_PDK110_17_BLOCK = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (0, 4)   @PIN(terminal=1, label="CTRL", direction="up");
+    (5, 0)   @PIN(terminal=2, label="VC1", direction="right");
+    (-5, 1)  @PIN(terminal=3, label="EN", direction="left");
+    (-5, -2) @PIN(terminal=4, label="PRE", direction="left");
+    @LINE { (0, 3) (0, 4) };
+    @LINE { (4, 0) (5, 0) };
+    @LINE { (-5, 1) (-4, 1) };
+    @LINE { (-5, -2) (-4, -2) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* 3rd-order passive R-C ladder filter schematic inside box */
+    @LINE { (-1.6, 1.2) (-1.0, 1.2) (-0.7, 1.6) (-0.3, 0.8) (0.1, 1.6) (0.5, 0.8) (0.8, 1.2) (1.6, 1.2) };
+    @LINE { (0.0, 2.0) (0.0, 1.2) };
+    @LINE { (-1.6, 1.2) (-1.6, 0.1) };
+    @LINE { (-2.2, 0.1) (-1.0, 0.1) };
+    @LINE { (-2.2, -0.3) (-1.0, -0.3) };
+    @LINE { (-1.6, -0.3) (-1.6, -1.2) };
+    @LINE { (1.6, 1.2) (1.6, 0.1) };
+    @LINE { (1.0, 0.1) (2.2, 0.1) };
+    @LINE { (1.0, -0.3) (2.2, -0.3) };
+    @LINE { (1.6, -0.3) (1.6, -1.2) };
+    @LINE { (-2.0, -1.2) (2.0, -1.2) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(-2, 3.6)
+  };
+  # @SELECT-INSTANCE(model="tx_loop_filter_v5_pdk110_17", recursive=true) => @SET-SYMBOL $TX_LOOP_FILTER_V5_PDK110_17_BLOCK
+}

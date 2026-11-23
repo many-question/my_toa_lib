@@ -1,0 +1,10 @@
+type: ifc
+license: CC0-1.0
+name: pll-inv-pdk110-26
+title: pll_inv_pdk110_26
+description: Interface of the subcircuit pll_inv_pdk110_26 of pll.
+pins:
+- {name: a}
+- {name: "y"}
+- {name: vdd}
+- {name: vss}

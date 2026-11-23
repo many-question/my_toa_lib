@@ -1,0 +1,15 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_34d41d01f4a2a4da3ed9a755226ea7781141a95b
+name: pll
+form: composition
+description: Netlist of the subcircuit ff_static_fast_v14_pdk110_33 of pll.
+files:
+  netlist:
+  - "33_ff_static_fast_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  ring_inv_latch_v14_pdk110_34:
+    ifc: ifc_a7a69147467164617dedf0bb219dc10eebe26a49
+    ckt: ckt_3c03b2577e5eb6b72a9c0fe0de9330347ddef62f

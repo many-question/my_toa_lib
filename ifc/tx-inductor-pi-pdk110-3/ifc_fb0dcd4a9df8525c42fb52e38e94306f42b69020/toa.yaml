@@ -1,0 +1,9 @@
+type: ifc
+license: CC0-1.0
+name: tx-inductor-pi-pdk110-3
+title: tx_inductor_pi_pdk110_3
+description: Interface of the subcircuit tx_inductor_pi_pdk110_3 of pll.
+pins:
+- {name: p}
+- {name: "n"}
+- {name: sub}

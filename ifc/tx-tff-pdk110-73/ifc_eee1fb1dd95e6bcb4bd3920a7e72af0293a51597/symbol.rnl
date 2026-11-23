@@ -1,0 +1,25 @@
+/* Symbol of the subcircuit tx_tff_pdk110_73 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-tff-pdk110-73-sym", version="0.1")
+}
+@RNL {
+  $TX_TFF_PDK110_73_BLOCK = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 1)  @PIN(terminal=1, label="CK", direction="left");
+    (-4, -1) @PIN(terminal=2, label="R", direction="left");
+    (4, 1)   @PIN(terminal=3, label="Q", direction="right");
+    (4, -1)  @PIN(terminal=4, label="QB", direction="right");
+    @LINE { (-4, 1) (-3, 1) };
+    @LINE { (-4, -1) (-3, -1) };
+    @LINE { (3, 1) (4, 1) };
+    @LINE { (3, -1) (4, -1) };
+    (0, 0) @RECTANGLE(width=6, height=5);
+    /* Clock edge triangle + divide-by-2 toggle feedback loop + waveform */
+    @LINE { (-3, 1.5) (-2.1, 1.0) (-3, 0.5) };
+    (2.75, -1.0) @CIRCLE(radius=0.22);
+    @LINE { (-1.4, -0.2) (-1.4, 0.7) (-0.2, 0.7) (-0.2, -0.2) (1.0, -0.2) (1.0, 0.7) };
+    @LINE { (1.2, -1.0) (1.2, 1.7) (-1.8, 1.7) (-1.8, 0.2) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.1)
+  };
+  # @SELECT-INSTANCE(model="tx_tff_pdk110_73", recursive=true) => @SET-SYMBOL $TX_TFF_PDK110_73_BLOCK
+}

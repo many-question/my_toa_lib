@@ -1,0 +1,27 @@
+/* Symbol of the subcircuit tx_fll_counter_pdk110_71 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-fll-counter-pdk110-71-sym", version="0.1")
+}
+@RNL {
+  $TX_FLL_COUNTER_PDK110_71_BLOCK = @DEFINE-SYMBOL(box=[-5, -4, 5, 4]) {
+    (-5, 2)  @PIN(terminal=1, label="CLK", direction="left");
+    (-5, 0)  @PIN(terminal=2, label="GATE", direction="left");
+    (-5, -2) @PIN(terminal=3, label="RST", direction="left");
+    (5, 0)   @PIN(terminal=[4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17], label="Q<13:0>", direction="right");
+    @LINE { (-5, 2) (-4, 2) };
+    @LINE { (-5, 0) (-4, 0) };
+    @LINE { (-5, -2) (-4, -2) };
+    @LINE { (4, 0) (5, 0) };
+    (0, 0) @RECTANGLE(width=8, height=6);
+    /* Clock triangle + ascending count staircase + binary stage boxes */
+    @LINE { (-4, 2.45) (-3.1, 2.0) (-4, 1.55) };
+    @LINE { (-2.0, -0.4) (-1.1, -0.4) (-1.1, 0.3) (-0.2, 0.3) (-0.2, 1.0) (0.7, 1.0) (0.7, 1.7) (1.8, 1.7) };
+    (0, -1.6) @RECTANGLE(width=3.8, height=1.2);
+    @LINE { (-0.95, -1.0) (-0.95, -2.2) };
+    @LINE { (0.0, -1.0) (0.0, -2.2) };
+    @LINE { (0.95, -1.0) (0.95, -2.2) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="tx_fll_counter_pdk110_71", recursive=true) => @SET-SYMBOL $TX_FLL_COUNTER_PDK110_71_BLOCK
+}

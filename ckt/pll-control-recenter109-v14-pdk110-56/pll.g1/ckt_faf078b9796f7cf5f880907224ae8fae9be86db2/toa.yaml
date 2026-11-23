@@ -1,0 +1,57 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_aad8249ca3cc32aeaf0a51f3c31bd2c6047aa199
+name: pll
+form: composition
+description: Netlist of the subcircuit pll_control_recenter109_v14_pdk110_56 of pll.
+files:
+  netlist:
+  - "56_pll_control_recenter109_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_27:
+    ifc: ifc_49c41690a6e5826228f07a546469a1c672efd382
+    ckt: ckt_0bbc17ff799871660ee5633f7ab1478801de1d7a
+  pll_inv_pdk110_36:
+    ifc: ifc_f6b67931358ab7dec1f0b4ff1c3f492bba851e1d
+    ckt: ckt_4f8d1e9c1323830e33bf199e5b2d9952b2dcd2a0
+  pll_inv_pdk110_7:
+    ifc: ifc_c0dfe4e6bdb90696e0394568aa04a67a45ac6d4b
+    ckt: ckt_7544bbde7fdaef6fb3fa34e72a5c1ebe8aaf398d
+  pll_tg_pdk110_16:
+    ifc: ifc_39c919cda426e24303c271735633ef3ac0714783
+    ckt: ckt_678bc8a5e2892d834c4de7e83b6578fff0ccd40e
+  tx_cp_timing_pdk110_78:
+    ifc: ifc_18204dddea092545ad630867b7ae99ad01c6af2d
+    ckt: ckt_e2640242177c5057a8737664824fc6743ee09909
+  tx_dff_r0_pdk110_58:
+    ifc: ifc_46bd6fd224f9bf51a4504c927f82af13da0b3e0e
+    ckt: ckt_c2cd0a3ce14edf02119cfd8390874d3e4fa8b2bd
+  tx_fll_counter_pdk110_71:
+    ifc: ifc_3d93bc4ebcff5a2a5f039d1cf4803295d64c3070
+    ckt: ckt_9e31fad0bc1eda3bfa7dde05aef4639cfae91990
+  tx_fll_dac_pdk110_75:
+    ifc: ifc_15f5e07a821812e258b35b13f9ccadfc0236b091
+    ckt: ckt_bb36d101d23537ec37aaa5a5bf9f5c1034e074d5
+  tx_fll_recenter109_v14_pdk110_69:
+    ifc: ifc_0ecf20e0af49e27118649c997e04485609729cea
+    ckt: ckt_69c3cb6c5c08ba3a90e4e60270514fb628835f99
+  tx_fll_snapshot_pdk110_74:
+    ifc: ifc_c25286539f17c93a005ce29360d2063b9307cea5
+    ckt: ckt_0948142c847ce37ecfd4f98289e80d3b86189882
+  tx_frequency_watchdog_pdk110_80:
+    ifc: ifc_70ceeb10e75b38fe6c90a039a77fce02fc9136d7
+    ckt: ckt_dc10c64ced82d0f45acc57478b7b9fc6d06c1a4e
+  tx_mux_pdk110_64:
+    ifc: ifc_689907d0b5eeb84b85d9e7c2b13a8de09ba30dc5
+    ckt: ckt_536243f22e410a8ee33c316034791f358c186dde
+  tx_or_pdk110_67:
+    ifc: ifc_dfef44e5193b08b04bfd74738aea8f0d1541d4a1
+    ckt: ckt_c1048463f3845d7caf8345fbef7232e2149ba242
+  tx_pll_config_pdk110_57:
+    ifc: ifc_255beb4aac2122e92d44c2febf0191b1834b1b62
+    ckt: ckt_c9332025d8cb306923d4d531f09dbced25dde173
+  tx_pll_supervisor_capture_v14_pdk110_77:
+    ifc: ifc_928836e865f633ae98e81ba66d6816bb98759e1c
+    ckt: ckt_c96d19d06aef0624db396b71dd852127d581a7a6

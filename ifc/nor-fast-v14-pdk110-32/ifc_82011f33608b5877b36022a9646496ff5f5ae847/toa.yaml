@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: nor-fast-v14-pdk110-32
+title: nor_fast_v14_pdk110_32
+description: Interface of the subcircuit nor_fast_v14_pdk110_32 of pll.
+pins:
+- {name: a}
+- {name: b}
+- {name: out}
+- {name: vdd}
+- {name: vss}

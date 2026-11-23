@@ -1,0 +1,45 @@
+/* Symbol of the subcircuit tx_pll_supervisor_capture_v14_pdk110_77 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-pll-supervisor-capture-v14-pdk110-77-sym", version="0.1")
+}
+@RNL {
+  $TX_PLL_SUPERVISOR_CAPTURE_V14_PDK110_77_BLOCK = @DEFINE-SYMBOL(box=[-6, -7, 6, 7]) {
+    (-6, 6)  @PIN(terminal=1, label="REF", direction="left");
+    (-6, 4)  @PIN(terminal=2, label="RST", direction="left");
+    (-6, 2)  @PIN(terminal=3, label="RDY", direction="left");
+    (-6, 0)  @PIN(terminal=4, label="ACQ", direction="left");
+    (-6, -2) @PIN(terminal=5, label="RNG_E", direction="left");
+    (-6, -4) @PIN(terminal=6, label="PH_OK", direction="left");
+    (-6, -6) @PIN(terminal=7, label="FRQ_OK", direction="left");
+    (6, 3)   @PIN(terminal=8, label="EN", direction="right");
+    (6, 1)   @PIN(terminal=9, label="QUAL", direction="right");
+    (6, -1)  @PIN(terminal=10, label="RESTART", direction="right");
+    (6, -3)  @PIN(terminal=11, label="FAULT", direction="right");
+    @LINE { (-6, 6) (-5, 6) };
+    @LINE { (-6, 4) (-5, 4) };
+    @LINE { (-6, 2) (-5, 2) };
+    @LINE { (-6, 0) (-5, 0) };
+    @LINE { (-6, -2) (-5, -2) };
+    @LINE { (-6, -4) (-5, -4) };
+    @LINE { (-6, -6) (-5, -6) };
+    @LINE { (5, 3) (6, 3) };
+    @LINE { (5, 1) (6, 1) };
+    @LINE { (5, -1) (6, -1) };
+    @LINE { (5, -3) (6, -3) };
+    (0, 0) @RECTANGLE(width=10, height=14);
+    /* Clock triangle + 4-state lock qualification FSM graph */
+    @LINE { (-5, 6.45) (-4.1, 6.0) (-5, 5.55) };
+    (-1.3, 2.2) @CIRCLE(radius=0.85);
+    (1.3, 2.2) @CIRCLE(radius=0.85);
+    (1.3, -2.2) @CIRCLE(radius=0.85);
+    (-1.3, -2.2) @CIRCLE(radius=0.85);
+    @LINE { (-0.45, 2.2) (0.45, 2.2) };
+    @LINE { (1.3, 1.35) (1.3, -1.35) };
+    @LINE { (0.45, -2.2) (-0.45, -2.2) };
+    @LINE { (-1.3, -1.35) (-1.3, 1.35) };
+    @LINE { (-0.5, 0.0) (-0.1, -0.4) (0.6, 0.5) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 7.6)
+  };
+  # @SELECT-INSTANCE(model="tx_pll_supervisor_capture_v14_pdk110_77", recursive=true) => @SET-SYMBOL $TX_PLL_SUPERVISOR_CAPTURE_V14_PDK110_77_BLOCK
+}

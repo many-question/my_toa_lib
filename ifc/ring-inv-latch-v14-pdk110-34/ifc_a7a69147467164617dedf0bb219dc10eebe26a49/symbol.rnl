@@ -1,0 +1,26 @@
+/* Symbol of the subcircuit ring_inv_latch_v14_pdk110_34 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="ring-inv-latch-v14-pdk110-34-sym", version="0.1")
+}
+@RNL {
+  $RING_INV_LATCH_V14_PDK110_34_BLOCK = @DEFINE-SYMBOL(box=[-4, -3, 4, 3]) {
+    (-4, 2)  @PIN(terminal=1, label="D", direction="left");
+    (-4, 0)  @PIN(terminal=2, label="CK", direction="left");
+    (-4, -2) @PIN(terminal=3, label="CKB", direction="left");
+    (4, 0)   @PIN(terminal=4, label="Q", direction="right");
+    @LINE { (-4, 2) (-3, 2) };
+    @LINE { (-4, 0) (-3, 0) };
+    @LINE { (-4, -2) (-3, -2) };
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=6);
+    /* Dual-phase clock triangles + master/slave partition + inverter cascade */
+    @LINE { (-3, 0.45) (-2.1, 0.0) (-3, -0.45) };
+    (-2.75, -2.0) @CIRCLE(radius=0.22);
+    @LINE { (0.0, 2.4) (0.0, -2.4) };
+    @LINE { (-1.5, 1.5) (-0.4, 0.9) (-1.5, 0.3) (-1.5, 1.5) };
+    @LINE { (0.4, 1.5) (1.5, 0.9) (0.4, 0.3) (0.4, 1.5) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="ring_inv_latch_v14_pdk110_34", recursive=true) => @SET-SYMBOL $RING_INV_LATCH_V14_PDK110_34_BLOCK
+}

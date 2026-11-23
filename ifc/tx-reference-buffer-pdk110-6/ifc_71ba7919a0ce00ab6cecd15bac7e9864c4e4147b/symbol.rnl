@@ -1,0 +1,9 @@
+/* Symbol of the subcircuit tx_reference_buffer_pdk110_6 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-reference-buffer-pdk110-6-sym", version="0.1");
+  @USE-PACKAGE(name="rnl-std-all", version="0.4")
+}
+@RNL {
+  # @SELECT-INSTANCE(model="tx_reference_buffer_pdk110_6", recursive=true) => @SET-SYMBOL(terminals=[[1, "a"], [2, "y"]]) $BUFFER
+}

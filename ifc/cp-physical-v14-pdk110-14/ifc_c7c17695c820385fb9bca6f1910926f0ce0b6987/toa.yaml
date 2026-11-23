@@ -1,0 +1,13 @@
+type: ifc
+license: CC0-1.0
+name: cp-physical-v14-pdk110-14
+title: cp_physical_v14_pdk110_14
+description: Interface of the subcircuit cp_physical_v14_pdk110_14 of pll.
+pins:
+- {name: hp}
+- {name: hn}
+- {name: pulse}
+- {name: enable}
+- {name: out}
+- {name: vdd}
+- {name: vss}

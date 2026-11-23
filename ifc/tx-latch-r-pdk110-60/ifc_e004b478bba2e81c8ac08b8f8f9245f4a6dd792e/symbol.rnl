@@ -1,0 +1,29 @@
+/* Symbol of the subcircuit tx_latch_r_pdk110_60 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="tx-latch-r-pdk110-60-sym", version="0.1")
+}
+@RNL {
+  $TX_LATCH_R_PDK110_60_BLOCK = @DEFINE-SYMBOL(box=[-4, -4, 4, 4]) {
+    (-4, 2)  @PIN(terminal=1, label="D", direction="left");
+    (-4, 0)  @PIN(terminal=2, label="G", direction="left");
+    (-4, -2) @PIN(terminal=3, label="GB", direction="left");
+    (0, -4)  @PIN(terminal=4, label="RB", direction="down");
+    (4, 0)   @PIN(terminal=5, label="Q", direction="right");
+    @LINE { (-4, 2) (-3, 2) };
+    @LINE { (-4, 0) (-3, 0) };
+    @LINE { (-4, -2) (-3, -2) };
+    @LINE { (0, -4) (0, -3) };
+    @LINE { (3, 0) (4, 0) };
+    (0, 0) @RECTANGLE(width=6, height=6);
+    /* Active-low bubbles + pass switch + storage loop + reset arrow */
+    (-2.75, -2.0) @CIRCLE(radius=0.22);
+    (0.0, -2.75) @CIRCLE(radius=0.22);
+    @LINE { (-1.8, 1.6) (-1.1, 1.6) (-0.5, 2.1) };
+    @LINE { (-0.6, 1.1) (1.0, 0.4) (-0.6, -0.3) (-0.6, 1.1) };
+    (1.2, 0.4) @CIRCLE(radius=0.18);
+    @LINE { (1.4, 0.4) (1.8, 0.4) (1.8, -0.8) (-1.0, -0.8) (-1.0, 0.4) (-0.6, 0.4) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.65) => @PLACE(0, 3.6)
+  };
+  # @SELECT-INSTANCE(model="tx_latch_r_pdk110_60", recursive=true) => @SET-SYMBOL $TX_LATCH_R_PDK110_60_BLOCK
+}

@@ -1,0 +1,11 @@
+type: ifc
+license: CC0-1.0
+name: tx-xor-pdk110-66
+title: tx_xor_pdk110_66
+description: Interface of the subcircuit tx_xor_pdk110_66 of pll.
+pins:
+- {name: a}
+- {name: b}
+- {name: "y"}
+- {name: vdd}
+- {name: vss}

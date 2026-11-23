@@ -1,0 +1,65 @@
+/* Symbol of the subcircuit pll_control_recenter109_v14_pdk110_56 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-control-recenter109-v14-pdk110-56-sym", version="0.1")
+}
+@RNL {
+  $PLL_CONTROL_RECENTER109_V14_PDK110_56_BLOCK = @DEFINE-SYMBOL(box=[-11, -10, 11, 10]) {
+    (-11, 6)  @PIN(terminal=1, label="REFB", direction="left");
+    (-11, 4)  @PIN(terminal=2, label="RST", direction="left");
+    (-11, 2)  @PIN(terminal=3, label="APPLY", direction="left");
+    (-11, -1) @PIN(terminal=[4, 5, 6, 7, 8, 9], label="K<5:0>", direction="left");
+    (-11, -4) @PIN(terminal=10, label="OUTCLK", direction="left");
+    (-11, -6) @PIN(terminal=11, label="ACQCLK", direction="left");
+    (-11, -8) @PIN(terminal=12, label="PH_OK", direction="left");
+    (-7, 10)  @PIN(terminal=[14, 15, 16, 17, 18, 19, 20, 21], label="B<7:0>", direction="up");
+    (-3, 10)  @PIN(terminal=[22, 23, 24, 25, 26, 27], label="S<5:0>", direction="up");
+    (0, 10)   @PIN(terminal=28, label="DIV_RST", direction="up");
+    (3, 10)   @PIN(terminal=29, label="EN", direction="up");
+    (5, 10)   @PIN(terminal=30, label="PLS", direction="up");
+    (8, 10)   @PIN(terminal=31, label="PRE", direction="up");
+    (11, 6)   @PIN(terminal=32, label="QUAL", direction="right");
+    (11, 4)   @PIN(terminal=33, label="RNG_ERR", direction="right");
+    (11, 2)   @PIN(terminal=34, label="CFG_RDY", direction="right");
+    (11, 0)   @PIN(terminal=13, label="FRQ_OK", direction="right");
+    (11, -2)  @PIN(terminal=35, label="CFG_INV", direction="right");
+    (11, -4)  @PIN(terminal=36, label="RESTART", direction="right");
+    (11, -6)  @PIN(terminal=37, label="CNT_GATE", direction="right");
+    (11, -8)  @PIN(terminal=38, label="CNT_RST", direction="right");
+    @LINE { (-11, 6) (-10, 6) };
+    @LINE { (-11, 4) (-10, 4) };
+    @LINE { (-11, 2) (-10, 2) };
+    @LINE { (-11, -1) (-10, -1) };
+    @LINE { (-11, -4) (-10, -4) };
+    @LINE { (-11, -6) (-10, -6) };
+    @LINE { (-11, -8) (-10, -8) };
+    @LINE { (-7, 9) (-7, 10) };
+    @LINE { (-3, 9) (-3, 10) };
+    @LINE { (0, 9) (0, 10) };
+    @LINE { (3, 9) (3, 10) };
+    @LINE { (5, 9) (5, 10) };
+    @LINE { (8, 9) (8, 10) };
+    @LINE { (10, 6) (11, 6) };
+    @LINE { (10, 4) (11, 4) };
+    @LINE { (10, 2) (11, 2) };
+    @LINE { (10, 0) (11, 0) };
+    @LINE { (10, -2) (11, -2) };
+    @LINE { (10, -4) (11, -4) };
+    @LINE { (10, -6) (11, -6) };
+    @LINE { (10, -8) (11, -8) };
+    (0, 0) @RECTANGLE(width=20, height=18);
+    /* Internal Digital Control Architecture Sub-Block Diagram (CFG, FLL, DAC, SUP) */
+    (-3.0, 3.0) @RECTANGLE(width=4.6, height=3.2);
+    (3.0, 3.0)  @RECTANGLE(width=4.6, height=3.2);
+    (-3.0, -3.5) @RECTANGLE(width=4.6, height=3.2);
+    (3.0, -3.5)  @RECTANGLE(width=4.6, height=3.2);
+    @LINE { (-0.7, 3.0) (0.7, 3.0) };
+    @LINE { (-3.0, 1.4) (-3.0, -1.9) };
+    @LINE { (3.0, 1.4) (3.0, -1.9) };
+    @LINE { (-0.7, -3.5) (0.7, -3.5) };
+    (3.0, 3.0) @CIRCLE(radius=0.9);
+    @LINE { (-4.4, -4.2) (-3.6, -4.2) (-3.6, -3.5) (-2.8, -3.5) (-2.8, -2.8) (-2.0, -2.8) };
+    ? @TEXT("${name}", key="name", halign="middle", size=0.7) => @PLACE(0, 0)
+  };
+  # @SELECT-INSTANCE(model="pll_control_recenter109_v14_pdk110_56", recursive=true) => @SET-SYMBOL $PLL_CONTROL_RECENTER109_V14_PDK110_56_BLOCK
+}

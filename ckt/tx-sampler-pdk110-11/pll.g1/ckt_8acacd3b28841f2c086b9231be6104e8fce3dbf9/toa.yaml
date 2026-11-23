@@ -1,0 +1,20 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_1f6935767db7928cfa93287a4de986a0d46df5d4
+name: pll
+form: passive
+description: Netlist of the subcircuit tx_sampler_pdk110_11 of pll.
+files:
+  netlist:
+  - "11_tx_sampler.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  pll_inv_pdk110_12:
+    ifc: ifc_79fc2dd7dc9b2d098dc2eabd8af8b4c2109e431e
+    ckt: ckt_bcb8258ee5f430390016c58ad2111aa6955ca77f
+  pll_tg_pdk110_13:
+    ifc: ifc_6812150876c8f1ba1d63f9bcb6be1364f6acf756
+    ckt: ckt_579024431840df0aa28f202f72a431fb0443692a
+specifications:
+  process: tsmc180

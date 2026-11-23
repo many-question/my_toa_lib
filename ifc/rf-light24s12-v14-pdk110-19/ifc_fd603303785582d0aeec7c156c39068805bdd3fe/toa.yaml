@@ -1,0 +1,10 @@
+type: ifc
+license: CC0-1.0
+name: rf-light24s12-v14-pdk110-19
+title: rf_light24s12_v14_pdk110_19
+description: Interface of the subcircuit rf_light24s12_v14_pdk110_19 of pll.
+pins:
+- {name: rf}
+- {name: clk}
+- {name: vdd}
+- {name: vss}

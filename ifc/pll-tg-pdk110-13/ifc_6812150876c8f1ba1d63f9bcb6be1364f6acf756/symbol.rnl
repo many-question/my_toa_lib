@@ -1,0 +1,22 @@
+/* Symbol of the subcircuit pll_tg_pdk110_13 of pll. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="pll-tg-pdk110-13-sym", version="0.1")
+}
+@RNL {
+  $PLL_TG_PDK110_13_BLOCK = @DEFINE-SYMBOL(box=[-2, -2, 2, 2]) {
+    (-2, 0) @PIN(terminal=1, direction="left");
+    (2, 0)  @PIN(terminal=2, direction="right");
+    (0, -2) @PIN(terminal=3, direction="down");
+    (0, 2)  @PIN(terminal=4, direction="up");
+    @LINE { (-2, 0) (-1, 0) };
+    @LINE { (1, 0) (2, 0) };
+    @LINE { (-1, 1) (1, 0) (-1, -1) (-1, 1) };
+    @LINE { (1, 1) (-1, 0) (1, -1) (1, 1) };
+    @LINE { (0, -2) (0, -0.5) };
+    @LINE { (0, 2) (0, 0.9) };
+    (0, 0.7) @CIRCLE(radius=0.2);
+    ? @TEXT("${name}", key="name", halign="start", size=0.65) => @PLACE(1.6, 1.6)
+  };
+  # @SELECT-INSTANCE(model="pll_tg_pdk110_13", recursive=true) => @SET-SYMBOL $PLL_TG_PDK110_13_BLOCK
+}

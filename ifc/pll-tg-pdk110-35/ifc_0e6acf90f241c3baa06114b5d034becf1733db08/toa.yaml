@@ -1,0 +1,12 @@
+type: ifc
+license: CC0-1.0
+name: pll-tg-pdk110-35
+title: pll_tg_pdk110_35
+description: Interface of the subcircuit pll_tg_pdk110_35 of pll.
+pins:
+- {name: a}
+- {name: b}
+- {name: "on"}
+- {name: "off"}
+- {name: vdd}
+- {name: vss}

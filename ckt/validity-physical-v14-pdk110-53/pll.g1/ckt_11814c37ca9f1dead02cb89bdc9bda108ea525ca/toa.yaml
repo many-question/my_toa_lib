@@ -1,0 +1,20 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_307728a9cb356b704df0f0e7a2cdb736b8e3e317
+name: pll
+form: transistor
+description: Netlist of the subcircuit validity_physical_v14_pdk110_53 of pll.
+files:
+  netlist:
+  - "53_validity_physical_v14.scs"
+  packages:
+  - pll_semantics.rnl
+uses:
+  cmp_physical_v14_pdk110_54:
+    ifc: ifc_90b6278770a1aec49ef5716afd4eb8e298bb326b
+    ckt: ckt_2676eab4204171af41fa4f48a446d1d563e13b2b
+  tx_and_pdk110_47:
+    ifc: ifc_68439ec415a2984bae048865f408de2e7ebbfae5
+    ckt: ckt_ab582ec2b0e9b43066e67e0dbc111ca2ca05334e
+specifications:
+  process: tsmc180

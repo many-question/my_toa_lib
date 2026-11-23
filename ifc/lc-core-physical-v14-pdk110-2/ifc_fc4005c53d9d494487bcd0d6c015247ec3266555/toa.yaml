@@ -1,0 +1,15 @@
+type: ifc
+license: CC0-1.0
+name: lc-core-physical-v14-pdk110-2
+title: lc_core_physical_v14_pdk110_2
+description: Interface of the subcircuit lc_core_physical_v14_pdk110_2 of pll.
+pins:
+- {name: vp}
+- {name: vn}
+- {name: b3}
+- {name: b4}
+- {name: b5}
+- {name: b6}
+- {name: b7}
+- {name: vdd}
+- {name: vss}

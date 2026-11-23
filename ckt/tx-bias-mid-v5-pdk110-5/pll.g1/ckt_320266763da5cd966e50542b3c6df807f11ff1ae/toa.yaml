@@ -1,0 +1,13 @@
+type: ckt
+license: CC0-1.0
+ifc: ifc_d87334648ffaf2c6170313e6f9cf5ab4c7c43f2e
+name: pll
+form: passive
+description: Netlist of the subcircuit tx_bias_mid_v5_pdk110_5 of pll.
+files:
+  netlist:
+  - "05_tx_bias_mid_v5.scs"
+  packages:
+  - pll_semantics.rnl
+specifications:
+  process: tsmc180
