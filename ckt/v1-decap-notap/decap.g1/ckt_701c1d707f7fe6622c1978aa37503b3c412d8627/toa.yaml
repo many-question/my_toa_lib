@@ -1,0 +1,14 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_0c46f8d9d1f5a8cb68ea5cd17d2e6f31ce14c711
+name: decap
+form: passive
+description: Schematic of the Virtuoso cell decap/V1_decap_notap (view schematic).
+files:
+  netlist:
+  - V1_decap_notap.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28

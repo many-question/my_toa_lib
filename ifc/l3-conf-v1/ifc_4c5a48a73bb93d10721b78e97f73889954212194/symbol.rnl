@@ -1,0 +1,39 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_conf_V1, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-conf-v1-sym", version="0.1")
+}
+@RNL {
+  $L3_CONF_V1_BLOCK = @DEFINE-SYMBOL(box=[13, -12, 34, 2]) {
+    @LINE {(34, -5) (30, -5)};
+    @LINE {(34, 1) (30, 1)};
+    @LINE {(34, -3) (30, -3)};
+    @LINE {(13, -5) (22, -5)};
+    @LINE {(13, -5) (17, -5)};
+    @LINE {(34, -9) (30, -9)};
+    @LINE {(34, -11) (30, -11)};
+    @RECTANGLE {(22, -12) (30, 2)};
+    @LINE {(13, -5) (17, -5)};
+    @LINE {(34, -7) (30, -7)};
+    @LINE {(34, -1) (30, -1)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(13, 1);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(26.5, -13);
+    (34, -5) @PIN(terminal="SDI");
+    (33.4, -4) @TEXT("SDI", size=1, halign="end", valign="middle");
+    (34, -1) @PIN(terminal="SCKO");
+    (33.4, 0) @TEXT("SCKO", size=1, halign="end", valign="middle");
+    (34, -3) @PIN(terminal="SDO");
+    (33.4, -2) @TEXT("SDO", size=1, halign="end", valign="middle");
+    (34, -7) @PIN(terminal="RST");
+    (33.4, -6) @TEXT("RST", size=1, halign="end", valign="middle");
+    (34, -9) @PIN(terminal="VDD");
+    (33.4, -8) @TEXT("VDD", size=1, halign="end", valign="middle");
+    (34, -11) @PIN(terminal="GND");
+    (33.4, -10) @TEXT("GND", size=1, halign="end", valign="middle");
+    (13, -5) @PIN(terminal=["OUT_21", "OUT_20", "OUT_19", "OUT_18", "OUT_17", "OUT_16", "OUT_15", "OUT_14", "OUT_13", "OUT_12", "OUT_11", "OUT_10", "OUT_9", "OUT_8", "OUT_7", "OUT_6", "OUT_5", "OUT_4", "OUT_3", "OUT_2", "OUT_1", "OUT_0"]);
+    (13.6, -4) @TEXT("OUT<21:0>", size=1, halign="start", valign="middle");
+    (34, 1) @PIN(terminal="SCKI");
+    (33.4, 2) @TEXT("SCKI", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_conf_V1", recursive=true) => @SET-SYMBOL(terminals=["GND", "OUT_21", "OUT_20", "OUT_19", "OUT_18", "OUT_17", "OUT_16", "OUT_15", "OUT_14", "OUT_13", "OUT_12", "OUT_11", "OUT_10", "OUT_9", "OUT_8", "OUT_7", "OUT_6", "OUT_5", "OUT_4", "OUT_3", "OUT_2", "OUT_1", "OUT_0", "RST", "SCKI", "SCKO", "SDI", "SDO", "VDD"]) $L3_CONF_V1_BLOCK
+}

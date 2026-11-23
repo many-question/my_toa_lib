@@ -1,0 +1,44 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_crossbar_cell, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-crossbar-cell-sym", version="0.1")
+}
+@RNL {
+  $LB_CROSSBAR_CELL_BLOCK = @DEFINE-SYMBOL(box=[-2, -9, 18, 3]) {
+    @LINE {(-2, -3) (2, -3)};
+    @LINE {(4, -9) (4, -5)};
+    @LINE {(16, 3) (16, -1)};
+    @LINE {(16, -9) (16, -5)};
+    @RECTANGLE {(2, -5) (18, -1)};
+    @LINE {(-2, -3) (2, -3)};
+    @LINE {(14, -9) (14, -5)};
+    @LINE {(12, 3) (12, -1)};
+    @LINE {(6, -9) (6, -5)};
+    @LINE {(10, 3) (10, -1)};
+    @LINE {(14, 3) (14, -1)};
+    @LINE {(8, 3) (8, -1)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(-2, 2);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(12, -3.5);
+    (12, 3) @PIN(terminal="SDI");
+    (11, 2.4) @TEXT("SDI", size=1, halign="end", valign="middle", rotate=90);
+    (-2, -3) @PIN(terminal="ROW");
+    (-1.4, -2) @TEXT("ROW", size=1, halign="start", valign="middle");
+    (4, -9) @PIN(terminal="COL");
+    (3, -5.6) @TEXT("COL", size=1, halign="end", valign="middle", rotate=90);
+    (16, -9) @PIN(terminal="GND");
+    (15, -8.4) @TEXT("GND", size=1, halign="start", valign="middle", rotate=90);
+    (10, 3) @PIN(terminal="PRE");
+    (9, 2.4) @TEXT("PRE", size=1, halign="end", valign="middle", rotate=90);
+    (14, -9) @PIN(terminal="SCK");
+    (13, -8.4) @TEXT("SCK", size=1, halign="start", valign="middle", rotate=90);
+    (14, 3) @PIN(terminal="SDO");
+    (13, 2.4) @TEXT("SDO", size=1, halign="end", valign="middle", rotate=90);
+    (6, -9) @PIN(terminal="REP");
+    (5, -5.6) @TEXT("REP", size=1, halign="end", valign="middle", rotate=90);
+    (16, 3) @PIN(terminal="VDD");
+    (15, -0.4) @TEXT("VDD", size=1, halign="start", valign="middle", rotate=90);
+    (8, 3) @PIN(terminal="BUS");
+    (7, 2.4) @TEXT("BUS", size=1, halign="end", valign="middle", rotate=90)
+  };
+  # @SELECT-INSTANCE(model="LB_crossbar_cell", recursive=true) => @SET-SYMBOL(terminals=["COL", "GND", "PRE", "ROW", "SCK", "SDI", "SDO", "VDD", "BUS", "REP"]) $LB_CROSSBAR_CELL_BLOCK
+}

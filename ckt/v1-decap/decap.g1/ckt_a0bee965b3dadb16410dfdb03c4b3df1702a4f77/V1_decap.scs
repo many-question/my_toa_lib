@@ -1,0 +1,38 @@
+// RNL cell decap/V1_decap
+// @RNL(type="header") {
+//   @VERSION("0.4");
+//   @USE-PACKAGE(name="rnl-std-all", version="0.4");
+//   @USE-PACKAGE(name="rnl-std-fill") {};
+//   @USE-PACKAGE(name="eda-symbol", version="0.2", path="eda-symbol.rnl");
+//   @USE-PACKAGE(name="eda-style", version="0.2", path="eda-style.rnl");
+//   @DEVICE(model="cfmom*", terminals=["p", "n"], type="c")
+// }
+subckt V1_decap GND VDD
+    C0 (VDD GND) cfmom_2t nr=28 lr=1.67u w=70n s=70n stm=2 spm=7 multi=2
+// @RNL(author="rnl-virtuoso") {
+//   %symbol_0 = @DEFINE-SYMBOL(box=[-2, -6, 2, 0]) {
+//     @LINE {(1, -2.2) (-1, -2.2)};
+//     @LINE {(0, 0) (0, -2.2)};
+//     @LINE {(0, -2.8) (0, -6)};
+//     @ARC {(1, -3.2) (0, -2.8) (-1, -3.2)};
+//     ? @TEXT("${name}", size=0.8, halign="start", valign="baseline", key="name") => @PLACE(1.4, 0.1);
+//     ? @TEXT("${model}", size=0.8, halign="end", valign="baseline", key="model") => @PLACE(-1.1, 0.3);
+//     (0, 0) @PIN(terminal=1);
+//     (0, -6) @PIN(terminal=2)
+//   };
+//   #"C0" @SET-SYMBOL %symbol_0;
+//   #"C0" @PLACE(-16, 14) => @ORIENT("R0");
+//   %port_0 = $IO_PORT @ATTACH &"VDD" => @PLACE(-30, 14) => @ORIENT("R0");
+//   %port_1 = $IO_PORT @ATTACH &"GND" => @PLACE(-30, 8) => @ORIENT("R0");
+//   %p0 = (-16, 6);
+//   %p1 = (-6, 6);
+//   %wire_0 = &"GND" @WIRE(mode="straight") {%p0 %p1};
+//   %wire_1 = &"GND" @WIRE(mode="straight") {%p0 #"C0":2};
+//   %wire_0 @TEXT("GND", size=1, halign="middle", valign="baseline") => @PLACE(-12, 6.7);
+//   %p2 = (-16, 16);
+//   %p3 = (-6, 16);
+//   %wire_2 = &"VDD" @WIRE(mode="straight") {%p2 %p3};
+//   %wire_3 = &"VDD" @WIRE(mode="straight") {#"C0":1 %p2};
+//   %wire_2 @TEXT("VDD", size=1, halign="middle", valign="baseline") => @PLACE(-12, 16.7)
+// }
+ends V1_decap

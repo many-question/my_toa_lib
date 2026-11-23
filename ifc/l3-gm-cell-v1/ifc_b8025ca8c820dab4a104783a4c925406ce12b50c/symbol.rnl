@@ -1,0 +1,89 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_gm_cell_V1, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-gm-cell-v1-sym", version="0.1")
+}
+@RNL {
+  $L3_GM_CELL_V1_BLOCK = @DEFINE-SYMBOL(box=[-18, -33, 10, -5]) {
+    @LINE {(10, -9) (6, -9)};
+    @LINE {(10, -11) (6, -11)};
+    @LINE {(6, -18) (0, -18)};
+    @LINE {(10, -27) (6, -27)};
+    @LINE {(-18, -17) (-12, -17)};
+    @LINE {(-3, -25) (-3, -33)};
+    @LINE {(-3, -13) (-3, -9)};
+    @LINE {(-3, -19) (-3, -15)};
+    @LINE {(-18, -21) (-12, -21)};
+    @LINE {(-18, -7) (-14, -7)};
+    @LINE {(10, -7) (6, -7)};
+    @LINE {(10, -18) (6, -18)};
+    @LINE {(-8, -19) (-6, -19)};
+    @LINE {(-11, -5) (-11, -9)};
+    @LINE {(-12, -15) (-12, -23) (-8, -21) (-8, -17) (-12, -15)};
+    @LINE {(-6, -18) (-6, -20) (-4, -20) (-4, -18) (-6, -18)};
+    @LINE {(-6, -18) (-4, -20)};
+    @LINE {(6, -20) (0, -20)};
+    @LINE {(10, -13) (6, -13)};
+    @LINE {(-3, -25) (-4, -23)};
+    @LINE {(-3, -13) (-4, -15)};
+    @LINE {(-4, -19) (-2, -19) (-2, -18) (0, -17) (0, -21) (-2, -20) (-2, -19)};
+    @LINE {(-4, -18) (-6, -20)};
+    @LINE {(-18, -29) (-14, -29)};
+    @LINE {(-18, -31) (-14, -31)};
+    @LINE {(-3, -5) (-3, -13)};
+    @LINE {(-3, -19) (-3, -23)};
+    @LINE {(10, -20) (6, -20)};
+    @LINE {(-18, -25) (-14, -25)};
+    @LINE {(-18, -27) (-14, -27)};
+    @LINE {(-18, -12) (-14, -12)};
+    @LINE {(-7, -5) (-7, -13)};
+    @LINE {(-11, -33) (-11, -29)};
+    @LINE {(-7, -25) (-7, -33)};
+    (-10, -20) @TEXT("GM", size=1, halign="middle", valign="baseline");
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(4, -29);
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(7, -4);
+    (10, -7) @PIN(terminal="EN");
+    (9.4, -6) @TEXT("EN", size=1, halign="end", valign="middle");
+    (10, -11) @PIN(terminal=["MT_2", "MT_1"]);
+    (9.4, -10) @TEXT("MT<2:1>", size=1, halign="end", valign="middle");
+    (-18, -12) @PIN(terminal=["VDCAP_3", "VDCAP_2", "VDCAP_1"]);
+    (-17.4, -11) @TEXT("VDCAP<3:1>", size=1, halign="start", valign="middle");
+    (-3, -33) @PIN(terminal="IOUTN");
+    (2.4, -32) @TEXT("IOUTN", size=1, halign="end", valign="middle");
+    (-18, -7) @PIN(terminal="IBP");
+    (-17.4, -6) @TEXT("IBP", size=1, halign="start", valign="middle");
+    (-18, -29) @PIN(terminal="VDDSWI");
+    (-17.4, -28) @TEXT("VDDSWI", size=1, halign="start", valign="middle");
+    (-3, -5) @PIN(terminal="IOUTP");
+    (-2.4, -6) @TEXT("IOUTP", size=1, halign="start", valign="middle");
+    (-18, -27) @PIN(terminal="GNDAMP");
+    (-17.4, -26) @TEXT("GNDAMP", size=1, halign="start", valign="middle");
+    %pin_11_1 = (-11, -33) @PIN(terminal="VCM");
+    (-10, -5.6) @TEXT("VCM", size=1, halign="end", valign="middle", rotate=90);
+    %pin_11_2 = (-11, -5) @PIN(terminal="VCM");
+    (-10, -32.4) @TEXT("VCM", size=1, halign="start", valign="middle", rotate=90);
+    (10, -18) @PIN(terminal=["BUSP_2", "BUSP_1"]);
+    (9.4, -17) @TEXT("BUSP<2:1>", size=1, halign="end", valign="middle");
+    (10, -13) @PIN(terminal="FTX");
+    (9.4, -12) @TEXT("FTX", size=1, halign="end", valign="middle");
+    (10, -20) @PIN(terminal=["BUSN_2", "BUSN_1"]);
+    (9.4, -19) @TEXT("BUSN<2:1>", size=1, halign="end", valign="middle");
+    (-18, -31) @PIN(terminal="GNDSWI");
+    (-17.4, -30) @TEXT("GNDSWI", size=1, halign="start", valign="middle");
+    (-18, -17) @PIN(terminal="VINP");
+    (-17.4, -16) @TEXT("VINP", size=1, halign="start", valign="middle");
+    (-18, -21) @PIN(terminal="VINN");
+    (-17.4, -20) @TEXT("VINN", size=1, halign="start", valign="middle");
+    %pin_4_1 = (-7, -33) @PIN(terminal="VBO");
+    (-6, -5.6) @TEXT("VBO", size=1, halign="end", valign="middle", rotate=90);
+    %pin_4_2 = (-7, -5) @PIN(terminal="VBO");
+    (-6, -29.6) @TEXT("VBO", size=1, halign="end", valign="middle", rotate=90);
+    (-18, -25) @PIN(terminal="VDDAMP");
+    (-17.4, -24) @TEXT("VDDAMP", size=1, halign="start", valign="middle");
+    (10, -9) @PIN(terminal="SLB");
+    (9.4, -8) @TEXT("SLB", size=1, halign="end", valign="middle");
+    (10, -27) @PIN(terminal=["GTUNE_3", "GTUNE_2", "GTUNE_1", "GTUNE_0"]);
+    (9.4, -26) @TEXT("GTUNE<3:0>", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_gm_cell_V1", recursive=true) => @SET-SYMBOL(terminals=["BUSN_2", "BUSN_1", "BUSP_2", "BUSP_1", "EN", "FTX", "GNDAMP", "GNDSWI", "GTUNE_3", "GTUNE_2", "GTUNE_1", "GTUNE_0", "IBP", "IOUTN", "IOUTP", "MT_2", "MT_1", "SLB", "VBO", "VCM", "VDCAP_3", "VDCAP_2", "VDCAP_1", "VDDAMP", "VDDSWI", "VINN", "VINP"]) $L3_GM_CELL_V1_BLOCK
+}

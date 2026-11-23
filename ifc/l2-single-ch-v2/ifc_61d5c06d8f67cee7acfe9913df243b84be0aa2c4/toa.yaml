@@ -1,0 +1,43 @@
+type: ifc
+license: CC-BY-4.0
+name: l2-single-ch-v2
+title: L2_single_ch_V2
+description: Interface of the Virtuoso cell RISCA_JL/L2_single_ch_V2.
+pins:
+- {name: ADDR, width: 3}
+- {name: BUSN, width: 2}
+- {name: BUSP, width: 2}
+- {name: CLK}
+- {name: DBUSI, width: 16}
+- {name: DBUSO, width: 16}
+- {name: FRAME, width: 16}
+- {name: GNDAMP}
+- {name: GNDANA}
+- {name: GNDCLK}
+- {name: GNDDAT}
+- {name: GNDDIG}
+- {name: GNDREC}
+- {name: GNDSAM}
+- {name: IB}
+- {name: REPET, width: 17}
+- {name: RST}
+- {name: SCKI}
+- {name: SCKO}
+- {name: SDI}
+- {name: SDO}
+- {name: UDI}
+- {name: UDO}
+- {name: VBS}
+- {name: VCM}
+- {name: VDDAMP}
+- {name: VDDANA}
+- {name: VDDCLK}
+- {name: VDDDAT}
+- {name: VDDDIG}
+- {name: VDDREC}
+- {name: VDDSAM}
+- {name: VINCM}
+- {name: VINN, width: 2}
+- {name: VINP, width: 2}
+- {name: VREFN}
+- {name: VREFP}

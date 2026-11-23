@@ -1,0 +1,16 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_6fd245d8395fc6f2e3e0a69e2210cacaf2c5239a
+name: risca-jl
+form: mixed
+description: Schematic of the Virtuoso cell RISCA_JL/LB_vcmbooster (view schematic).
+files:
+  netlist:
+  - LB_vcmbooster.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28
+external:
+- {name: tcbn28hpcplusbwp12t30p140, role: other, process: tsmc28}

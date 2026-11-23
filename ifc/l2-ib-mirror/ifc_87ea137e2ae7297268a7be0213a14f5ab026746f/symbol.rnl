@@ -1,0 +1,25 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L2_Ib_mirror, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l2-ib-mirror-sym", version="0.1")
+}
+@RNL {
+  $L2_IB_MIRROR_BLOCK = @DEFINE-SYMBOL(box=[0, -4, 22, 2]) {
+    @LINE {(22, 0) (18, 0)};
+    @LINE {(0, 0) (4, 0)};
+    @LINE {(0, -2) (4, -2)};
+    @RECTANGLE {(4, -4) (18, 2)};
+    @LINE {(22, -2) (18, -2)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(18, 3);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(12, -5);
+    (22, 0) @PIN(terminal=["IOUT_5", "IOUT_4", "IOUT_3", "IOUT_2", "IOUT_1", "IOUT_0"]);
+    (17.4, 0) @TEXT("IOUT<5:0>", size=1, halign="end", valign="middle");
+    (0, 0) @PIN(terminal="IIN");
+    (4.6, 0) @TEXT("IIN", size=1, halign="start", valign="middle");
+    (0, -2) @PIN(terminal="GND");
+    (4.6, -2) @TEXT("GND", size=1, halign="start", valign="middle");
+    (22, -2) @PIN(terminal="VDCAP");
+    (17.4, -2) @TEXT("VDCAP", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L2_Ib_mirror", recursive=true) => @SET-SYMBOL(terminals=["GND", "IIN", "IOUT_5", "IOUT_4", "IOUT_3", "IOUT_2", "IOUT_1", "IOUT_0", "VDCAP"]) $L2_IB_MIRROR_BLOCK
+}

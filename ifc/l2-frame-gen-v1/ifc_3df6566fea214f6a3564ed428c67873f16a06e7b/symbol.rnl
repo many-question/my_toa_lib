@@ -1,0 +1,55 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L2_frame_gen_V1, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l2-frame-gen-v1-sym", version="0.1")
+}
+@RNL {
+  $L2_FRAME_GEN_V1_BLOCK = @DEFINE-SYMBOL(box=[0, -15, 16, 8]) {
+    @LINE {(16, -4) (12, -4)};
+    @LINE {(16, 0) (12, 0)};
+    @LINE {(16, 2) (12, 2)};
+    @LINE {(8, -15) (8, -14)};
+    @LINE {(10, 8) (10, 4)};
+    @LINE {(16, -2) (12, -2)};
+    @LINE {(8, -15) (8, -12)};
+    @LINE {(10, 8) (10, 4)};
+    @LINE {(6, 8) (6, 4)};
+    @LINE {(0, -8) (4, -8)};
+    @LINE {(16, -8) (12, -8)};
+    @LINE {(0, 0) (4, 0)};
+    @LINE {(0, -2) (4, -2)};
+    @RECTANGLE {(4, -6) (12, 4)};
+    @LINE {(10, -12) (6, -12) (8, -10) (10, -12)};
+    @LINE {(4, -8) (12, -8)};
+    @LINE {(8, -12) (8, -14)};
+    @LINE {(8, -10) (8, -6)};
+    @LINE {(10, 0) (10, 2) (6, 2) (6, -4) (10, -4) (10, -2)};
+    @LINE {(10, 0) (9, 1)};
+    @LINE {(10, 0) (11, 1)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(12, -12);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(14, -14);
+    (16, -4) @PIN(terminal="SDI");
+    (15.4, -3) @TEXT("SDI", size=1, halign="end", valign="middle");
+    (16, 0) @PIN(terminal="SCK");
+    (15.4, 1) @TEXT("SCK", size=1, halign="end", valign="middle");
+    (16, 2) @PIN(terminal="RST");
+    (15.4, 3) @TEXT("RST", size=1, halign="end", valign="middle");
+    (8, -15) @PIN(terminal="CLKIN");
+    (7.4, -13) @TEXT("CLKIN", size=1, halign="end", valign="middle");
+    (16, -2) @PIN(terminal="SDO");
+    (15.4, -1) @TEXT("SDO", size=1, halign="end", valign="middle");
+    (10, 8) @PIN(terminal=["REPET_17", "REPET_16", "REPET_15", "REPET_14", "REPET_13", "REPET_12", "REPET_11", "REPET_10", "REPET_9", "REPET_8", "REPET_7", "REPET_6", "REPET_5", "REPET_4", "REPET_3", "REPET_2", "REPET_1"]);
+    (10.6, 6) @TEXT("REPET<17:1>", size=1, halign="start", valign="middle");
+    (6, 8) @PIN(terminal=["FRAME_15", "FRAME_14", "FRAME_13", "FRAME_12", "FRAME_11", "FRAME_10", "FRAME_9", "FRAME_8", "FRAME_7", "FRAME_6", "FRAME_5", "FRAME_4", "FRAME_3", "FRAME_2", "FRAME_1", "FRAME_0"]);
+    (-4.4, 6) @TEXT("FRAME<15:0>", size=1, halign="start", valign="middle");
+    (0, -8) @PIN(terminal="CLKSH");
+    (0.6, -7) @TEXT("CLKSH", size=1, halign="start", valign="middle");
+    (16, -8) @PIN(terminal="CLKDT");
+    (15.4, -7) @TEXT("CLKDT", size=1, halign="end", valign="middle");
+    (0, 0) @PIN(terminal="VDD");
+    (0.6, 1) @TEXT("VDD", size=1, halign="start", valign="middle");
+    (0, -2) @PIN(terminal="GND");
+    (0.6, -1) @TEXT("GND", size=1, halign="start", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L2_frame_gen_V1", recursive=true) => @SET-SYMBOL(terminals=["CLKSH", "CLKDT", "FRAME_15", "FRAME_14", "FRAME_13", "FRAME_12", "FRAME_11", "FRAME_10", "FRAME_9", "FRAME_8", "FRAME_7", "FRAME_6", "FRAME_5", "FRAME_4", "FRAME_3", "FRAME_2", "FRAME_1", "FRAME_0", "SDO", "GND", "VDD", "RST", "SCK", "SDI", "REPET_17", "REPET_16", "REPET_15", "REPET_14", "REPET_13", "REPET_12", "REPET_11", "REPET_10", "REPET_9", "REPET_8", "REPET_7", "REPET_6", "REPET_5", "REPET_4", "REPET_3", "REPET_2", "REPET_1", "CLKIN"]) $L2_FRAME_GEN_V1_BLOCK
+}

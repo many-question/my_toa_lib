@@ -1,0 +1,57 @@
+type: ifc
+license: CC-BY-4.0
+name: l0-risca
+title: L0_RISCA
+description: Interface of the Virtuoso cell RISCA_JL/L0_RISCA.
+pins:
+- {name: GREF}
+- {name: VREF}
+- {name: VSAM}
+- {name: VCM}
+- {name: GDIG}
+- {name: VDIG}
+- {name: VANA}
+- {name: VBS}
+- {name: GAMP}
+- {name: VAMP}
+- {name: VREC}
+- {name: GREC}
+- {name: VCLK}
+- {name: GCLK}
+- {name: VIOL}
+- {name: DCLK}
+- {name: VIOH}
+- {name: D15}
+- {name: D14}
+- {name: D13}
+- {name: D12}
+- {name: D11}
+- {name: D10}
+- {name: D9}
+- {name: D8}
+- {name: D7}
+- {name: D6}
+- {name: D5}
+- {name: D4}
+- {name: D3}
+- {name: D2}
+- {name: D1}
+- {name: D0}
+- {name: SDO}
+- {name: SDI}
+- {name: SCK}
+- {name: RST}
+- {name: GIOH}
+- {name: GIOL}
+- {name: VCKB}
+- {name: CLKN}
+- {name: CLKP}
+- {name: GCKB}
+- {name: IN2N}
+- {name: IN2P}
+- {name: IN1N}
+- {name: IN1P}
+- {name: SLP}
+- {name: INCM}
+- {name: IB}
+- {name: GNDA}

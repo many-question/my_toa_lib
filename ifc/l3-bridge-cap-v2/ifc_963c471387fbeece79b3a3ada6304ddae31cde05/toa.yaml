@@ -1,0 +1,18 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-bridge-cap-v2
+title: L3_bridge_cap_V2
+description: Interface of the Virtuoso cell RISCA_JL/L3_bridge_cap_V2.
+pins:
+- {name: CDAC}
+- {name: CLK}
+- {name: CMP}
+- {name: CS1}
+- {name: CS2}
+- {name: GND}
+- {name: RS1}
+- {name: RS2}
+- {name: SRT}
+- {name: VDD}
+- {name: VRESG}
+- {name: VRESP}

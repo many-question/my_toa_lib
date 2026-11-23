@@ -1,0 +1,59 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_61d5c06d8f67cee7acfe9913df243b84be0aa2c4
+name: risca-jl
+form: mixed
+description: Schematic of the Virtuoso cell RISCA_JL/L2_single_ch_V2 (view schematic).
+files:
+  netlist:
+  - L2_single_ch_V2.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+uses:
+  L3_CDAC_V1:
+    ifc: ifc_e3f3276bf289c7e48c6259fdc4871487727253be
+    ckt: ckt_88e65c0a8bdf5f64f9f682d37a1b9b4620286fb2
+  L3_DAC_swi_V2:
+    ifc: ifc_4ce3cffe0dda2fde77b1b0e24de11a24898af8d7
+    ckt: ckt_bc9b2628ec2aff7c4f192bd7187095e22e65a9e1
+  L3_bridge_cap_V2:
+    ifc: ifc_963c471387fbeece79b3a3ada6304ddae31cde05
+    ckt: ckt_880dcf490f7a58ce1b4e597b1c9c71cd786d3593
+  L3_clk_mux_V1:
+    ifc: ifc_547d56a1bd5b93fae47a18d2a6ebe77cc352827b
+    ckt: ckt_7f9ee1d641ff429d5e908d9afa50a32a1b5d25e0
+  L3_comparator_V1:
+    ifc: ifc_bb0def56d6c9f716f45f678e8991b49c7ec9e72c
+    ckt: ckt_2226c08ec489d07a65fe0aebc9f52e02aa732221
+  L3_conf_V1:
+    ifc: ifc_4c5a48a73bb93d10721b78e97f73889954212194
+    ckt: ckt_0f5c2e237614837145dacaa9acf91be5e4eb8ff8
+  L3_data_bus:
+    ifc: ifc_63899bda541c11318a5a9812ed37b0cc422aafa0
+    ckt: ckt_25448c9228af8f743a5a4f826fe05d2da3bc891e
+  L3_gm_cell_V1:
+    ifc: ifc_b8025ca8c820dab4a104783a4c925406ce12b50c
+    ckt: ckt_f987bb01126e5bd812f0ebaa2103f9d53e45a199
+  L3_input_MUX_V1:
+    ifc: ifc_a68c044935e7ea77a9f5d734e584e982978f1a69
+    ckt: ckt_66c1ebc4e95739fb7fedbedf5ecbacb84f62367d
+  L3_logic_V2:
+    ifc: ifc_ed68700e860ddd99beaf0e6e83d7f9790f975d4f
+    ckt: ckt_850bcdc777c36c06da2631779de83afacc0becb9
+  L3_res_rx_V2:
+    ifc: ifc_952ebb3b3d060a4103e21910823747946eecd9fd
+    ckt: ckt_3067a6174397070fb0b74e8a558d946dc37f5bdb
+  LB_RDAC:
+    ifc: ifc_4d1c40c34a63e705de928c1bdc9f875fd7b55865
+    ckt: ckt_7ca898c99bc840205c7e6f0bf51ffa4c64e3a6a9
+  LB_vcmbooster:
+    ifc: ifc_6fd245d8395fc6f2e3e0a69e2210cacaf2c5239a
+    ckt: ckt_c4f10f7db9a09838f681b3b48d7bef722f79f70a
+  LB_vcmbooster_LV:
+    ifc: ifc_6effd355676e2e181f089cf5a22c8968f8d85412
+    ckt: ckt_e1956413e16bb0a748fa54cae692c6913a7369aa
+specifications:
+  process: tsmc28
+external:
+- {name: tcbn28hpcplusbwp12t30p140, role: other, process: tsmc28}

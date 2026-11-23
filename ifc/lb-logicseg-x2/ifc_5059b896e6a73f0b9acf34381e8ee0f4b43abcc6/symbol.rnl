@@ -1,0 +1,43 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_logicseg_X2, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-logicseg-x2-sym", version="0.1")
+}
+@RNL {
+  $LB_LOGICSEG_X2_BLOCK = @DEFINE-SYMBOL(box=[0, -23, 22, 9]) {
+    @LINE {(22, -12) (17, -12)};
+    @LINE {(22, -8) (17, -8)};
+    @LINE {(22, 4) (17, 4)};
+    @LINE {(22, -4) (17, -4)};
+    @LINE {(22, 0) (17, 0)};
+    @LINE {(0, -8) (6, -8)};
+    @LINE {(12, 9) (12, 5)};
+    @LINE {(12, -23) (12, -19)};
+    @LINE {(22, -16) (17, -16)};
+    @LINE {(22, -18) (17, -18)};
+    @RECTANGLE {(6, -19) (17, 5)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(19, 8);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", rotate=90, key="model") => @PLACE(11, -7);
+    (22, -12) @PIN(terminal="RST");
+    (21.4, -11) @TEXT("RST", size=1, halign="end", valign="middle");
+    (22, -8) @PIN(terminal="ENB");
+    (21.4, -7) @TEXT("ENB", size=1, halign="end", valign="middle");
+    (22, 4) @PIN(terminal="CMPP");
+    (21.4, 5) @TEXT("CMPP", size=1, halign="end", valign="middle");
+    (22, -4) @PIN(terminal="CMPO");
+    (21.4, -3) @TEXT("CMPO", size=1, halign="end", valign="middle");
+    (22, 0) @PIN(terminal="CMPN");
+    (21.4, 1) @TEXT("CMPN", size=1, halign="end", valign="middle");
+    (0, -8) @PIN(terminal="NEXTB");
+    (0.6, -7) @TEXT("NEXTB", size=1, halign="start", valign="middle");
+    (12, 9) @PIN(terminal="DOP");
+    (11, 8.4) @TEXT("DOP", size=1, halign="end", valign="middle", rotate=90);
+    (12, -23) @PIN(terminal="DON");
+    (11, -22.4) @TEXT("DON", size=1, halign="start", valign="middle", rotate=90);
+    (22, -16) @PIN(terminal="VDD");
+    (21.4, -15) @TEXT("VDD", size=1, halign="end", valign="middle");
+    (22, -18) @PIN(terminal="GND");
+    (21.4, -17) @TEXT("GND", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="LB_logicseg_X2", recursive=true) => @SET-SYMBOL(terminals=["CMPN", "CMPO", "CMPP", "DON", "DOP", "ENB", "GND", "NEXTB", "RST", "VDD"]) $LB_LOGICSEG_X2_BLOCK
+}

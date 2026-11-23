@@ -1,0 +1,14 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_9881f5f9cb1fc387dcae782338a588e41810707e
+name: risca-jl
+form: passive
+description: Schematic of the Virtuoso cell RISCA_JL/LB_RES50 (view schematic).
+files:
+  netlist:
+  - LB_RES50.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28

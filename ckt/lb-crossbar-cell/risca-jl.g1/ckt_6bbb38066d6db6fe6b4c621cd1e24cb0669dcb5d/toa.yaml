@@ -1,0 +1,16 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_b29e8e1b4fa99bb30054271a86a2315168be84fe
+name: risca-jl
+form: mixed
+description: Schematic of the Virtuoso cell RISCA_JL/LB_crossbar_cell (view schematic).
+files:
+  netlist:
+  - LB_crossbar_cell.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28
+external:
+- {name: tcbn28hpcplusbwp12t30p140, role: other, process: tsmc28}

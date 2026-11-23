@@ -1,0 +1,17 @@
+type: ifc
+license: CC-BY-4.0
+name: l2-frame-gen-v1
+title: L2_frame_gen_V1
+description: Interface of the Virtuoso cell RISCA_JL/L2_frame_gen_V1.
+pins:
+- {name: CLKSH}
+- {name: CLKDT}
+- {name: FRAME, width: 16}
+- {name: SDO}
+- {name: GND}
+- {name: VDD}
+- {name: RST}
+- {name: SCK}
+- {name: SDI}
+- {name: REPET, width: 17}
+- {name: CLKIN}

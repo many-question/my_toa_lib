@@ -1,0 +1,68 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_bridge_cap_V2, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-bridge-cap-v2-sym", version="0.1")
+}
+@RNL {
+  $L3_BRIDGE_CAP_V2_BLOCK = @DEFINE-SYMBOL(box=[-4, 0, 20, 22]) {
+    @LINE {(20, 18) (16, 18)};
+    @LINE {(20, 16) (16, 16)};
+    @LINE {(20, 10) (16, 10)};
+    @LINE {(20, 8) (16, 8)};
+    @LINE {(20, 14) (16, 14)};
+    @LINE {(-4, 16) (0, 16)};
+    @LINE {(-4, 14) (0, 14)};
+    @LINE {(8, 12) (10, 12) (10, 13)};
+    @LINE {(-4, 2) (8, 2)};
+    @LINE {(8, 4) (8, 0)};
+    @LINE {(9, 3) (9, 1)};
+    @LINE {(9, 2) (20, 2)};
+    @LINE {(8, 4) (10, 4) (10, 3)};
+    @LINE {(8, 0) (10, 0) (10, 1)};
+    @LINE {(10, 6) (14, 6)};
+    @LINE {(4, 6) (8, 6) (10, 7)};
+    @LINE {(14, 2) (14, 6)};
+    @LINE {(8, 16) (8, 12)};
+    @LINE {(8, 16) (10, 16) (10, 15)};
+    @LINE {(9, 15) (9, 13)};
+    @LINE {(9, 14) (14, 14)};
+    @LINE {(4, 14) (8, 14)};
+    @LINE {(4, 14) (4, 11) (3, 9)};
+    @LINE {(4, 9) (4, 6)};
+    @LINE {(14, 14) (14, 11) (13, 9)};
+    @LINE {(14, 9) (14, 6)};
+    @LINE {(14, 22) (14, 19) (13, 17)};
+    @LINE {(14, 17) (14, 14)};
+    @LINE {(4, 17) (4, 14)};
+    @LINE {(4, 22) (4, 19) (3, 17)};
+    @LINE {(20, 12) (16, 12)};
+    @LINE {(4, 6) (4, 2)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(17, 22);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(2, 0.5);
+    (14, 22) @PIN(terminal="VRESP");
+    (12, 16.6) @TEXT("VRESP", size=1, halign="start", valign="middle", rotate=90);
+    (20, 10) @PIN(terminal="RS1");
+    (19.4, 11) @TEXT("RS1", size=1, halign="end", valign="middle");
+    (4, 22) @PIN(terminal="VRESG");
+    (5, 16.6) @TEXT("VRESG", size=1, halign="start", valign="middle", rotate=90);
+    (20, 16) @PIN(terminal="SRT");
+    (19.4, 17) @TEXT("SRT", size=1, halign="end", valign="middle");
+    (20, 8) @PIN(terminal="RS2");
+    (19.4, 9) @TEXT("RS2", size=1, halign="end", valign="middle");
+    (20, 14) @PIN(terminal="CS1");
+    (19.4, 15) @TEXT("CS1", size=1, halign="end", valign="middle");
+    (20, 12) @PIN(terminal="CS2");
+    (19.4, 13) @TEXT("CS2", size=1, halign="end", valign="middle");
+    (20, 18) @PIN(terminal="CLK");
+    (19.4, 19) @TEXT("CLK", size=1, halign="end", valign="middle");
+    (-4, 14) @PIN(terminal="GND");
+    (-3.4, 15) @TEXT("GND", size=1, halign="start", valign="middle");
+    (20, 2) @PIN(terminal="CMP");
+    (19.4, 3) @TEXT("CMP", size=1, halign="end", valign="middle");
+    (-4, 2) @PIN(terminal="CDAC");
+    (-3.4, 3) @TEXT("CDAC", size=1, halign="start", valign="middle");
+    (-4, 16) @PIN(terminal="VDD");
+    (-3.4, 17) @TEXT("VDD", size=1, halign="start", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_bridge_cap_V2", recursive=true) => @SET-SYMBOL(terminals=["CDAC", "CLK", "CMP", "CS1", "CS2", "GND", "RS1", "RS2", "SRT", "VDD", "VRESG", "VRESP"]) $L3_BRIDGE_CAP_V2_BLOCK
+}

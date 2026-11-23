@@ -1,0 +1,19 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-res-rx-v2
+title: L3_res_rx_V2
+description: Interface of the Virtuoso cell RISCA_JL/L3_res_rx_V2.
+pins:
+- {name: BUS, width: 2}
+- {name: EN}
+- {name: GNDAMP}
+- {name: GNDSWI}
+- {name: HBW}
+- {name: IIN}
+- {name: MR, width: 2}
+- {name: RTUNE, width: 4}
+- {name: VB}
+- {name: VCM}
+- {name: VDDAMP}
+- {name: VDDSWI}
+- {name: VOUT}

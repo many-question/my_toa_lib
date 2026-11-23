@@ -1,0 +1,73 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_logic_V2, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-logic-v2-sym", version="0.1")
+}
+@RNL {
+  $L3_LOGIC_V2_BLOCK = @DEFINE-SYMBOL(box=[-37, -2, 8, 18]) {
+    @LINE {(-18, 18) (-18, 16)};
+    @LINE {(-18, 18) (-18, 16)};
+    @LINE {(-10, 18) (-10, 16)};
+    @LINE {(-18, 18) (-18, 16)};
+    @LINE {(-10, 18) (-10, 16)};
+    @LINE {(-37, 14) (-33, 14)};
+    @LINE {(-37, 12) (-33, 12)};
+    @LINE {(-37, 2) (-33, 2)};
+    @LINE {(-37, 4) (-33, 4)};
+    @LINE {(4, 16) (-33, 16) (-33, 0) (4, 0) (4, 16)};
+    @LINE {(8, 10) (4, 10)};
+    @LINE {(8, 12) (4, 12)};
+    @LINE {(-37, 6) (-33, 6)};
+    @LINE {(8, 2) (4, 2)};
+    @LINE {(-37, 8) (-33, 8)};
+    @LINE {(8, 4) (4, 4)};
+    @LINE {(8, 14) (4, 14)};
+    @LINE {(-37, 10) (-33, 10)};
+    @LINE {(8, 6) (4, 6)};
+    @LINE {(-18, -2) (-18, 0)};
+    @LINE {(8, 8) (4, 8)};
+    @LINE {(-18, -2) (-18, 0)};
+    @LINE {(-18, -2) (-18, 0)};
+    @LINE {(-10, -2) (-10, 0)};
+    @LINE {(-10, -2) (-10, 0)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(2, 19);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(-15, 8);
+    (-37, 10) @PIN(terminal="RST");
+    (-32.4, 10) @TEXT("RST", size=1, halign="start", valign="middle");
+    (-10, -2) @PIN(terminal=["DLSBN_5", "DLSBN_4", "DLSBN_3", "DLSBN_2", "DLSBN_1", "DLSBN_0"]);
+    (-12.4, 1) @TEXT("DLSBN<5:0>", size=1, halign="start", valign="middle");
+    (-37, 14) @PIN(terminal=["STUNE_3", "STUNE_2", "STUNE_1", "STUNE_0"]);
+    (-27.6, 14) @TEXT("STUNE<3:0>", size=0.5, halign="end", valign="middle");
+    (-37, 12) @PIN(terminal="CNT");
+    (-32.4, 12) @TEXT("CNT", size=1, halign="start", valign="middle");
+    (-37, 4) @PIN(terminal="VDD");
+    (-32.4, 4) @TEXT("VDD", size=1, halign="start", valign="middle");
+    (-37, 2) @PIN(terminal="GND");
+    (-32.4, 2) @TEXT("GND", size=1, halign="start", valign="middle");
+    (8, 10) @PIN(terminal="RDYM");
+    (3.4, 10) @TEXT("RDYM", size=1, halign="end", valign="middle");
+    (8, 8) @PIN(terminal="RDYL");
+    (3.4, 8) @TEXT("RDYL", size=1, halign="end", valign="middle");
+    (8, 2) @PIN(terminal="CMPCK");
+    (3.4, 2) @TEXT("CMPCK", size=1, halign="end", valign="middle");
+    (8, 12) @PIN(terminal="DOUT");
+    (3.4, 12) @TEXT("DOUT", size=1, halign="end", valign="middle");
+    (8, 4) @PIN(terminal="CMPN");
+    (3.4, 4) @TEXT("CMPN", size=1, halign="end", valign="middle");
+    (8, 6) @PIN(terminal="CMPP");
+    (3.4, 6) @TEXT("CMPP", size=1, halign="end", valign="middle");
+    (8, 14) @PIN(terminal="DCLK");
+    (3.4, 14) @TEXT("DCLK", size=1, halign="end", valign="middle");
+    (-37, 6) @PIN(terminal="STLSB");
+    (-32.4, 6) @TEXT("STLSB", size=1, halign="start", valign="middle");
+    (-37, 8) @PIN(terminal="STMSB");
+    (-32.4, 8) @TEXT("STMSB", size=1, halign="start", valign="middle");
+    (-18, 18) @PIN(terminal=["DMSBP_4", "DMSBP_3", "DMSBP_2", "DMSBP_1", "DMSBP_0"]);
+    (-23.4, 15) @TEXT("DMSBP<4:0>", size=1, halign="start", valign="middle");
+    (-10, 18) @PIN(terminal=["DLSBP_5", "DLSBP_4", "DLSBP_3", "DLSBP_2", "DLSBP_1", "DLSBP_0"]);
+    (-12.4, 15) @TEXT("DLSBP<5:0>", size=1, halign="start", valign="middle");
+    (-18, -2) @PIN(terminal=["DMSBN_4", "DMSBN_3", "DMSBN_2", "DMSBN_1", "DMSBN_0"]);
+    (-13.6, 1) @TEXT("DMSBN<4:0>", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_logic_V2", recursive=true) => @SET-SYMBOL(terminals=["CMPCK", "CMPN", "CMPP", "CNT", "DCLK", "DLSBN_5", "DLSBN_4", "DLSBN_3", "DLSBN_2", "DLSBN_1", "DLSBN_0", "DLSBP_5", "DLSBP_4", "DLSBP_3", "DLSBP_2", "DLSBP_1", "DLSBP_0", "DMSBN_4", "DMSBN_3", "DMSBN_2", "DMSBN_1", "DMSBN_0", "DMSBP_4", "DMSBP_3", "DMSBP_2", "DMSBP_1", "DMSBP_0", "DOUT", "GND", "RDYL", "RDYM", "RST", "STLSB", "STMSB", "STUNE_3", "STUNE_2", "STUNE_1", "STUNE_0", "VDD"]) $L3_LOGIC_V2_BLOCK
+}

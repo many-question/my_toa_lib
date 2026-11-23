@@ -1,0 +1,10 @@
+type: ifc
+license: CC-BY-4.0
+name: l2-ib-mirror
+title: L2_Ib_mirror
+description: Interface of the Virtuoso cell RISCA_JL/L2_Ib_mirror.
+pins:
+- {name: GND}
+- {name: IIN}
+- {name: IOUT, width: 6}
+- {name: VDCAP}

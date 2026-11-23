@@ -1,0 +1,16 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-clk-mux-v1
+title: L3_clk_mux_V1
+description: Interface of the Virtuoso cell RISCA_JL/L3_clk_mux_V1.
+pins:
+- {name: FRAME, width: 16}
+- {name: GND}
+- {name: OUT, width: 24}
+- {name: REPET, width: 17}
+- {name: RST}
+- {name: SCKI}
+- {name: SCKO}
+- {name: SDI}
+- {name: SDO}
+- {name: VDD}

@@ -1,0 +1,5 @@
+{"toa": "source/1"}
+{"object": "ckt_bc9b2628ec2aff7c4f192bd7187095e22e65a9e1", "label": "l3-dac-swi-v2/risca-jl.g1", "refs": ["ifc_4ce3cffe0dda2fde77b1b0e24de11a24898af8d7", "ifc_2a5d00817f6d08953bd1a9a9a92fe31af4f468c9", "ckt_2bd8d67f3616468c65f3378bc56bbdb353f3b300"], "license": "CC-BY-4.0 AND CC0-1.0"}
+{"object": "ifc_4ce3cffe0dda2fde77b1b0e24de11a24898af8d7", "label": "l3-dac-swi-v2", "license": "CC-BY-4.0"}
+{"object": "ifc_2a5d00817f6d08953bd1a9a9a92fe31af4f468c9", "label": "lb-bs-gen-v3", "license": "CC-BY-4.0"}
+{"object": "ckt_2bd8d67f3616468c65f3378bc56bbdb353f3b300", "label": "lb-bs-gen-v3/risca-jl.g1", "refs": ["ifc_2a5d00817f6d08953bd1a9a9a92fe31af4f468c9"], "license": "CC-BY-4.0 AND CC0-1.0"}

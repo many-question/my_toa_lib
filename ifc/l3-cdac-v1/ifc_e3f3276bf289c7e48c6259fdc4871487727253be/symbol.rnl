@@ -1,0 +1,25 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_CDAC_V1, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-cdac-v1-sym", version="0.1")
+}
+@RNL {
+  $L3_CDAC_V1_BLOCK = @DEFINE-SYMBOL(box=[-9, -4, 13, 4]) {
+    @LINE {(13, 0) (11, 0)};
+    @LINE {(-5, -4) (-5, -2)};
+    @LINE {(3, -4) (3, -2)};
+    @RECTANGLE {(-9, -2) (11, 2)};
+    @LINE {(-5, 4) (-5, 2)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(9, 3);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(10, -3.5);
+    (13, 0) @PIN(terminal="COM");
+    (7.6, 0) @TEXT("COM", size=1, halign="start", valign="middle");
+    (-5, -4) @PIN(terminal=["MSB_4", "MSB_3", "MSB_2", "MSB_1", "MSB_0"]);
+    (-0.6, 0) @TEXT("MSB<4:0>", size=1, halign="end", valign="middle");
+    (3, -4) @PIN(terminal=["LSB_5", "LSB_4", "LSB_3", "LSB_2", "LSB_1", "LSB_0"]);
+    (7.4, 0) @TEXT("LSB<5:0>", size=1, halign="end", valign="middle");
+    (-5, 4) @PIN(terminal="VREFN");
+    (-5.6, 3) @TEXT("VREFN", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_CDAC_V1", recursive=true) => @SET-SYMBOL(terminals=["COM", "LSB_5", "LSB_4", "LSB_3", "LSB_2", "LSB_1", "LSB_0", "MSB_4", "MSB_3", "MSB_2", "MSB_1", "MSB_0", "VREFN"]) $L3_CDAC_V1_BLOCK
+}

@@ -1,0 +1,16 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_9bca826fb5923c87202c51afbe26d13f5068c410
+name: risca-jl
+form: mixed
+description: Schematic of the Virtuoso cell RISCA_JL/L1_IO_ring (view schematic).
+files:
+  netlist:
+  - L1_IO_ring.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28
+external:
+- {name: tphn28hpcpgv18, role: other, process: tsmc28}

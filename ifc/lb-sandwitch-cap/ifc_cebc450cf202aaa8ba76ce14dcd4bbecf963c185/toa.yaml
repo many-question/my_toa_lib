@@ -1,0 +1,8 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-sandwitch-cap
+title: LB_sandwitch_cap
+description: Interface of the Virtuoso cell RISCA_JL/LB_sandwitch_cap.
+pins:
+- {name: BOT}
+- {name: TOP}

@@ -1,0 +1,24 @@
+// RNL cell RISCA_JL/LB_sandwitch_cap
+// @RNL(type="header") {
+//   @VERSION("0.4");
+//   @USE-PACKAGE(name="rnl-std-all", version="0.4");
+//   @USE-PACKAGE(name="rnl-std-fill") {};
+//   @USE-PACKAGE(name="eda-symbol", version="0.2", path="eda-symbol.rnl");
+//   @USE-PACKAGE(name="eda-style", version="0.2", path="eda-style.rnl")
+// }
+subckt LB_sandwitch_cap BOT TOP
+    C0 (TOP BOT) capacitor c=9f
+// @RNL(author="rnl-virtuoso") {
+//   #"C0" @SET-SYMBOL(terminals=["p", "n"]) $CAPACITOR;
+//   #"C0" @PLACE(-2, 10) => @ORIENT("R0");
+//   %port_0 = $IO_PORT @ATTACH &"TOP" => @PLACE(-12, 16) => @ORIENT("R0");
+//   %port_1 = $IO_PORT @ATTACH &"BOT" => @PLACE(-12, 4) => @ORIENT("R0");
+//   %p0 = (-13, 4);
+//   %p1 = (-2, 4);
+//   %wire_0 = &"BOT" @WIRE(mode="straight") {%p0 %port_1::pin %p1};
+//   %wire_1 = &"BOT" @WIRE(mode="straight") {%p1 #"C0":2};
+//   %p2 = (-2, 16);
+//   %wire_2 = &"TOP" @WIRE(mode="straight") {#"C0":1 %p2};
+//   %wire_3 = &"TOP" @WIRE(mode="straight") {%port_0::pin %p2}
+// }
+ends LB_sandwitch_cap

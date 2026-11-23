@@ -1,0 +1,16 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_4c5a48a73bb93d10721b78e97f73889954212194
+name: risca-jl
+form: gates
+description: Schematic of the Virtuoso cell RISCA_JL/L3_conf_V1 (view schematic).
+files:
+  netlist:
+  - L3_conf_V1.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28
+external:
+- {name: tcbn28hpcplusbwp12t30p140, role: other, process: tsmc28}

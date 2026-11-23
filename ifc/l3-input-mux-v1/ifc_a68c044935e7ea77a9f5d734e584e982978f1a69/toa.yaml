@@ -1,0 +1,15 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-input-mux-v1
+title: L3_input_MUX_V1
+description: Interface of the Virtuoso cell RISCA_JL/L3_input_MUX_V1.
+pins:
+- {name: FLIP}
+- {name: GND}
+- {name: "ON", width: 3}
+- {name: VCM}
+- {name: VDD}
+- {name: VINN, width: 2}
+- {name: VINP, width: 2}
+- {name: VOUTN}
+- {name: VOUTP}

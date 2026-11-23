@@ -1,0 +1,26 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_ed68700e860ddd99beaf0e6e83d7f9790f975d4f
+name: risca-jl
+form: gates
+description: Schematic of the Virtuoso cell RISCA_JL/L3_logic_V2 (view schematic).
+files:
+  netlist:
+  - L3_logic_V2.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+uses:
+  LB_inv_trim:
+    ifc: ifc_95691a8dc0f8f63ffad992c1de810c248237880e
+    ckt: ckt_220f2fa89956e6c38d80eec8e5169d20c04bdba7
+  LB_logicseg_X1:
+    ifc: ifc_fe02a659d897f6e096dea9778fd82c82c1cc4baf
+    ckt: ckt_4f89399d3e44383dd5132196c3b5c9d3e60788f3
+  LB_logicseg_X2:
+    ifc: ifc_5059b896e6a73f0b9acf34381e8ee0f4b43abcc6
+    ckt: ckt_3375d3002f57efc70db56edc79ddb75a0b353998
+specifications:
+  process: tsmc28
+external:
+- {name: tcbn28hpcplusbwp12t30p140, role: other, process: tsmc28}

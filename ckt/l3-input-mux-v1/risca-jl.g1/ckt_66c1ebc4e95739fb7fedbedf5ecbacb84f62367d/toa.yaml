@@ -1,0 +1,20 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_a68c044935e7ea77a9f5d734e584e982978f1a69
+name: risca-jl
+form: mixed
+description: Schematic of the Virtuoso cell RISCA_JL/L3_input_MUX_V1 (view schematic).
+files:
+  netlist:
+  - L3_input_MUX_V1.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+uses:
+  LB_bs_gen_V2:
+    ifc: ifc_5354c1d359b9e33af5a000d7b44708d1c5e38058
+    ckt: ckt_1a0183b852fb86771a1d110c11f760382d738b80
+specifications:
+  process: tsmc28
+external:
+- {name: tcbn28hpcplusbwp12t30p140, role: other, process: tsmc28}

@@ -1,0 +1,8 @@
+type: ifc
+license: CC-BY-4.0
+name: v1-decap
+title: V1_decap
+description: Interface of the Virtuoso cell decap/V1_decap.
+pins:
+- {name: GND}
+- {name: VDD}

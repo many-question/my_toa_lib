@@ -1,0 +1,17 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_sandwitch_cap, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-sandwitch-cap-sym", version="0.1")
+}
+@RNL {
+  $LB_SANDWITCH_CAP_BLOCK = @DEFINE-SYMBOL(box=[-2, -6, 2, 0]) {
+    @LINE {(0, 0) (0, -2.2)};
+    @LINE {(1, -2.2) (-1, -2.2)};
+    @ARC {(1, -3.2) (0, -2.8) (-1, -3.2)};
+    @LINE {(0, -2.8) (0, -6)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(1, -1);
+    (0, 0) @PIN(terminal="TOP");
+    (0, -6) @PIN(terminal="BOT")
+  };
+  # @SELECT-INSTANCE(model="LB_sandwitch_cap", recursive=true) => @SET-SYMBOL(terminals=["BOT", "TOP"]) $LB_SANDWITCH_CAP_BLOCK
+}

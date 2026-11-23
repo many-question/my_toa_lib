@@ -1,0 +1,16 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-logicseg-x2
+title: LB_logicseg_X2
+description: Interface of the Virtuoso cell RISCA_JL/LB_logicseg_X2.
+pins:
+- {name: CMPN}
+- {name: CMPO}
+- {name: CMPP}
+- {name: DON}
+- {name: DOP}
+- {name: ENB}
+- {name: GND}
+- {name: NEXTB}
+- {name: RST}
+- {name: VDD}

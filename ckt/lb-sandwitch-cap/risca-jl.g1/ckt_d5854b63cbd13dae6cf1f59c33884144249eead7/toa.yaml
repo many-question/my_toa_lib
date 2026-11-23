@@ -1,0 +1,14 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_cebc450cf202aaa8ba76ce14dcd4bbecf963c185
+name: risca-jl
+form: passive
+description: Schematic of the Virtuoso cell RISCA_JL/LB_sandwitch_cap (view schematic).
+files:
+  netlist:
+  - LB_sandwitch_cap.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28

@@ -1,0 +1,24 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-logic-v2
+title: L3_logic_V2
+description: Interface of the Virtuoso cell RISCA_JL/L3_logic_V2.
+pins:
+- {name: CMPCK}
+- {name: CMPN}
+- {name: CMPP}
+- {name: CNT}
+- {name: DCLK}
+- {name: DLSBN, width: 6}
+- {name: DLSBP, width: 6}
+- {name: DMSBN, width: 5}
+- {name: DMSBP, width: 5}
+- {name: DOUT}
+- {name: GND}
+- {name: RDYL}
+- {name: RDYM}
+- {name: RST}
+- {name: STLSB}
+- {name: STMSB}
+- {name: STUNE, width: 4}
+- {name: VDD}

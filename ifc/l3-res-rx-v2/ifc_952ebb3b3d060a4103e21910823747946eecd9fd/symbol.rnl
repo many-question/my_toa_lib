@@ -1,0 +1,74 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_res_rx_V2, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-res-rx-v2-sym", version="0.1")
+}
+@RNL {
+  $L3_RES_RX_V2_BLOCK = @DEFINE-SYMBOL(box=[0, -12, 36, 8]) {
+    (15.4, 0) @CIRCLE(radius=0.4);
+    @LINE {(0, 4) (4, 4)};
+    (20.2, 0) @CIRCLE(radius=0.4);
+    (19.8, 0) @CIRCLE(radius=0.4);
+    @LINE {(0, 0) (6, 0)};
+    @LINE {(14, -12) (14, -8)};
+    @LINE {(36, -4) (32, -4)};
+    @LINE {(36, -6) (32, -6)};
+    @LINE {(36, -6) (32, -6)};
+    @LINE {(11, 1) (12, 0)};
+    @LINE {(14, -8) (13, -7) (15, -6) (13, -5) (15, -4) (13, -3)};
+    @LINE {(22, -12) (22, 0)};
+    @LINE {(13, -3) (14, -2)};
+    @LINE {(6, 0) (7, 1) (8, -1) (9, 1) (10, -1) (11, 1)};
+    @LINE {(14, -2) (14, 0) (12, 0)};
+    @LINE {(12, -7) (16, -3)};
+    @LINE {(16, -3) (15, -3)};
+    @LINE {(16, -3) (16, -4)};
+    @LINE {(0, -5) (12, -5)};
+    @LINE {(19.4, 2) (16.2, 0) (19.4, -2) (19.4, 2)};
+    @LINE {(14, 0) (15, 0)};
+    (15.8, 0) @CIRCLE(radius=0.4);
+    @LINE {(20.6, 0) (24, 0)};
+    @LINE {(18, -11.8) (18, -1)};
+    @LINE {(5, 0) (5, 2) (8, 2) (10, 3)};
+    @LINE {(10, 2) (13, 2) (13, 0)};
+    @LINE {(26, 2) (26, -2) (24, -1) (24, 1) (26, 2)};
+    @LINE {(36, 4) (25, 4)};
+    @LINE {(25, 2) (25, 4)};
+    @LINE {(36, 0) (26, 0)};
+    @LINE {(4, 4) (9, 4) (9, 3)};
+    @LINE {(36, 6) (32, 6)};
+    @LINE {(36, -10) (32, -10)};
+    @LINE {(36, -10) (32, -10)};
+    @LINE {(36, -8) (32, -8)};
+    (18.2, -0.4) @TEXT("-", size=1, halign="middle", valign="baseline");
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(0, 7);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(30, -11);
+    (36, 4) @PIN(terminal=["MR_2", "MR_1"]);
+    (35.4, 5) @TEXT("MR<2:1>", size=1, halign="end", valign="middle");
+    (0, 4) @PIN(terminal="HBW");
+    (0.6, 5) @TEXT("HBW", size=1, halign="start", valign="middle");
+    (14, -12) @PIN(terminal="VCM");
+    (9.6, -11) @TEXT("VCM", size=1, halign="start", valign="middle");
+    (18, -12) @PIN(terminal="VB");
+    (17.4, -11) @TEXT("VB", size=1, halign="end", valign="middle");
+    (36, -10) @PIN(terminal="GNDSWI");
+    (35.4, -9) @TEXT("GNDSWI", size=1, halign="end", valign="middle");
+    (36, -4) @PIN(terminal="VDDAMP");
+    (35.4, -3) @TEXT("VDDAMP", size=1, halign="end", valign="middle");
+    (0, -5) @PIN(terminal=["RTUNE_3", "RTUNE_2", "RTUNE_1", "RTUNE_0"]);
+    (0.6, -4) @TEXT("RTUNE<3:0>", size=1, halign="start", valign="middle");
+    (22, -12) @PIN(terminal="IIN");
+    (19.6, -11) @TEXT("IIN", size=1, halign="start", valign="middle");
+    (36, 0) @PIN(terminal=["BUS_2", "BUS_1"]);
+    (35.4, 1) @TEXT("BUS<2:1>", size=1, halign="end", valign="middle");
+    (0, 0) @PIN(terminal="VOUT");
+    (4.4, 1) @TEXT("VOUT", size=1, halign="end", valign="middle");
+    (36, 6) @PIN(terminal="EN");
+    (35.4, 7) @TEXT("EN", size=1, halign="end", valign="middle");
+    (36, -6) @PIN(terminal="GNDAMP");
+    (35.4, -5) @TEXT("GNDAMP", size=1, halign="end", valign="middle");
+    (36, -8) @PIN(terminal="VDDSWI");
+    (35.4, -7) @TEXT("VDDSWI", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_res_rx_V2", recursive=true) => @SET-SYMBOL(terminals=["BUS_2", "BUS_1", "EN", "GNDAMP", "GNDSWI", "HBW", "IIN", "MR_2", "MR_1", "RTUNE_3", "RTUNE_2", "RTUNE_1", "RTUNE_0", "VB", "VCM", "VDDAMP", "VDDSWI", "VOUT"]) $L3_RES_RX_V2_BLOCK
+}

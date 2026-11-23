@@ -1,0 +1,15 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_RES50, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-res50-sym", version="0.1")
+}
+@RNL {
+  $LB_RES50_BLOCK = @DEFINE-SYMBOL(box=[-2, -6, 2, 0]) {
+    @LINE {(0, -6) (0, -4.8) (-1, -4.5) (1, -3.9) (-1, -3.3) (1, -2.7) (-1, -2.1) (1, -1.5) (0, -1.2) (0, 0)};
+    (3, -4) @TEXT("R50", size=1, halign="middle", valign="baseline");
+    ? @TEXT("${name}", size=0.3, halign="start", valign="middle", key="name") => @PLACE(1, 0);
+    (0, -6) @PIN(terminal="B");
+    (0, 0) @PIN(terminal="A")
+  };
+  # @SELECT-INSTANCE(model="LB_RES50", recursive=true) => @SET-SYMBOL(terminals=["A", "B"]) $LB_RES50_BLOCK
+}

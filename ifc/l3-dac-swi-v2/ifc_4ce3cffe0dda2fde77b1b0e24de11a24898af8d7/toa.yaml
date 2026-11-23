@@ -1,0 +1,20 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-dac-swi-v2
+title: L3_DAC_swi_V2
+description: Interface of the Virtuoso cell RISCA_JL/L3_DAC_swi_V2.
+pins:
+- {name: DLSB, width: 6}
+- {name: DMSB, width: 5}
+- {name: GNDANA}
+- {name: GNDDIG}
+- {name: GNDSAM}
+- {name: SH}
+- {name: VDDANA}
+- {name: VDDDIG}
+- {name: VDDSAM}
+- {name: VIN}
+- {name: VLSB, width: 6}
+- {name: VMSB, width: 5}
+- {name: VREFN}
+- {name: VREFP}

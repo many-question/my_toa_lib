@@ -1,0 +1,3 @@
+{"toa": "source/1"}
+{"object": "ckt_a00c8246c51b4ecf7519d3db0def0693b8191f3b", "label": "l1-clk-buffer/risca-jl.g1", "refs": ["ifc_05534cadcf034b28cd85f0168e0cc957c2314d80"], "license": "CC-BY-4.0 AND CC0-1.0"}
+{"object": "ifc_05534cadcf034b28cd85f0168e0cc957c2314d80", "label": "l1-clk-buffer", "license": "CC-BY-4.0"}

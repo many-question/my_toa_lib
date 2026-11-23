@@ -1,0 +1,31 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_RDAC, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-rdac-sym", version="0.1")
+}
+@RNL {
+  $LB_RDAC_BLOCK = @DEFINE-SYMBOL(box=[-2, -5, 17, 3]) {
+    @LINE {(-2, 0) (6, 0)};
+    @LINE {(-2, -2) (2, -2)};
+    @LINE {(-2, -4) (2, -4)};
+    @LINE {(-2, 2) (6, 2)};
+    @LINE {(6, 2) (6, -2) (8, -2) (10, 0) (8, 2) (6, 2)};
+    @LINE {(17, 1) (9, 1)};
+    @LINE {(9, -1) (17, -1)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(15, -3);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(9.5, -3.5);
+    (17, 1) @PIN(terminal="VOUTP");
+    (16.4, 2) @TEXT("VOUTP", size=1, halign="end", valign="middle");
+    (17, -1) @PIN(terminal="VOUTN");
+    (16.4, 0) @TEXT("VOUTN", size=1, halign="end", valign="middle");
+    (-2, 0) @PIN(terminal=["DIN_3", "DIN_2", "DIN_1", "DIN_0"]);
+    (-1.4, 1) @TEXT("DIN<3:0>", size=1, halign="start", valign="middle");
+    (-2, -2) @PIN(terminal="VDD");
+    (-1.4, -1) @TEXT("VDD", size=1, halign="start", valign="middle");
+    (-2, -4) @PIN(terminal="GND");
+    (-1.4, -3) @TEXT("GND", size=1, halign="start", valign="middle");
+    (-2, 2) @PIN(terminal="EN");
+    (-1.4, 3) @TEXT("EN", size=1, halign="start", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="LB_RDAC", recursive=true) => @SET-SYMBOL(terminals=["DIN_3", "DIN_2", "DIN_1", "DIN_0", "EN", "GND", "VDD", "VOUTN", "VOUTP"]) $LB_RDAC_BLOCK
+}

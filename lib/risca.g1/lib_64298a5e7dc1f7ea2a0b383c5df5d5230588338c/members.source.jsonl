@@ -1,0 +1,67 @@
+{"toa": "source/1"}
+{"object": "ifc_8fe3737f466ba50028a93f17bd131b1c729f575d", "label": "l0-risca", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_05534cadcf034b28cd85f0168e0cc957c2314d80", "label": "l1-clk-buffer", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_9bca826fb5923c87202c51afbe26d13f5068c410", "label": "l1-io-ring", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_66a5b0b233770a72b57af7055f6bd978594ff445", "label": "l1-risca-core-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_3df6566fea214f6a3564ed428c67873f16a06e7b", "label": "l2-frame-gen-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_87ea137e2ae7297268a7be0213a14f5ab026746f", "label": "l2-ib-mirror", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_61d5c06d8f67cee7acfe9913df243b84be0aa2c4", "label": "l2-single-ch-v2", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_963c471387fbeece79b3a3ada6304ddae31cde05", "label": "l3-bridge-cap-v2", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_e3f3276bf289c7e48c6259fdc4871487727253be", "label": "l3-cdac-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_547d56a1bd5b93fae47a18d2a6ebe77cc352827b", "label": "l3-clk-mux-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_bb0def56d6c9f716f45f678e8991b49c7ec9e72c", "label": "l3-comparator-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_4c5a48a73bb93d10721b78e97f73889954212194", "label": "l3-conf-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_4ce3cffe0dda2fde77b1b0e24de11a24898af8d7", "label": "l3-dac-swi-v2", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_63899bda541c11318a5a9812ed37b0cc422aafa0", "label": "l3-data-bus", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_b8025ca8c820dab4a104783a4c925406ce12b50c", "label": "l3-gm-cell-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_a68c044935e7ea77a9f5d734e584e982978f1a69", "label": "l3-input-mux-v1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_ed68700e860ddd99beaf0e6e83d7f9790f975d4f", "label": "l3-logic-v2", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_952ebb3b3d060a4103e21910823747946eecd9fd", "label": "l3-res-rx-v2", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_5354c1d359b9e33af5a000d7b44708d1c5e38058", "label": "lb-bs-gen-v2", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_2a5d00817f6d08953bd1a9a9a92fe31af4f468c9", "label": "lb-bs-gen-v3", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_b29e8e1b4fa99bb30054271a86a2315168be84fe", "label": "lb-crossbar-cell", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_52dfd3e247445b4f956545dd372971e3dad36b32", "label": "lb-dac-cunit", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_95691a8dc0f8f63ffad992c1de810c248237880e", "label": "lb-inv-trim", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_fe02a659d897f6e096dea9778fd82c82c1cc4baf", "label": "lb-logicseg-x1", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_5059b896e6a73f0b9acf34381e8ee0f4b43abcc6", "label": "lb-logicseg-x2", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_4d1c40c34a63e705de928c1bdc9f875fd7b55865", "label": "lb-rdac", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_9881f5f9cb1fc387dcae782338a588e41810707e", "label": "lb-res50", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_cebc450cf202aaa8ba76ce14dcd4bbecf963c185", "label": "lb-sandwitch-cap", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_4cac7cdd3f8d617d6c0dd71f6ef1a8a84e4782e5", "label": "lb-trangate", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_6fd245d8395fc6f2e3e0a69e2210cacaf2c5239a", "label": "lb-vcmbooster", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_6effd355676e2e181f089cf5a22c8968f8d85412", "label": "lb-vcmbooster-lv", "license": "CC-BY-4.0", "group": "risca-jl"}
+{"object": "ifc_ea12549aebd9138de8f2f8590e309c6a5e48821b", "label": "v1-decap", "license": "CC-BY-4.0", "group": "decap"}
+{"object": "ifc_0c46f8d9d1f5a8cb68ea5cd17d2e6f31ce14c711", "label": "v1-decap-notap", "license": "CC-BY-4.0", "group": "decap"}
+{"object": "ckt_429647558f3f79ee9c643bdf95b4bcbccb2c32cd", "label": "l0-risca/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_a00c8246c51b4ecf7519d3db0def0693b8191f3b", "label": "l1-clk-buffer/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_5131886954d959195036b598b641c90a82629aab", "label": "l1-io-ring/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_f6fc53ea49ccb880b2cef185ec961781f9a42377", "label": "l1-risca-core-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_0215ff11d786edeaec0a25199fc7c063c4251812", "label": "l2-frame-gen-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_27e90c46ab6d2cdd7c1a2192b6376199baa54731", "label": "l2-ib-mirror/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_141b34137a88606c2064e99fd13cbec8c719f6f1", "label": "l2-single-ch-v2/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_880dcf490f7a58ce1b4e597b1c9c71cd786d3593", "label": "l3-bridge-cap-v2/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_88e65c0a8bdf5f64f9f682d37a1b9b4620286fb2", "label": "l3-cdac-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_7f9ee1d641ff429d5e908d9afa50a32a1b5d25e0", "label": "l3-clk-mux-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_2226c08ec489d07a65fe0aebc9f52e02aa732221", "label": "l3-comparator-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_0f5c2e237614837145dacaa9acf91be5e4eb8ff8", "label": "l3-conf-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_bc9b2628ec2aff7c4f192bd7187095e22e65a9e1", "label": "l3-dac-swi-v2/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_25448c9228af8f743a5a4f826fe05d2da3bc891e", "label": "l3-data-bus/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_f987bb01126e5bd812f0ebaa2103f9d53e45a199", "label": "l3-gm-cell-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_66c1ebc4e95739fb7fedbedf5ecbacb84f62367d", "label": "l3-input-mux-v1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_850bcdc777c36c06da2631779de83afacc0becb9", "label": "l3-logic-v2/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_3067a6174397070fb0b74e8a558d946dc37f5bdb", "label": "l3-res-rx-v2/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_1a0183b852fb86771a1d110c11f760382d738b80", "label": "lb-bs-gen-v2/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_2bd8d67f3616468c65f3378bc56bbdb353f3b300", "label": "lb-bs-gen-v3/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_6bbb38066d6db6fe6b4c621cd1e24cb0669dcb5d", "label": "lb-crossbar-cell/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_5060a3bb6ea3ce49bedd33a6029ce20af10bf9d3", "label": "lb-dac-cunit/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_220f2fa89956e6c38d80eec8e5169d20c04bdba7", "label": "lb-inv-trim/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_4f89399d3e44383dd5132196c3b5c9d3e60788f3", "label": "lb-logicseg-x1/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_3375d3002f57efc70db56edc79ddb75a0b353998", "label": "lb-logicseg-x2/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_7ca898c99bc840205c7e6f0bf51ffa4c64e3a6a9", "label": "lb-rdac/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_f3cff7cef053063745fc907456c2e3e752a60287", "label": "lb-res50/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_d5854b63cbd13dae6cf1f59c33884144249eead7", "label": "lb-sandwitch-cap/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_24fef07e941998273982159149f0b31de8eefbd0", "label": "lb-trangate/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_e1956413e16bb0a748fa54cae692c6913a7369aa", "label": "lb-vcmbooster-lv/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_c4f10f7db9a09838f681b3b48d7bef722f79f70a", "label": "lb-vcmbooster/risca-jl.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "risca-jl"}
+{"object": "ckt_701c1d707f7fe6622c1978aa37503b3c412d8627", "label": "v1-decap-notap/decap.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "decap"}
+{"object": "ckt_a0bee965b3dadb16410dfdb03c4b3df1702a4f77", "label": "v1-decap/decap.g1", "license": "CC-BY-4.0 AND CC0-1.0", "group": "decap"}

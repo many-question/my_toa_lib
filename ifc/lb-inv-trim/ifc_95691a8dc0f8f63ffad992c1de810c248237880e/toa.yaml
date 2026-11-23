@@ -1,0 +1,12 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-inv-trim
+title: LB_inv_trim
+description: Interface of the Virtuoso cell RISCA_JL/LB_inv_trim.
+pins:
+- {name: A}
+- {name: GND}
+- {name: SN, width: 2}
+- {name: SP, width: 2}
+- {name: VDD}
+- {name: "Y"}

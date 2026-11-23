@@ -1,0 +1,10 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-cdac-v1
+title: L3_CDAC_V1
+description: Interface of the Virtuoso cell RISCA_JL/L3_CDAC_V1.
+pins:
+- {name: COM}
+- {name: LSB, width: 6}
+- {name: MSB, width: 5}
+- {name: VREFN}

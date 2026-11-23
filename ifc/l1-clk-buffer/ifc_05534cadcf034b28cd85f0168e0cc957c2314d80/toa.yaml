@@ -1,0 +1,11 @@
+type: ifc
+license: CC-BY-4.0
+name: l1-clk-buffer
+title: L1_clk_buffer
+description: Interface of the Virtuoso cell RISCA_JL/L1_clk_buffer.
+pins:
+- {name: CKVDD}
+- {name: CKVSS}
+- {name: CLK}
+- {name: CLKINN}
+- {name: CLKINP}

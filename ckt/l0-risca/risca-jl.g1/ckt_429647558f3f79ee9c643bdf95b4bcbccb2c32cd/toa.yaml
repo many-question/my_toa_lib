@@ -1,0 +1,35 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_8fe3737f466ba50028a93f17bd131b1c729f575d
+name: risca-jl
+form: mixed
+description: Schematic of the Virtuoso cell RISCA_JL/L0_RISCA (view schematic).
+files:
+  netlist:
+  - L0_RISCA.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+uses:
+  L1_IO_ring:
+    ifc: ifc_9bca826fb5923c87202c51afbe26d13f5068c410
+    ckt: ckt_5131886954d959195036b598b641c90a82629aab
+  L1_RISCA_core_V1:
+    ifc: ifc_66a5b0b233770a72b57af7055f6bd978594ff445
+    ckt: ckt_f6fc53ea49ccb880b2cef185ec961781f9a42377
+  L1_clk_buffer:
+    ifc: ifc_05534cadcf034b28cd85f0168e0cc957c2314d80
+    ckt: ckt_a00c8246c51b4ecf7519d3db0def0693b8191f3b
+  LB_RES50:
+    ifc: ifc_9881f5f9cb1fc387dcae782338a588e41810707e
+    ckt: ckt_f3cff7cef053063745fc907456c2e3e752a60287
+  V1_decap:
+    ifc: ifc_ea12549aebd9138de8f2f8590e309c6a5e48821b
+    ckt: ckt_a0bee965b3dadb16410dfdb03c4b3df1702a4f77
+  V1_decap_notap:
+    ifc: ifc_0c46f8d9d1f5a8cb68ea5cd17d2e6f31ce14c711
+    ckt: ckt_701c1d707f7fe6622c1978aa37503b3c412d8627
+specifications:
+  process: tsmc28
+external:
+- {name: RISCA_FIFO, role: other, process: tsmc28}

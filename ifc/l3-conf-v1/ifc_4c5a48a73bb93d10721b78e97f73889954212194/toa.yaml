@@ -1,0 +1,14 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-conf-v1
+title: L3_conf_V1
+description: Interface of the Virtuoso cell RISCA_JL/L3_conf_V1.
+pins:
+- {name: GND}
+- {name: OUT, width: 22}
+- {name: RST}
+- {name: SCKI}
+- {name: SCKO}
+- {name: SDI}
+- {name: SDO}
+- {name: VDD}

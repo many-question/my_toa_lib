@@ -1,0 +1,10 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-vcmbooster-lv
+title: LB_vcmbooster_LV
+description: Interface of the Virtuoso cell RISCA_JL/LB_vcmbooster_LV.
+pins:
+- {name: AVDD}
+- {name: AVSS}
+- {name: CLK}
+- {name: VBTSTP}

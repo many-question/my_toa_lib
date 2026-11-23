@@ -1,0 +1,17 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-data-bus
+title: L3_data_bus
+description: Interface of the Virtuoso cell RISCA_JL/L3_data_bus.
+pins:
+- {name: BUSIN, width: 16}
+- {name: BUSOUT, width: 16}
+- {name: CLK}
+- {name: DIN}
+- {name: GND}
+- {name: UPDATE}
+- {name: VDD}
+- {name: ADDR, width: 3}
+- {name: RDY, width: 2}
+- {name: UDI}
+- {name: UDO}

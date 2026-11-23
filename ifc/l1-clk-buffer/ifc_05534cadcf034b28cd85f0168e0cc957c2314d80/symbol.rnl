@@ -1,0 +1,30 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L1_clk_buffer, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l1-clk-buffer-sym", version="0.1")
+}
+@RNL {
+  $L1_CLK_BUFFER_BLOCK = @DEFINE-SYMBOL(box=[5, -9, 29, 11]) {
+    @LINE {(3, -1) (7, -1)};
+    @LINE {(7, -7) (27, -7) (27, 9) (7, 9) (7, -7)};
+    @LINE {(16, -11) (16, -7)};
+    @LINE {(18, -11) (18, -7)};
+    @LINE {(14, 5) (14, -3) (21, 1) (14, 5)};
+    @LINE {(3, 3) (7, 3)};
+    @LINE {(31, 1) (27, 1)};
+    @LINE {(15, 0) (16, 0) (16, 2) (17, 2) (17, 0) (18, 0)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(25, 10);
+    ? @TEXT("${model}", size=1, halign="start", valign="middle", key="model") => @PLACE(25, 8);
+    (16, -11) @PIN(terminal="CKVDD");
+    (16, -6.4) @TEXT("CKVDD", size=1, halign="start", valign="middle", rotate=90);
+    (18, -11) @PIN(terminal="CKVSS");
+    (18, -6.4) @TEXT("CKVSS", size=1, halign="start", valign="middle", rotate=90);
+    (3, 3) @PIN(terminal="CLKINP");
+    (7.6, 3) @TEXT("CLKINP", size=1, halign="start", valign="middle");
+    (31, 1) @PIN(terminal="CLK");
+    (26.4, 1) @TEXT("CLK", size=1, halign="end", valign="middle");
+    (3, -1) @PIN(terminal="CLKINN");
+    (7.6, -1) @TEXT("CLKINN", size=1, halign="start", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L1_clk_buffer", recursive=true) => @SET-SYMBOL(terminals=["CKVDD", "CKVSS", "CLK", "CLKINN", "CLKINP"]) $L1_CLK_BUFFER_BLOCK
+}

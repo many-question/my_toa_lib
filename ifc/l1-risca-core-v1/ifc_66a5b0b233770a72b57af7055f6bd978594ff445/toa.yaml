@@ -1,0 +1,36 @@
+type: ifc
+license: CC-BY-4.0
+name: l1-risca-core-v1
+title: L1_RISCA_core_V1
+description: Interface of the Virtuoso cell RISCA_JL/L1_RISCA_core_V1.
+pins:
+- {name: CLKIN}
+- {name: DCLK}
+- {name: DOUT, width: 16}
+- {name: GNDAMP}
+- {name: GNDANA}
+- {name: GNDCLK}
+- {name: GNDDAT}
+- {name: GNDDIG}
+- {name: GNDREC}
+- {name: GNDSAM}
+- {name: IB}
+- {name: RST}
+- {name: SCK}
+- {name: SDI}
+- {name: SDO}
+- {name: SLP}
+- {name: VBS}
+- {name: VCM}
+- {name: VDDAMP}
+- {name: VDDANA}
+- {name: VDDCLK}
+- {name: VDDDAT}
+- {name: VDDDIG}
+- {name: VDDREC}
+- {name: VDDSAM}
+- {name: VINCM}
+- {name: VINN, width: 2}
+- {name: VINP, width: 2}
+- {name: VREFN, width: 6}
+- {name: VREFP, width: 6}

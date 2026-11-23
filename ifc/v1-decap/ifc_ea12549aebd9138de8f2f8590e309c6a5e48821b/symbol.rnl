@@ -1,0 +1,22 @@
+/* Symbol of the Virtuoso cell decap/V1_decap, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="v1-decap-sym", version="0.1")
+}
+@RNL {
+  $V1_DECAP_BLOCK = @DEFINE-SYMBOL(box=[-1.1, -3, 1.1, 0]) {
+    @LINE {(0, 0) (0, -1)};
+    @LINE {(-1, -1) (1, -1)};
+    @LINE {(0, -3) (0, -2)};
+    @LINE {(-1, -2) (1, -2)};
+    @LINE {(1.2, -2.8) (1.6, -2.8)};
+    @LINE {(1, -2.2) (1.4, -2.2) (1.4, -2.8)};
+    @LINE {(1.2, -2.8) (1, -3)};
+    @LINE {(1.4, -2.8) (1.2, -3)};
+    @LINE {(1.6, -2.8) (1.4, -3)};
+    ? @TEXT("${name}", size=0.3, halign="start", valign="middle", key="name") => @PLACE(1, 0);
+    (0, 0) @PIN(terminal="VDD");
+    (0, -3) @PIN(terminal="GND")
+  };
+  # @SELECT-INSTANCE(model="V1_decap", recursive=true) => @SET-SYMBOL(terminals=["GND", "VDD"]) $V1_DECAP_BLOCK
+}

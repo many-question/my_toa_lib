@@ -1,0 +1,8 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-dac-cunit
+title: LB_DAC_cunit
+description: Interface of the Virtuoso cell RISCA_JL/LB_DAC_cunit.
+pins:
+- {name: BOT}
+- {name: TOP}

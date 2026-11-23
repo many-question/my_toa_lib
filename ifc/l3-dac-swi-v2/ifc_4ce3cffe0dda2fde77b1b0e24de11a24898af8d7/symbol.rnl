@@ -1,0 +1,55 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_DAC_swi_V2, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-dac-swi-v2-sym", version="0.1")
+}
+@RNL {
+  $L3_DAC_SWI_V2_BLOCK = @DEFINE-SYMBOL(box=[-14, -10, 34, 0]) {
+    @LINE {(-14, -5) (-12, -5)};
+    @LINE {(34, -5) (32, -5)};
+    @LINE {(-2, 0) (-2, -2)};
+    @LINE {(2, 0) (2, -2)};
+    @LINE {(8, 0) (8, -2)};
+    @LINE {(6, 0) (6, -2)};
+    @LINE {(-4, 0) (-4, -2)};
+    @LINE {(-6, 0) (-6, -2)};
+    @LINE {(0, 0) (0, -2)};
+    @LINE {(-12, -2) (-12, -8) (32, -8) (32, -2) (-12, -2)};
+    @LINE {(4, 0) (4, -2)};
+    @LINE {(14, -10) (14, -8)};
+    @LINE {(22, -10) (22, -8)};
+    @LINE {(14, 0) (14, -2)};
+    @LINE {(22, 0) (22, -2)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(30, 1);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(-1.5, -9);
+    (-14, -5) @PIN(terminal="VIN");
+    (-11.4, -5) @TEXT("VIN", size=1, halign="start", valign="middle");
+    (34, -5) @PIN(terminal="SH");
+    (31.4, -5) @TEXT("SH", size=1, halign="end", valign="middle");
+    (0, 0) @PIN(terminal="GNDANA");
+    (0, -1.6) @TEXT("GNDANA", size=1, halign="end", valign="middle", rotate=90);
+    (2, 0) @PIN(terminal="VDDSAM");
+    (2, -1.6) @TEXT("VDDSAM", size=1, halign="end", valign="middle", rotate=90);
+    (-2, 0) @PIN(terminal="VDDANA");
+    (-2, -1.6) @TEXT("VDDANA", size=1, halign="end", valign="middle", rotate=90);
+    (-4, 0) @PIN(terminal="VREFP");
+    (-4, -2.6) @TEXT("VREFP", size=1, halign="end", valign="middle", rotate=90);
+    (-6, 0) @PIN(terminal="VREFN");
+    (-6, -2.6) @TEXT("VREFN", size=1, halign="end", valign="middle", rotate=90);
+    (6, 0) @PIN(terminal="VDDDIG");
+    (6, -1.6) @TEXT("VDDDIG", size=1, halign="end", valign="middle", rotate=90);
+    (4, 0) @PIN(terminal="GNDSAM");
+    (4, -1.6) @TEXT("GNDSAM", size=1, halign="end", valign="middle", rotate=90);
+    (22, -10) @PIN(terminal=["DLSB_5", "DLSB_4", "DLSB_3", "DLSB_2", "DLSB_1", "DLSB_0"]);
+    (18.6, -7) @TEXT("DLSB<5:0>", size=1, halign="start", valign="middle");
+    (14, -10) @PIN(terminal=["DMSB_4", "DMSB_3", "DMSB_2", "DMSB_1", "DMSB_0"]);
+    (8.6, -7) @TEXT("DMSB<4:0>", size=1, halign="start", valign="middle");
+    (22, 0) @PIN(terminal=["VLSB_5", "VLSB_4", "VLSB_3", "VLSB_2", "VLSB_1", "VLSB_0"]);
+    (18.6, -3) @TEXT("VLSB<5:0>", size=1, halign="start", valign="middle");
+    (14, 0) @PIN(terminal=["VMSB_4", "VMSB_3", "VMSB_2", "VMSB_1", "VMSB_0"]);
+    (8.6, -3) @TEXT("VMSB<4:0>", size=1, halign="start", valign="middle");
+    (8, 0) @PIN(terminal="GNDDIG");
+    (8, -1.6) @TEXT("GNDDIG", size=1, halign="end", valign="middle", rotate=90)
+  };
+  # @SELECT-INSTANCE(model="L3_DAC_swi_V2", recursive=true) => @SET-SYMBOL(terminals=["DLSB_5", "DLSB_4", "DLSB_3", "DLSB_2", "DLSB_1", "DLSB_0", "DMSB_4", "DMSB_3", "DMSB_2", "DMSB_1", "DMSB_0", "GNDANA", "GNDDIG", "GNDSAM", "SH", "VDDANA", "VDDDIG", "VDDSAM", "VIN", "VLSB_5", "VLSB_4", "VLSB_3", "VLSB_2", "VLSB_1", "VLSB_0", "VMSB_4", "VMSB_3", "VMSB_2", "VMSB_1", "VMSB_0", "VREFN", "VREFP"]) $L3_DAC_SWI_V2_BLOCK
+}

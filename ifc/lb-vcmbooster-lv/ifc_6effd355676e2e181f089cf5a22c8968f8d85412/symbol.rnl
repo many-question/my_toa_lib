@@ -1,0 +1,33 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_vcmbooster_LV, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-vcmbooster-lv-sym", version="0.1")
+}
+@RNL {
+  $LB_VCMBOOSTER_LV_BLOCK = @DEFINE-SYMBOL(box=[6, -10, 26, -2]) {
+    @LINE {(16.5, -5) (16.5, -7)};
+    @LINE {(15.5, -5) (15.5, -7)};
+    @LINE {(13, -6) (15.5, -6)};
+    @LINE {(6, -6) (12, -6)};
+    @LINE {(26, -6) (20, -6)};
+    @LINE {(26, -4) (20, -4)};
+    @LINE {(26, -8) (20, -8)};
+    @LINE {(18, -4.5) (17.5, -4.5)};
+    @LINE {(17, -4.5) (17.5, -4.5)};
+    @LINE {(16.5, -6) (19, -6)};
+    @LINE {(17.5, -4) (17.5, -5)};
+    @LINE {(14, -4.5) (15, -4.5)};
+    @LINE {(12, -2) (20, -2) (20, -10) (12, -10) (12, -2)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(22, -1);
+    ? @TEXT("${model}", size=1, halign="start", valign="middle", key="model") => @PLACE(11, -11);
+    (6, -6) @PIN(terminal="CLK");
+    (7.1, -5) @TEXT("CLK", size=1, halign="start", valign="middle");
+    (26, -8) @PIN(terminal="AVSS");
+    (25.4, -7) @TEXT("AVSS", size=1, halign="end", valign="middle");
+    (26, -4) @PIN(terminal="AVDD");
+    (25.4, -3) @TEXT("AVDD", size=1, halign="end", valign="middle");
+    (26, -6) @PIN(terminal="VBTSTP");
+    (25.4, -5) @TEXT("VBTSTP", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="LB_vcmbooster_LV", recursive=true) => @SET-SYMBOL(terminals=["AVDD", "AVSS", "CLK", "VBTSTP"]) $LB_VCMBOOSTER_LV_BLOCK
+}

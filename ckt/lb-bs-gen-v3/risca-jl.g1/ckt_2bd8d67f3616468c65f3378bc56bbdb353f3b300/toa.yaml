@@ -1,0 +1,14 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_2a5d00817f6d08953bd1a9a9a92fe31af4f468c9
+name: risca-jl
+form: transistor
+description: Schematic of the Virtuoso cell RISCA_JL/LB_bs_gen_V3 (view schematic).
+files:
+  netlist:
+  - LB_bs_gen_V3.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28

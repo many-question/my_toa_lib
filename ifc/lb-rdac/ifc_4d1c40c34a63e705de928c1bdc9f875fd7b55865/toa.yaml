@@ -1,0 +1,12 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-rdac
+title: LB_RDAC
+description: Interface of the Virtuoso cell RISCA_JL/LB_RDAC.
+pins:
+- {name: DIN, width: 4}
+- {name: EN}
+- {name: GND}
+- {name: VDD}
+- {name: VOUTN}
+- {name: VOUTP}

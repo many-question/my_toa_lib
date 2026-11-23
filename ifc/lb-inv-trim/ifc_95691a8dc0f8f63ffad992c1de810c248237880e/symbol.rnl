@@ -1,0 +1,32 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_inv_trim, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-inv-trim-sym", version="0.1")
+}
+@RNL {
+  $LB_INV_TRIM_BLOCK = @DEFINE-SYMBOL(box=[0, -2, 7, 4]) {
+    @LINE {(0, 3) (2, 3)};
+    @LINE {(0, -1) (2, -1)};
+    @LINE {(0, 1) (2, 1)};
+    @LINE {(2, 3) (2, -1)};
+    @LINE {(3, 4) (3, 2.3)};
+    @LINE {(3, -2) (3, -0.4)};
+    @LINE {(2, -1) (5, 1)};
+    @LINE {(2, 3) (5, 1)};
+    (5.5, 1) @CIRCLE(radius=0.5);
+    @LINE {(6, 1) (7, 1)};
+    ? @TEXT("${name}", size=0.4, halign="end", valign="top", key="name") => @PLACE(10, 4);
+    ? @TEXT("${model}", size=0.4, halign="end", valign="baseline", key="model") => @PLACE(8, -2);
+    (0, 3) @PIN(terminal=["SP_1", "SP_0"]);
+    (-1.4, 4) @TEXT("SP<1:0>", size=0.5, halign="start", valign="middle");
+    (0, -1) @PIN(terminal=["SN_1", "SN_0"]);
+    (-1.4, -2) @TEXT("SN<1:0>", size=0.5, halign="start", valign="middle");
+    (0, 1) @PIN(terminal="A");
+    (7, 1) @PIN(terminal="Y");
+    (3, 4) @PIN(terminal="VDD");
+    (3.6, 3) @TEXT("VDD", size=0.5, halign="start", valign="middle");
+    (3, -2) @PIN(terminal="GND");
+    (3.6, -1) @TEXT("GND", size=0.5, halign="start", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="LB_inv_trim", recursive=true) => @SET-SYMBOL(terminals=["A", "GND", "SN_1", "SN_0", "SP_1", "SP_0", "VDD", "Y"]) $LB_INV_TRIM_BLOCK
+}

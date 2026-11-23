@@ -1,0 +1,11 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-bs-gen-v3
+title: LB_bs_gen_V3
+description: Interface of the Virtuoso cell RISCA_JL/LB_bs_gen_V3.
+pins:
+- {name: CLK}
+- {name: CLKBS}
+- {name: VDD}
+- {name: VIN}
+- {name: VSS}

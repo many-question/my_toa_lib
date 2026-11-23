@@ -1,0 +1,8 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-res50
+title: LB_RES50
+description: Interface of the Virtuoso cell RISCA_JL/LB_RES50.
+pins:
+- {name: A}
+- {name: B}

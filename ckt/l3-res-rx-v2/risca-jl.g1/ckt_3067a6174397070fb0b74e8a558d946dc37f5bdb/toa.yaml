@@ -1,0 +1,20 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_952ebb3b3d060a4103e21910823747946eecd9fd
+name: risca-jl
+form: mixed
+description: Schematic of the Virtuoso cell RISCA_JL/L3_res_rx_V2 (view schematic).
+files:
+  netlist:
+  - L3_res_rx_V2.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+uses:
+  LB_trangate:
+    ifc: ifc_4cac7cdd3f8d617d6c0dd71f6ef1a8a84e4782e5
+    ckt: ckt_24fef07e941998273982159149f0b31de8eefbd0
+specifications:
+  process: tsmc28
+external:
+- {name: tcbn28hpcplusbwp12t30p140, role: other, process: tsmc28}

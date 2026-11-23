@@ -1,0 +1,46 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_data_bus, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-data-bus-sym", version="0.1")
+}
+@RNL {
+  $L3_DATA_BUS_BLOCK = @DEFINE-SYMBOL(box=[0, -14, 26, 8]) {
+    @LINE {(0, -6) (7, -6)};
+    @LINE {(0, -2) (7, -2)};
+    @LINE {(0, 0) (7, 0)};
+    @LINE {(14, 8) (14, 4)};
+    @LINE {(14, -14) (14, -10)};
+    @LINE {(26, -4) (22, -4)};
+    @LINE {(26, -6) (22, -6)};
+    @RECTANGLE {(7, -10) (22, 4)};
+    @LINE {(26, 0) (22, 0)};
+    @LINE {(0, -4) (7, -4)};
+    @LINE {(10, 8) (10, 4)};
+    @LINE {(10, -14) (10, -10)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(20, 6);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(13, -3);
+    (0, -6) @PIN(terminal="UPDATE");
+    (0.6, -5) @TEXT("UPDATE", size=1, halign="start", valign="middle");
+    (0, -2) @PIN(terminal="DIN");
+    (0.6, -1) @TEXT("DIN", size=1, halign="start", valign="middle");
+    (0, 0) @PIN(terminal="CLK");
+    (0.6, 1) @TEXT("CLK", size=1, halign="start", valign="middle");
+    (14, 8) @PIN(terminal=["BUSIN_15", "BUSIN_14", "BUSIN_13", "BUSIN_12", "BUSIN_11", "BUSIN_10", "BUSIN_9", "BUSIN_8", "BUSIN_7", "BUSIN_6", "BUSIN_5", "BUSIN_4", "BUSIN_3", "BUSIN_2", "BUSIN_1", "BUSIN_0"]);
+    (9.6, 3) @TEXT("BUSIN<15:0>", size=1, halign="start", valign="middle");
+    (14, -14) @PIN(terminal=["BUSOUT_15", "BUSOUT_14", "BUSOUT_13", "BUSOUT_12", "BUSOUT_11", "BUSOUT_10", "BUSOUT_9", "BUSOUT_8", "BUSOUT_7", "BUSOUT_6", "BUSOUT_5", "BUSOUT_4", "BUSOUT_3", "BUSOUT_2", "BUSOUT_1", "BUSOUT_0"]);
+    (20.4, -9) @TEXT("BUSOUT<15:0>", size=1, halign="end", valign="middle");
+    (26, -4) @PIN(terminal="VDD");
+    (21.4, -4) @TEXT("VDD", size=1, halign="end", valign="middle");
+    (26, -6) @PIN(terminal="GND");
+    (21.4, -6) @TEXT("GND", size=1, halign="end", valign="middle");
+    (26, 0) @PIN(terminal=["ADDR_2", "ADDR_1", "ADDR_0"]);
+    (21.4, 0) @TEXT("ADDR<2:0>", size=1, halign="end", valign="middle");
+    (0, -4) @PIN(terminal=["RDY_1", "RDY_0"]);
+    (0.6, -3) @TEXT("RDY<1:0>", size=1, halign="start", valign="middle");
+    (10, -14) @PIN(terminal="UDO");
+    (9.4, -12) @TEXT("UDO", size=1, halign="end", valign="middle");
+    (10, 8) @PIN(terminal="UDI");
+    (7.6, 6) @TEXT("UDI", size=1, halign="start", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_data_bus", recursive=true) => @SET-SYMBOL(terminals=["BUSIN_15", "BUSIN_14", "BUSIN_13", "BUSIN_12", "BUSIN_11", "BUSIN_10", "BUSIN_9", "BUSIN_8", "BUSIN_7", "BUSIN_6", "BUSIN_5", "BUSIN_4", "BUSIN_3", "BUSIN_2", "BUSIN_1", "BUSIN_0", "BUSOUT_15", "BUSOUT_14", "BUSOUT_13", "BUSOUT_12", "BUSOUT_11", "BUSOUT_10", "BUSOUT_9", "BUSOUT_8", "BUSOUT_7", "BUSOUT_6", "BUSOUT_5", "BUSOUT_4", "BUSOUT_3", "BUSOUT_2", "BUSOUT_1", "BUSOUT_0", "CLK", "DIN", "GND", "UPDATE", "VDD", "ADDR_2", "ADDR_1", "ADDR_0", "RDY_1", "RDY_0", "UDI", "UDO"]) $L3_DATA_BUS_BLOCK
+}

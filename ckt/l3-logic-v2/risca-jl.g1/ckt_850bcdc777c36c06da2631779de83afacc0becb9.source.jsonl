@@ -1,0 +1,9 @@
+{"toa": "source/1"}
+{"object": "ckt_850bcdc777c36c06da2631779de83afacc0becb9", "label": "l3-logic-v2/risca-jl.g1", "refs": ["ifc_ed68700e860ddd99beaf0e6e83d7f9790f975d4f", "ifc_95691a8dc0f8f63ffad992c1de810c248237880e", "ckt_220f2fa89956e6c38d80eec8e5169d20c04bdba7", "ifc_fe02a659d897f6e096dea9778fd82c82c1cc4baf", "ckt_4f89399d3e44383dd5132196c3b5c9d3e60788f3", "ifc_5059b896e6a73f0b9acf34381e8ee0f4b43abcc6", "ckt_3375d3002f57efc70db56edc79ddb75a0b353998"], "license": "CC-BY-4.0 AND CC0-1.0"}
+{"object": "ifc_ed68700e860ddd99beaf0e6e83d7f9790f975d4f", "label": "l3-logic-v2", "license": "CC-BY-4.0"}
+{"object": "ifc_95691a8dc0f8f63ffad992c1de810c248237880e", "label": "lb-inv-trim", "license": "CC-BY-4.0"}
+{"object": "ckt_220f2fa89956e6c38d80eec8e5169d20c04bdba7", "label": "lb-inv-trim/risca-jl.g1", "refs": ["ifc_95691a8dc0f8f63ffad992c1de810c248237880e"], "license": "CC-BY-4.0 AND CC0-1.0"}
+{"object": "ifc_fe02a659d897f6e096dea9778fd82c82c1cc4baf", "label": "lb-logicseg-x1", "license": "CC-BY-4.0"}
+{"object": "ckt_4f89399d3e44383dd5132196c3b5c9d3e60788f3", "label": "lb-logicseg-x1/risca-jl.g1", "refs": ["ifc_fe02a659d897f6e096dea9778fd82c82c1cc4baf"], "license": "CC-BY-4.0 AND CC0-1.0"}
+{"object": "ifc_5059b896e6a73f0b9acf34381e8ee0f4b43abcc6", "label": "lb-logicseg-x2", "license": "CC-BY-4.0"}
+{"object": "ckt_3375d3002f57efc70db56edc79ddb75a0b353998", "label": "lb-logicseg-x2/risca-jl.g1", "refs": ["ifc_5059b896e6a73f0b9acf34381e8ee0f4b43abcc6"], "license": "CC-BY-4.0 AND CC0-1.0"}

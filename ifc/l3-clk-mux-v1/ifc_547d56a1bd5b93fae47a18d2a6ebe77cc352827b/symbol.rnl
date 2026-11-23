@@ -1,0 +1,52 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_clk_mux_V1, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-clk-mux-v1-sym", version="0.1")
+}
+@RNL {
+  $L3_CLK_MUX_V1_BLOCK = @DEFINE-SYMBOL(box=[1, -16, 22, 2]) {
+    @LINE {(22, -5) (18, -5)};
+    @LINE {(22, -1) (18, -1)};
+    @LINE {(12, -16) (12, -12)};
+    @LINE {(1, -5) (10, -5)};
+    @LINE {(1, -5) (5, -5)};
+    @LINE {(22, -9) (18, -9)};
+    @LINE {(22, -3) (18, -3)};
+    @LINE {(22, -11) (18, -11)};
+    @LINE {(11, -1) (17, -1)};
+    @RECTANGLE {(10, -12) (18, 2)};
+    @LINE {(11, -3) (17, -3)};
+    @LINE {(11, -5) (17, -5)};
+    @LINE {(11, -7) (17, -7)};
+    @LINE {(11, -9) (17, -9)};
+    @LINE {(12, -10) (12, 0)};
+    @LINE {(14, -10) (14, 0)};
+    @LINE {(16, -10) (16, 0)};
+    @LINE {(16, -16) (16, -12)};
+    @LINE {(22, -7) (18, -7)};
+    @LINE {(22, 1) (18, 1)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(19, 3);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(14.5, 3);
+    (22, -5) @PIN(terminal="SDI");
+    (21.4, -4) @TEXT("SDI", size=1, halign="end", valign="middle");
+    (12, -16) @PIN(terminal=["FRAME_15", "FRAME_14", "FRAME_13", "FRAME_12", "FRAME_11", "FRAME_10", "FRAME_9", "FRAME_8", "FRAME_7", "FRAME_6", "FRAME_5", "FRAME_4", "FRAME_3", "FRAME_2", "FRAME_1", "FRAME_0"]);
+    (11.4, -13) @TEXT("FRAME<15:0>", size=1, halign="end", valign="middle");
+    (22, -7) @PIN(terminal="RST");
+    (21.4, -6) @TEXT("RST", size=1, halign="end", valign="middle");
+    (22, -9) @PIN(terminal="VDD");
+    (21.4, -8) @TEXT("VDD", size=1, halign="end", valign="middle");
+    (22, -3) @PIN(terminal="SDO");
+    (21.4, -2) @TEXT("SDO", size=1, halign="end", valign="middle");
+    (22, -11) @PIN(terminal="GND");
+    (21.4, -10) @TEXT("GND", size=1, halign="end", valign="middle");
+    (16, -16) @PIN(terminal=["REPET_17", "REPET_16", "REPET_15", "REPET_14", "REPET_13", "REPET_12", "REPET_11", "REPET_10", "REPET_9", "REPET_8", "REPET_7", "REPET_6", "REPET_5", "REPET_4", "REPET_3", "REPET_2", "REPET_1"]);
+    (16.6, -13) @TEXT("REPET<17:1>", size=1, halign="start", valign="middle");
+    (1, -5) @PIN(terminal=["OUT_23", "OUT_22", "OUT_21", "OUT_20", "OUT_19", "OUT_18", "OUT_17", "OUT_16", "OUT_15", "OUT_14", "OUT_13", "OUT_12", "OUT_11", "OUT_10", "OUT_9", "OUT_8", "OUT_7", "OUT_6", "OUT_5", "OUT_4", "OUT_3", "OUT_2", "OUT_1", "OUT_0"]);
+    (1.6, -4) @TEXT("OUT<23:0>", size=1, halign="start", valign="middle");
+    (22, 1) @PIN(terminal="SCKI");
+    (21.4, 2) @TEXT("SCKI", size=1, halign="end", valign="middle");
+    (22, -1) @PIN(terminal="SCKO");
+    (21.4, 0) @TEXT("SCKO", size=1, halign="end", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_clk_mux_V1", recursive=true) => @SET-SYMBOL(terminals=["FRAME_15", "FRAME_14", "FRAME_13", "FRAME_12", "FRAME_11", "FRAME_10", "FRAME_9", "FRAME_8", "FRAME_7", "FRAME_6", "FRAME_5", "FRAME_4", "FRAME_3", "FRAME_2", "FRAME_1", "FRAME_0", "GND", "OUT_23", "OUT_22", "OUT_21", "OUT_20", "OUT_19", "OUT_18", "OUT_17", "OUT_16", "OUT_15", "OUT_14", "OUT_13", "OUT_12", "OUT_11", "OUT_10", "OUT_9", "OUT_8", "OUT_7", "OUT_6", "OUT_5", "OUT_4", "OUT_3", "OUT_2", "OUT_1", "OUT_0", "REPET_17", "REPET_16", "REPET_15", "REPET_14", "REPET_13", "REPET_12", "REPET_11", "REPET_10", "REPET_9", "REPET_8", "REPET_7", "REPET_6", "REPET_5", "REPET_4", "REPET_3", "REPET_2", "REPET_1", "RST", "SCKI", "SCKO", "SDI", "SDO", "VDD"]) $L3_CLK_MUX_V1_BLOCK
+}

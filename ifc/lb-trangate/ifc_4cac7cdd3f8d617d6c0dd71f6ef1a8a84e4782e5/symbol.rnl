@@ -1,0 +1,27 @@
+/* Symbol of the Virtuoso cell RISCA_JL/LB_trangate, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="lb-trangate-sym", version="0.1")
+}
+@RNL {
+  $LB_TRANGATE_BLOCK = @DEFINE-SYMBOL(box=[0, -2, 6, 2]) {
+    @LINE {(0, -2) (3, -2)};
+    @LINE {(3, 2) (3, 1)};
+    @LINE {(0, 2) (3, 2)};
+    @LINE {(3, -2) (3, -1)};
+    @LINE {(6, 0) (4, 0)};
+    (3, -0.8) @CIRCLE(radius=0.2);
+    @LINE {(0, 0) (2, 0)};
+    @LINE {(2, 0) (4, 1)};
+    ? @TEXT("${name}", size=0.3, halign="start", valign="middle", key="name") => @PLACE(3, 3);
+    (0, -2) @PIN(terminal="P");
+    (0, 2) @PIN(terminal="N");
+    (6, 2) @PIN(terminal="VDD");
+    (5.4, 2) @TEXT("VDD", size=0.3, halign="end", valign="middle");
+    (6, -2) @PIN(terminal="GND");
+    (5.4, -2) @TEXT("GND", size=0.3, halign="end", valign="middle");
+    (6, 0) @PIN(terminal="B");
+    (0, 0) @PIN(terminal="A")
+  };
+  # @SELECT-INSTANCE(model="LB_trangate", recursive=true) => @SET-SYMBOL(terminals=["A", "B", "GND", "N", "P", "VDD"]) $LB_TRANGATE_BLOCK
+}

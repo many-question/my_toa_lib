@@ -1,0 +1,25 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-gm-cell-v1
+title: L3_gm_cell_V1
+description: Interface of the Virtuoso cell RISCA_JL/L3_gm_cell_V1.
+pins:
+- {name: BUSN, width: 2}
+- {name: BUSP, width: 2}
+- {name: EN}
+- {name: FTX}
+- {name: GNDAMP}
+- {name: GNDSWI}
+- {name: GTUNE, width: 4}
+- {name: IBP}
+- {name: IOUTN}
+- {name: IOUTP}
+- {name: MT, width: 2}
+- {name: SLB}
+- {name: VBO}
+- {name: VCM}
+- {name: VDCAP, width: 3}
+- {name: VDDAMP}
+- {name: VDDSWI}
+- {name: VINN}
+- {name: VINP}

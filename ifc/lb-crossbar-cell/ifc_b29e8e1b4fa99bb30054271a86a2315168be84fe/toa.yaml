@@ -1,0 +1,16 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-crossbar-cell
+title: LB_crossbar_cell
+description: Interface of the Virtuoso cell RISCA_JL/LB_crossbar_cell.
+pins:
+- {name: COL}
+- {name: GND}
+- {name: PRE}
+- {name: ROW}
+- {name: SCK}
+- {name: SDI}
+- {name: SDO}
+- {name: VDD}
+- {name: BUS}
+- {name: REP}

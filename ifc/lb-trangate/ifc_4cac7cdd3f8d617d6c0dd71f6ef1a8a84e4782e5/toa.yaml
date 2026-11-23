@@ -1,0 +1,12 @@
+type: ifc
+license: CC-BY-4.0
+name: lb-trangate
+title: LB_trangate
+description: Interface of the Virtuoso cell RISCA_JL/LB_trangate.
+pins:
+- {name: A}
+- {name: B}
+- {name: GND}
+- {name: "N"}
+- {name: P}
+- {name: VDD}
