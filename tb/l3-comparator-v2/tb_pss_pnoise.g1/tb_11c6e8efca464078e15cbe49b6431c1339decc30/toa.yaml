@@ -1,0 +1,42 @@
+type: tb
+license: CC-BY-4.0
+ifc: ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992
+name: tb_pss_pnoise
+title: Noise, kickback, delay and supply charge of a clocked comparator by PSS and PNOISE
+socket: L3_comparator_V2
+description: The comparator runs from a 5 GHz clock with its inputs at VCM -/+ Vin/2, coupled through 150 fF and biased through 1 GOhm, and its outputs loaded with 2 fF. A periodic steady state (pss) gives the waveforms of one clock period, from which the delay, the kickback on the inputs and the charge drawn from the supply are taken; a periodic noise analysis (pnoise) between the latch nodes LP and LM of the block, with V2 as the input probe, gives the input-referred noise.
+probes: [latch_p, latch_n]
+files:
+  netlist:
+  - tb.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+simulators:
+- {name: spectre, version: "21.1.0.509.isr12"}
+run: spectre input.scs +escchars +aps -format psfascii -raw psf
+analyze: {entry: analyze.py, python: ">=3.6", results: psfascii}
+metrics:
+- {id: vnoise, unit: V, better: lower, tolerance: {rel: 0.02}, description: "Input-referred noise, the root of the input-referred noise density of pnoise integrated from 10 MHz to 2.5 GHz."}
+- {id: energy, unit: J, better: lower, tolerance: {rel: 0.02}, description: "Energy of one comparison, the charge the supply V1 delivers over one clock period (0 to 200 ps, the integral of the current into its positive terminal, negated) times VDD of the point. The ADE output of this name is the integral alone, a negative charge."}
+- {id: kickback, unit: V, better: lower, tolerance: {rel: 0.02}, description: "Kickback, the peak-to-peak of the common mode of the inputs VINP and VINN over one clock period."}
+- {id: tdel, unit: s, better: lower, tolerance: {abs: 1.0e-12}, description: "Delay, the first time in the clock period when DCMPP + DCMPN rises through 0.45 V."}
+parameters:
+  VCM: {unit: V, description: Input common-mode voltage}
+  VDD: {unit: V, description: Supply voltage}
+  Vin: {unit: V, description: Differential input voltage}
+presets:
+  nom:
+    parameters: {VCM: 0.55, VDD: 0.9, Vin: 0.0001}
+    options: {temp: 27}
+    models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]
+  vcm_sweep:
+  - {parameters: {VCM: 0.3, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.35, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.4, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.45, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.5, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.55, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.6, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.65, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}
+  - {parameters: {VCM: 0.7, VDD: 0.9, Vin: 0.0001}, options: {temp: 27}, models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]}

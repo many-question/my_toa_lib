@@ -1,0 +1,35 @@
+type: tb
+license: CC-BY-4.0
+ifc: ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992
+name: tb_tran_decision
+title: Decision of a clocked comparator in one clock period, with transient noise
+socket: L3_comparator_V2
+description: The comparator runs from a 5 GHz clock with its inputs at VCM -/+ Vin/2, coupled through 150 fF and biased through 1 GOhm, and its outputs loaded with 2 fF. A transient analysis of 400 ps with transient noise (up to 10 MHz) is run twice, with the noise seeds 1 and 2 (the sweep of Iteration). With Vin = 0, the decision shows the sign of the input offset; run as a Monte Carlo of mismatch, its mean is the probability that DCMPP goes high.
+files:
+  netlist:
+  - tb.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+simulators:
+- {name: spectre, version: "21.1.0.509.isr12"}
+run: spectre input.scs +escchars +aps -format psfascii -raw psf
+analyze: {entry: analyze.py, python: ">=3.6", results: psfascii}
+metrics:
+- {id: decision, unit: "1", better: none, tolerance: {abs: 0.25}, description: "The decision at 200 ps, 1 when DCMPP is above 0.45 V, averaged over the two noise runs (0, 0.5 or 1)."}
+- {id: vout, unit: V, better: none, tolerance: {abs: 0.001}, description: "DCMPP at 200 ps, averaged over the two noise runs."}
+- {id: tdel, unit: s, better: lower, tolerance: {abs: 1.0e-12}, description: "Delay, the first time DCMPP + DCMPN rises through 0.45 V, averaged over the two noise runs."}
+parameters:
+  VCM: {unit: V, description: Input common-mode voltage}
+  VDD: {unit: V, description: Supply voltage}
+  Vin: {unit: V, description: Differential input voltage}
+presets:
+  nom:
+    parameters: {VCM: 0.55, VDD: 0.9, Vin: 0}
+    options: {temp: 27}
+    models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]
+  mc_lds_200:
+    parameters: {VCM: 0.55, VDD: 0.9, Vin: 0}
+    options: {temp: 27}
+    models: [{file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}]
+    statistics: {method: mismatch, points: 200, sampling: lds, seed: 12345}

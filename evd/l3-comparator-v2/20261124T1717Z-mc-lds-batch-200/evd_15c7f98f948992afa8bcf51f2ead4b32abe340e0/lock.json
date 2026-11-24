@@ -1,0 +1,27 @@
+{
+  "toa": "lock/1",
+  "dut": "ckt_874980b0a38b2dc2618a1efaa208a004180094ef",
+  "tbs": [
+    {
+      "object": "tb_b52a52db790ebc072a44f1d2edf7d0dab29b77ca",
+      "files": {
+        "tb.scs": "2321745d1dbc07440696631857b9ffa121934a7ee4361b76d4f732f05ee1b22c",
+        "eda-symbol.rnl": "8870970f4f034665fa94c49bd60f951598b83a33e209c2d6709bae037d91ecc7",
+        "eda-style.rnl": "2529a5892174d63bbb60827868906d0e9d23d84a97e52292c178a1a1bbb6be34",
+        "analyze.py": "3c2b9ba4d22e2be086178709ca14a291b8bccd12491d4a51f8e1471e7190b4f3"
+      }
+    }
+  ],
+  "tree": [
+    {
+      "path": "",
+      "object": "ckt_874980b0a38b2dc2618a1efaa208a004180094ef",
+      "ifc": "ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992",
+      "files": {
+        "L3_comparator_V2.scs": "0d51e55973ff03603213c6d29d2032700409217bf6a4317e46f128caf16beff4",
+        "eda-symbol.rnl": "8870970f4f034665fa94c49bd60f951598b83a33e209c2d6709bae037d91ecc7",
+        "eda-style.rnl": "2529a5892174d63bbb60827868906d0e9d23d84a97e52292c178a1a1bbb6be34"
+      }
+    }
+  ]
+}

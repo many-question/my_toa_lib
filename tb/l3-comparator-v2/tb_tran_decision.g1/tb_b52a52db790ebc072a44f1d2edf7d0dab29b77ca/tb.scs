@@ -1,0 +1,112 @@
+// Testbench tb_tran_decision of the interface l3-comparator-v2: the test RISCA_JL:_tb_L3_comparator_V1:1 of the Virtuoso cell RISCA_JL/_tb_L3_comparator_V1, exported by toa-virtuoso.
+// @RNL(type="header") {
+//   @VERSION("0.4");
+//   @USE-PACKAGE(name="rnl-std-all", version="0.4");
+//   @USE-PACKAGE(name="rnl-std-fill") {};
+//   @USE-PACKAGE(name="eda-symbol", version="0.2", path="eda-symbol.rnl");
+//   @USE-PACKAGE(name="eda-style", version="0.2", path="eda-style.rnl");
+//   @USE-PACKAGE(name="l3-comparator-v2-sym", version="0.1")
+// }
+simulator lang=spectre
+global 0
+V0 (CLK 0) vsource type=pulse val0=0 val1=VDD period=200p delay=100p \
+        rise=30p fall=30p
+V3 (net10 0) vsource dc=VCM-Vin/2 type=dc
+V2 (net11 0) vsource dc=VCM+Vin/2 type=dc
+V1 (VDD 0) vsource dc=VDD type=dc
+C3 (DCMPP 0) capacitor c=2f
+C2 (DCMPN 0) capacitor c=2f
+C1 (net10 VINN) capacitor c=150f
+C0 (net11 VINP) capacitor c=150f
+R1 (net10 VINN) resistor r=1G isnoisy=no
+R0 (net11 VINP) resistor r=1G isnoisy=no
+I0 (CLK DCMPN DCMPP 0 VDD 0 0 0 VDD VINN VINP) L3_comparator_V2
+// @RNL(author="rnl-virtuoso") {
+//   #"C1" @SET-SYMBOL(terminals=["p", "n"]) $CAPACITOR;
+//   #"C1" @PLACE(-20, -4) => @ORIENT("R90");
+//   #"C0" @SET-SYMBOL(terminals=["p", "n"]) $CAPACITOR;
+//   #"C0" @PLACE(-20, 0) => @ORIENT("R90");
+//   #"C3" @SET-SYMBOL(terminals=["p", "n"]) $CAPACITOR;
+//   #"C3" @PLACE(52, -16) => @ORIENT("R0");
+//   #"I0" @PLACE(13, 0) => @ORIENT("R0");
+//   #"V3" @SET-SYMBOL(terminals=["p", "n"]) $VOLTAGE_SOURCE;
+//   #"V3" @PLACE(-29, -11) => @ORIENT("R0");
+//   #"V2" @SET-SYMBOL(terminals=["p", "n"]) $VOLTAGE_SOURCE;
+//   #"V2" @PLACE(-35, -11) => @ORIENT("R0");
+//   #"V1" @SET-SYMBOL(terminals=["p", "n"]) $VOLTAGE_SOURCE;
+//   #"V1" @PLACE(3, -11) => @ORIENT("R0");
+//   #"R0" @SET-SYMBOL(terminals=["p", "n"]) $RESISTOR;
+//   #"R0" @PLACE(-20, 4) => @ORIENT("R90");
+//   #"C2" @SET-SYMBOL(terminals=["p", "n"]) $CAPACITOR;
+//   #"C2" @PLACE(46, -16) => @ORIENT("R0");
+//   #"R1" @SET-SYMBOL(terminals=["p", "n"]) $RESISTOR;
+//   #"R1" @PLACE(-20, -8) => @ORIENT("R90");
+//   #"V0" @SET-SYMBOL(terminals=["p", "n"]) $VPULSE;
+//   #"V0" @PLACE(38, -16) => @ORIENT("R0");
+//   %marker_0 = $GROUND @ATTACH &"0" => @PLACE(52, -19) => @ORIENT("R0");
+//   %marker_2 = $GROUND @ATTACH &"0" => @PLACE(46, -19) => @ORIENT("R0");
+//   %marker_4 = $GROUND @ATTACH &"0" => @PLACE(-35, -14) => @ORIENT("R0");
+//   %marker_6 = $GROUND @ATTACH &"0" => @PLACE(38, -19) => @ORIENT("R0");
+//   %marker_10 = $GROUND @ATTACH &"0" => @PLACE(9, -12) => @ORIENT("R0");
+//   %marker_13 = $GROUND @ATTACH &"0" => @PLACE(3, -14) => @ORIENT("R0");
+//   %marker_14 = $GROUND @ATTACH &"0" => @PLACE(-29, -14) => @ORIENT("R0");
+//   %wire_0 = &"0" @WIRE(mode="straight") {%marker_0::pin #"C3":2};
+//   %wire_1 = &"0" @WIRE(mode="straight") {%marker_14::pin #"V3":2};
+//   %wire_2 = &"0" @WIRE(mode="straight") {%marker_4::pin #"V2":2};
+//   %wire_3 = &"0" @WIRE(mode="straight") {%marker_13::pin #"V1":2};
+//   %wire_4 = &"0" @WIRE(mode="straight") {%marker_2::pin #"C2":2};
+//   %wire_5 = &"0" @WIRE(mode="straight") {%marker_6::pin #"V0":2};
+//   %wire_6 = &"net11" @WIRE(mode="straight") {#"C0":1 #"R0":1};
+//   %p0 = (-35, 0);
+//   %wire_7 = &"net11" @WIRE(mode="straight") {#"V2":1 %p0};
+//   %wire_8 = &"net11" @WIRE(mode="straight") {%p0 #"C0":1};
+//   %wire_9 = &"net10" @WIRE(mode="straight") {#"R1":1 #"C1":1};
+//   %p1 = (-29, -4);
+//   %wire_10 = &"net10" @WIRE(mode="straight") {#"V3":1 %p1};
+//   %wire_11 = &"net10" @WIRE(mode="straight") {%p1 #"C1":1};
+//   %wire_12 = &"VINN" @WIRE(mode="straight") {#"R1":2 #"C1":2};
+//   %wire_13 = &"VINN" @WIRE(mode="straight") {#"C1":2 #"I0":10};
+//   %wire_13 @TEXT("VINN", size=1, halign="middle", valign="baseline") => @PLACE(8, -3.3);
+//   %wire_14 = &"VINP" @WIRE(mode="straight") {#"C0":2 #"R0":2};
+//   %wire_15 = &"VINP" @WIRE(mode="straight") {#"C0":2 #"I0":11};
+//   %wire_15 @TEXT("VINP", size=1, halign="middle", valign="baseline") => @PLACE(8, 0.7);
+//   %p2 = (46, -4);
+//   %wire_16 = &"DCMPN" @WIRE(mode="straight") {#"I0":2 %p2};
+//   %wire_17 = &"DCMPN" @WIRE(mode="straight") {#"C2":1 %p2};
+//   %wire_16 @TEXT("DCMPN", size=1, halign="middle", valign="baseline") => @PLACE(35, -3.3);
+//   %p3 = (52, 0);
+//   %wire_18 = &"DCMPP" @WIRE(mode="straight") {#"I0":3 %p3};
+//   %wire_19 = &"DCMPP" @WIRE(mode="straight") {#"C3":1 %p3};
+//   %wire_18 @TEXT("DCMPP", size=1, halign="middle", valign="baseline") => @PLACE(35, 0.7);
+//   %p4 = (38, -8);
+//   %wire_20 = &"CLK" @WIRE(mode="straight") {#"I0":1 %p4};
+//   %wire_21 = &"CLK" @WIRE(mode="straight") {#"V0":1 %p4};
+//   %wire_20 @TEXT("CLK", size=1, halign="middle", valign="baseline") => @PLACE(33, -7.3);
+//   %p5 = (34, -10);
+//   %wire_22 = {&"VDD" &"0"} @WIRE(mode="straight") {#"I0":5 %p5};
+//   %wire_22 @TEXT("VDD,<*3>gnd!", size=1, halign="middle", valign="baseline") => @PLACE(34, -9.3);
+//   %wire_23 = &"VDD" @WIRE(mode="straight") {#"V1":1 #"I0":9};
+//   %wire_23 @TEXT("VDD", size=1, halign="middle", valign="baseline") => @PLACE(7, -7.3);
+//   %p6 = (9, -10);
+//   %wire_24 = &"0" @WIRE(mode="straight") {%p6 #"I0":4};
+//   %wire_25 = &"0" @WIRE(mode="straight") {%marker_10::pin %p6}
+// }
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12  tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+     checklimitdest=psf 
+parameters Iteration=1
+sweep sweep param=Iteration start=1 stop=2 step=1 {
+tran tran stop=400p errpreset=conservative noisefmax=10M noisefmin=1 \
+    noiseseed=Iteration noisescale=1 write="spectre.ic" \
+    writefinal="spectre.fc" annotate=status maxiters=5 
+}
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save DCMPP DCMPN 
+saveOptions options save=selected

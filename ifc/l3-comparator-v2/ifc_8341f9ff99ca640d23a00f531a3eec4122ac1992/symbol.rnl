@@ -1,0 +1,40 @@
+/* Symbol of the Virtuoso cell RISCA_JL/L3_comparator_V2, exported by rnl-virtuoso. */
+@RNL(type="header") {
+  @VERSION("0.4");
+  @PACKAGE(name="l3-comparator-v2-sym", version="0.1")
+}
+@RNL {
+  $L3_COMPARATOR_V2_BLOCK = @DEFINE-SYMBOL(box=[0, -12, 16, 4]) {
+    @LINE {(16, -8) (12, -8)};
+    @LINE {(16, 0) (8, 0)};
+    @LINE {(16, -4) (8, -4)};
+    @LINE {(0, 0) (6, 0)};
+    @LINE {(0, -4) (6, -4)};
+    @LINE {(6, 2) (6, -6) (10, -2) (6, 2)};
+    @LINE {(7, -1) (8, -1) (8, -3) (9, -3)};
+    @LINE {(7, -2) (9, -2)};
+    @LINE {(12, -8) (8, -8) (8, -4)};
+    @LINE {(16, -10) (12, -10)};
+    @LINE {(0, -10) (4, -10)};
+    @LINE {(0, -8) (4, -8)};
+    ? @TEXT("${name}", size=1, halign="start", valign="middle", key="name") => @PLACE(14, 3);
+    ? @TEXT("${model}", size=1, halign="middle", valign="middle", key="model") => @PLACE(8, -11);
+    (16, -8) @PIN(terminal="CLK");
+    (15.4, -7) @TEXT("CLK", size=1, halign="end", valign="middle");
+    (16, -10) @PIN(terminal=["TRIM_3", "TRIM_2", "TRIM_1", "TRIM_0"]);
+    (15.4, -9) @TEXT("TRIM<3:0>", size=1, halign="end", valign="middle");
+    (16, 0) @PIN(terminal="DCMPP");
+    (15.4, 1) @TEXT("DCMPP", size=1, halign="end", valign="middle");
+    (16, -4) @PIN(terminal="DCMPN");
+    (15.4, -3) @TEXT("DCMPN", size=1, halign="end", valign="middle");
+    (0, -8) @PIN(terminal="VDD");
+    (0.6, -7) @TEXT("VDD", size=1, halign="start", valign="middle");
+    (0, 0) @PIN(terminal="VINP");
+    (0.6, 1) @TEXT("VINP", size=1, halign="start", valign="middle");
+    (0, -4) @PIN(terminal="VINN");
+    (0.6, -3) @TEXT("VINN", size=1, halign="start", valign="middle");
+    (0, -10) @PIN(terminal="GND");
+    (0.6, -9) @TEXT("GND", size=1, halign="start", valign="middle")
+  };
+  # @SELECT-INSTANCE(model="L3_comparator_V2", recursive=true) => @SET-SYMBOL(terminals=["CLK", "DCMPN", "DCMPP", "GND", "TRIM_3", "TRIM_2", "TRIM_1", "TRIM_0", "VDD", "VINN", "VINP"]) $L3_COMPARATOR_V2_BLOCK
+}

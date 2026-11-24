@@ -1,0 +1,18 @@
+type: ckt
+license: CC-BY-4.0 AND CC0-1.0
+ifc: ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992
+name: risca-jl
+form: transistor
+description: Schematic of the Virtuoso cell RISCA_JL/L3_comparator_V2 (view schematic). The targets are the specs of the Maestro test of _tb_L3_comparator_V1, on the metrics of tb_pss_pnoise.
+files:
+  netlist:
+  - L3_comparator_V2.scs
+  packages:
+  - eda-symbol.rnl
+  - eda-style.rnl
+specifications:
+  process: tsmc28
+  targets:
+    tb_pss_pnoise.vnoise: {max: 0.0005}
+    tb_pss_pnoise.kickback: {max: 0.03}
+    tb_pss_pnoise.tdel: {max: 7.0e-11}

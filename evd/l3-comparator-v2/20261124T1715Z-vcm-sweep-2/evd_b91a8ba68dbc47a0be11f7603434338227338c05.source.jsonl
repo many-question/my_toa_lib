@@ -1,0 +1,5 @@
+{"toa": "source/1"}
+{"object": "evd_b91a8ba68dbc47a0be11f7603434338227338c05", "label": "l3-comparator-v2/20261124T1715Z-vcm-sweep-2", "refs": ["ckt_874980b0a38b2dc2618a1efaa208a004180094ef", "tb_11c6e8efca464078e15cbe49b6431c1339decc30", "ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992"], "license": "CC-BY-4.0"}
+{"object": "ckt_874980b0a38b2dc2618a1efaa208a004180094ef", "label": "l3-comparator-v2/risca-jl.g1", "refs": ["ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992"], "license": "CC-BY-4.0 AND CC0-1.0"}
+{"object": "tb_11c6e8efca464078e15cbe49b6431c1339decc30", "label": "l3-comparator-v2/tb_pss_pnoise.g1", "refs": ["ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992"], "license": "CC-BY-4.0"}
+{"object": "ifc_8341f9ff99ca640d23a00f531a3eec4122ac1992", "label": "l3-comparator-v2", "license": "CC-BY-4.0"}

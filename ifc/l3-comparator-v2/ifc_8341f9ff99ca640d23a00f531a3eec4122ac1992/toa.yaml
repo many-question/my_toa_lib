@@ -1,0 +1,17 @@
+type: ifc
+license: CC-BY-4.0
+name: l3-comparator-v2
+title: L3_comparator_V2
+description: Interface of the Virtuoso cell RISCA_JL/L3_comparator_V2.
+pins:
+- {name: CLK}
+- {name: DCMPN}
+- {name: DCMPP}
+- {name: GND}
+- {name: TRIM, width: 4}
+- {name: VDD}
+- {name: VINN}
+- {name: VINP}
+probes:
+- {name: latch_p, description: "The node of the regenerative latch on the side of VINP; DCMPP is its inverse. With latch_n it is the pair across which the noise of the comparator is observed."}
+- {name: latch_n, description: "The node of the regenerative latch on the side of VINN; DCMPN is its inverse."}

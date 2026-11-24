@@ -1,0 +1,29 @@
+type: evd
+license: CC-BY-4.0
+kind: sim
+dut: ckt_874980b0a38b2dc2618a1efaa208a004180094ef
+tbs: [tb_11c6e8efca464078e15cbe49b6431c1339decc30]
+description: "Made by toa run 0.1.0: tb_pss_pnoise on ckt_874980b0a38b2dc2618a1efaa208a004180094ef, conditions vcm_sweep-3."
+probes: {latch_n: LM, latch_p: LP}
+conditions:
+  parameters: {VCM: 0.45, VDD: 0.9, Vin: 0.0001}
+  options: {temp: 27}
+  models:
+  - {file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}
+environment:
+  simulator: {name: spectre, version: "26.1.0.427", command: spectre261-sandbox --read-only models input.scs +escchars +aps -format psfascii -raw results}
+  pdk: {process: tsmc28, release: iPDK_CRN28HPC+ULL_v1.8_2p2a_20190531}
+  analysis: {python: "3.9.18"}
+  system: {os: linux x86_64, cpu: Intel(R) Xeon(R) Gold 6326 CPU @ 2.90GHz, threads: 64}
+metrics:
+  tb_pss_pnoise.energy: 6.147984411222181e-14
+  tb_pss_pnoise.kickback: 0.02028503139442961
+  tb_pss_pnoise.tdel: 5.24567221487116e-11
+  tb_pss_pnoise.vnoise: 0.000595948206417118
+evidence:
+- {path: evidence/pnoise_input_noise_V_2_Hz.csv, kind: spectrum, label: pnoise input noise (V**2/Hz)}
+- {path: evidence/pss_V1_PLUS.csv, kind: waveform, label: pss /V1/PLUS}
+- {path: evidence/pss_VINP.csv, kind: waveform, label: pss /VINP}
+- {path: evidence/pss_VINN.csv, kind: waveform, label: pss /VINN}
+- {path: evidence/pss_DCMPP.csv, kind: waveform, label: pss /DCMPP}
+- {path: evidence/pss_DCMPN.csv, kind: waveform, label: pss /DCMPN}

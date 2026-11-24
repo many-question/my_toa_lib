@@ -1,0 +1,23 @@
+type: evd
+license: CC-BY-4.0
+kind: mc
+dut: ckt_874980b0a38b2dc2618a1efaa208a004180094ef
+tbs: [tb_b52a52db790ebc072a44f1d2edf7d0dab29b77ca]
+description: "Made by toa run 0.1.0: tb_tran_decision on ckt_874980b0a38b2dc2618a1efaa208a004180094ef, conditions mc_lds_200, a Monte Carlo simulation of 200 samples, all in one simulation."
+conditions:
+  parameters: {VCM: 0.55, VDD: 0.9, Vin: 0}
+  options: {temp: 27}
+  models:
+  - {file: crn28ull_1d8_elk_v1d8_2p2_shrink0d9_embedded_usage.scs, section: [pre_simu, LocalMCOnly_MOS_MOSCAP, TT_RES_BIP_DIO_DISRES, TT_MOM], process: tsmc28}
+  statistics: {method: mismatch, points: 200, sampling: lds, seed: 12345, run: batch}
+environment:
+  simulator: {name: spectre, version: "26.1.0.427", command: spectre261-sandbox --read-only models input.scs +escchars +aps -format psfascii -raw results}
+  pdk: {process: tsmc28, release: iPDK_CRN28HPC+ULL_v1.8_2p2a_20190531}
+  analysis: {python: "3.9.18"}
+  system: {os: linux x86_64, cpu: Intel(R) Xeon(R) Gold 6326 CPU @ 2.90GHz, threads: 64}
+metrics:
+  tb_tran_decision.decision: {"n": 200, failed: 0, mean: 0.515, sigma: 0.5010290917239926, min: 0.0, max: 1.0}
+  tb_tran_decision.vout: {"n": 200, failed: 0, mean: 0.4634694720173844, sigma: 0.45082301172957684, min: 5.336402065339246e-5, max: 0.8999028433462593}
+  tb_tran_decision.tdel: {"n": 200, failed: 0, mean: 1.3983497867387495e-10, sigma: 2.6901830923482186e-12, min: 1.3629417745361936e-10, max: 1.5437367152640467e-10}
+evidence:
+- {path: evidence/samples.csv, kind: table}
